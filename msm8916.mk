@@ -50,9 +50,7 @@ PRODUCT_PACKAGES += \
     tinyplay \
     tinycap \
     tinypcminfo \
-    libtinycompress \
-    libbase_shim \
-    libbt-vendor
+    libtinycompress 
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
@@ -74,10 +72,6 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth.a2dp@1.0-impl.mock
-
-PRODUCT_PACKAGES += \
-    libbase_shim \
-    libbt-vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
