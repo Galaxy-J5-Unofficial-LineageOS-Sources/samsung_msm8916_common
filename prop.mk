@@ -32,14 +32,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1 \
-    ro.bluetooth.dun=true \
-    ro.bluetooth.hfp.ver=1.7 \
-    ro.bluetooth.sap=true \
-    ro.bt.bdaddr_path=/efs/bluetooth/bt_addr \
-    ro.qualcomm.bt.hci_transport=smd \
-    vendor.bluetooth.soc=pronto \
     vendor.qcom.bluetooth.soc=pronto \
-    ro.bluetooth.library_name=libbluetooth_qti.so
+    ro.bluetooth.hfp.ver=1.6 \
+    ro.qualcomm.bt.hci_transport=smd \
+    ro.bluetooth.dun=true \
+    ro.bluetooth.sap=true
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
