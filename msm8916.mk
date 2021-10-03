@@ -50,7 +50,9 @@ PRODUCT_PACKAGES += \
     tinyplay \
     tinycap \
     tinypcminfo \
-    libtinycompress
+    libtinycompress \
+    libbase_shim \
+    libbt-vendor
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
