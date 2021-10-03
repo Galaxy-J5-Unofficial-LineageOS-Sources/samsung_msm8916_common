@@ -22,10 +22,6 @@ vendor/lib/soundfx/libqcvirt.so
 vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
 vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
 
-# AptX - (Moto griffin - NCLS25.86-11-4-6-5)
-vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
-vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
-
 # Bluetooth - ANT+ - H3113_Customized DE_1312-2606_50.1.A.4.102_R4A
 -lib/com.qualcomm.qti.ant@1.0.so|eef326d23bc65dbdd75134b7302c1989e770e3c6
 vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so|62f59ebce4dd877035de2886b0bc769fbe3f5f44
