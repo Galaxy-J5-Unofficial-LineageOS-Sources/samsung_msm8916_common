@@ -18,10 +18,6 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
-# AptX - (Moto griffin - NCLS25.86-11-4-6-5)
-vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
-vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
-
 # Bluetooth - from aljeter - PPP29.55-25
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti |45986b1685eb84a02832e43937dd504ca4520855
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc |a979981c55f3dcaf6cf2212e71b901ca4d58b959
