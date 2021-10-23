@@ -27,6 +27,7 @@
 namespace vendor {
 namespace lineage {
 namespace fastcharge {
+namespace QCMSM8916 {
 namespace V1_0 {
 namespace implementation {
 
