@@ -198,7 +198,7 @@ TARGET_RECOVERY_PIXEL_FORMAT	:= "RGB_565"
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
     BOARD_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy/
+    $(COMMON_PATH)/sepolicy/vendor
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
