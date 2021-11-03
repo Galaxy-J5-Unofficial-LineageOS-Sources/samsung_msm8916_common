@@ -472,7 +472,7 @@ SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/msm8916/display
 SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8916/audio
 
 PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom-caf/msm8996
+    hardware/qcom-caf/msm8916
 
 # Use a profile based boot image for this device. Note that this is currently a
 # generic profile and not Android Go optimized.
