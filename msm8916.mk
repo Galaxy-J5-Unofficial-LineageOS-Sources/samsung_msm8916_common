@@ -227,9 +227,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1-service \
     android.hardware.gatekeeper@1.0-service.software
 
-# HIDL HALs
-$(call inherit-product, $(LOCAL_PATH)/hidl.mk)
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.msm8916
