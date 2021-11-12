@@ -1,5 +1,6 @@
 # API
-ro.product.first_api_level=22
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=22
 
 # Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
