@@ -26,8 +26,8 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 # Extra Flags
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true # Builds deprecated elf files in vendor
 RELAX_USES_LIBRARY_CHECK := true 
-BUILD_BROKEN_DUP_RULES := true 
-ALLOW_MISSING_DEPENDENCIES=true #Temporal fix for missing LineageOS dependencies
+BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
+ALLOW_MISSING_DEPENDENCIES=true # Temporal fix for missing LineageOS dependencies
 
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true # Actually needed for non-treble devices
