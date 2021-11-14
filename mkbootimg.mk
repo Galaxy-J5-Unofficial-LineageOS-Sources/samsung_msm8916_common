@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,75 +12,29 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(call my-dir)
-
-ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DT)),true)
-ifneq ($(strip $(BOARD_KERNEL_PREBUILT_DT)),true)
-ifeq ($(strip $(BUILD_TINY_ANDROID)),true)
-include system/tools/dtbtool/Android.bp
-endif
-
-ifeq ($(strip $(TARGET_CUSTOM_DTBTOOL)),)
-DTBTOOL_NAME := dtbToolLineage
-else
-DTBTOOL_NAME := $(TARGET_CUSTOM_DTBTOOL)
-endif
-
-DTBTOOL := $(HOST_OUT_EXECUTABLES)/$(DTBTOOL_NAME)$(HOST_EXECUTABLE_SUFFIX)
-
+DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolLineage$(HOST_EXECUTABLE_SUFFIX)
 INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 
-ifeq ($(strip $(TARGET_CUSTOM_DTBTOOL)),)
-# dtbToolCM will search subdirectories
-possible_dtb_dirs = $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/
-else
-# Most specific paths must come first in possible_dtb_dirs
-possible_dtb_dirs = $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/dts/exynos/ $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/dts/ $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/
-endif
+$(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr $(INSTALLED_KERNEL_TARGET)
+	@echo -e ${CL_CYN}"Start DT image: $@"${CL_RST}
+	$(call pretty,"Target dt image: $(INSTALLED_DTIMAGE_TARGET)")
+	$(hide) $(DTBTOOL) -2 -o $(INSTALLED_DTIMAGE_TARGET) -s $(BOARD_KERNEL_PAGESIZE) -p $(KERNEL_OUT)/scripts/dtc/ $(KERNEL_OUT)/arch/arm/boot/dts/
+	@echo -e ${CL_CYN}"Made DT image: $@"${CL_RST}
 
-define build-dtimage-target
-    $(call pretty,"Target dt image: $@")
-    $(hide) for dir in $(possible_dtb_dirs); do \
-        if [ -d "$$dir" ]; then \
-            dtb_dir="$$dir"; \
-            break; \
-        fi; \
-    done; \
-    $(DTBTOOL) $(BOARD_DTBTOOL_ARGS) -o $@ -s $(BOARD_KERNEL_PAGESIZE) -p $(KERNEL_OUT)/scripts/dtc/ "$$dtb_dir";
-    $(hide) chmod a+r $@
-endef
 
-$(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(INSTALLED_KERNEL_TARGET)
-	$(build-dtimage-target)
-	@echo "Made DT image: $@"
-
-.PHONY: dtimage
-dtimage: $(INSTALLED_DTIMAGE_TARGET)
-
-endif
-endif
-
-ifeq ($(strip $(TARGET_NEEDS_LOKI)),true)
-LOKI_TOOL := loki_tool
-else
-LOKI_TOOL := echo
-TARGET_LOKI_ABOOT_IMAGE :=
-endif
-
+## Overload bootimg generation: Same as the original, + --dt arg
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(INSTALLED_DTIMAGE_TARGET)
 	$(call pretty,"Target boot image: $@")
 	$(hide) $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_ARGS) $(BOARD_MKBOOTIMG_ARGS) --dt $(INSTALLED_DTIMAGE_TARGET) --output $@
-	$(hide) echo -n "SEANDROIDENFORCE" >> $@
-	$(hide) $(LOKI_TOOL) patch boot $(TARGET_LOKI_ABOOT_IMAGE) $@ $@.lok
-	$(hide) cp $@.lok $@ || true
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_BOOTIMAGE_PARTITION_SIZE),raw)
-	@echo "Made boot image: $@"
+	@echo -e ${CL_CYN}"Made boot image: $@"${CL_RST}
 
-$(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(recovery_ramdisk) $(recovery_kernel) $(RECOVERYIMAGE_EXTRA_DEPS)
-	@echo "----- Making recovery image ------"
-	$(hide) $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) $(INTERNAL_MKBOOTIMG_VERSION_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
-	$(hide) echo -n "SEANDROIDENFORCE" >> $@
-	$(hide) $(LOKI_TOOL) patch recovery $(TARGET_LOKI_ABOOT_IMAGE) $@ $@.lok
-	$(hide) cp $@.lok $@ || true
+## Overload recoveryimg generation: Same as the original, + --dt arg
+$(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(INSTALLED_DTIMAGE_TARGET) \
+		$(recovery_ramdisk) \
+		$(recovery_kernel)
+	@echo -e ${CL_CYN}"----- Making recovery image ------"${CL_RST}
+	$(hide) $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) $(BOARD_MKBOOTIMG_ARGS) --dt $(INSTALLED_DTIMAGE_TARGET) --output $@
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE),raw)
-	@echo "Made recovery image: $@"
+	@echo -e ${CL_CYN}"Made recovery image: $@"${CL_RST}
+	
