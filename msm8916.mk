@@ -28,6 +28,10 @@ COMMON_PATH := device/samsung/msm8916-common
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.use_fifo_ui=1 \
     debug.renderengine.backend=threaded
+    
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
