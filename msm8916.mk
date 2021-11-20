@@ -28,10 +28,6 @@ COMMON_PATH := device/samsung/msm8916-common
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.use_fifo_ui=1 \
     debug.renderengine.backend=threaded
-    
-# Privapp-permissions whitelisting
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.control_privapp_permissions=log
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
