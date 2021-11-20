@@ -1,7 +1,3 @@
-# API
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=22
-
 # Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
@@ -162,11 +158,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.sib16_support=1
-    
-    
-# Render Engine
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.renderengine.backend=gles
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
