@@ -27,7 +27,6 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true # Builds deprecated elf files in vendor
 RELAX_USES_LIBRARY_CHECK := true 
 BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
-ALLOW_MISSING_DEPENDENCIES=true # Temporal fix for missing LineageOS dependencies
 
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true # Actually needed for non-treble devices
@@ -134,15 +133,10 @@ TARGET_INIT_VENDOR_LIB := libinit_msm8916
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8916
 
 # Kernel
-BOARD_KERNEL_CMDLINE += \
-	console=null \
-	androidboot.hardware=qcom \
-	user_debug=23 \
-	msm_rtb.filter=0x3F \
-	ehci-hcd.park=3 \
-	androidboot.bootdevice=7824900.sdhci \
-	androidboot.selinux=permissive 
-	
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23
+BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x3F ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/msm8916-common/mkbootimg.mk
 BOARD_DTBTOOL_ARGS := -2
