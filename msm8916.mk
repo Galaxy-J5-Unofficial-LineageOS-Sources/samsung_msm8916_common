@@ -24,11 +24,6 @@ $(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-v
 LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
 
-# Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.use_fifo_ui=1 \
-    debug.renderengine.backend=threaded
-    
 # Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
