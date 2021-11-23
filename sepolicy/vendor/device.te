@@ -6,3 +6,4 @@ type wcnss_device, dev_type;
 type smd_device, dev_type;
 type hsic_device, dev_type;
 type mhi_device, dev_type;
+type smem_log_device, dev_type;
