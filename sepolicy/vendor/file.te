@@ -9,4 +9,4 @@ type qmuxd_socket, file_type;
 type sysfs_fm, sysfs_type, fs_type;
 type location, file_type, data_file_type;
 type sysfs_kgsl_gpuclk, sysfs_type, fs_type;
-
+type sysfs_smd_open_timeout, sysfs_type, fs_type;
