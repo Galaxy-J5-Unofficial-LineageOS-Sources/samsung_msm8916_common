@@ -1,4 +1,6 @@
 #============= thermal-engine ==============
+type thermal-engine, domain;
+type thermal-engine_exec, exec_type, file_type;
 allow thermal-engine self:capability dac_override;
 allow thermal-engine socket_device:sock_file { create setattr };
 allow thermal-engine sysfs:dir { open read };
