@@ -18,8 +18,6 @@ userdebug_or_eng(`
 #allow qmuxd qmux_bluetooth_socket:dir { write add_name remove_name search };
 #allow qmuxd qmux_bluetooth_socket:sock_file { create setattr getattr write unlink };
 
-qmux_socket(qmuxd);
-
 #Allow logging
 allow qmuxd {
     #Allow operation in platform specific transports
