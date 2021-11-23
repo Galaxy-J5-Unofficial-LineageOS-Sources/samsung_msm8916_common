@@ -1,4 +1,5 @@
 # Device types
 type alarm_device, dev_type, mlstrustedobject;
 type ssr_device, dev_type;
-type  fm_radio_device, dev_type;
+type fm_radio_device, dev_type;
+type wcnss_device, dev_type;
