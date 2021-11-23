@@ -5,3 +5,4 @@ type firmware_file, file_type;
 type persist_file, file_type;
 type persist_data_file, file_type;
 type camera_socket, file_type;
+type qmuxd_socket, file_type;
