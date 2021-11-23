@@ -210,7 +210,7 @@ TARGET_RECOVERY_PIXEL_FORMAT	:= "RGB_565"
 
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
-#include device/qcom/sepolicy-legacy/sepolicy.mk
+include device/custom/sepolicy/legacy-common/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Shims
