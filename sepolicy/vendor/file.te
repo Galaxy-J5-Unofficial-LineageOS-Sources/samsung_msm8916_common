@@ -20,3 +20,4 @@ type sysfs_hsic, sysfs_type, fs_type;
 type sysfs_hsic_host_rdy, sysfs_type, file_type;
 
 type persist_display_file, file_type;
+type sysfs_spmi_dev, sysfs_type, fs_type;
