@@ -1,4 +1,7 @@
 #============= time_daemon ==============
+type time_daemon, domain;
+type time_daemon_exec, exec_type, file_type;
+type time_data_file, file_type, data_file_type;
 allow time_daemon alarm_device:chr_file { ioctl open read write };
 allow time_daemon self:capability { setgid setuid };
 allow time_daemon time_data_file:dir { add_name search write };
