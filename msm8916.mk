@@ -115,7 +115,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     
 # System
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.binary_xml=false
+    persist.sys.binary_xml=false \
+    persist.data.netmgrd.qos.enable=true \
+    ro.kernel.ebpf.supported=false
 
 # Display
 PRODUCT_PACKAGES += \
