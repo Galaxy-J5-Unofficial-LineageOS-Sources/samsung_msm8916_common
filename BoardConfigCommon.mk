@@ -209,7 +209,7 @@ TARGET_RECOVERY_PIXEL_FORMAT	:= "RGB_565"
 
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
-#include device/custom/sepolicy/legacy-common/sepolicy.mk
+include device/qcom/sepolicy-legacy/sepolicy.mk
     BOARD_SEPOLICY_DIRS += \
     $(COMMON_PATH)/sepolicy/
 
