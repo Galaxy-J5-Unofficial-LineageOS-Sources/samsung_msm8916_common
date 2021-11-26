@@ -1,7 +1,0 @@
-#============= mm-qcamerad ==============
-type mm-qcamerad, domain;
-type mm-qcamerad_exec, exec_type, file_type;
-allow mm-qcamerad camera_data_file:dir { add_name remove_name search write };
-allow mm-qcamerad camera_data_file:sock_file { create unlink };
-allow mm-qcamerad sysfs:file { getattr open read write };
-
