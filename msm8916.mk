@@ -115,7 +115,11 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     
 # System
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.binary_xml=false 
+    persist.sys.binary_xml=false
+    
+# API
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vndk.version=current    
     
 # Display
 PRODUCT_PACKAGES += \
