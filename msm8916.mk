@@ -474,6 +474,3 @@ SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8916/audio
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/msm8916
-
-# Speed profile services and wifi-service to reduce RAM and storage.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
