@@ -113,10 +113,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
     
-# System
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.binary_xml=false
-    
 # API
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vndk.version=current    
@@ -140,9 +136,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.4-service.clearkey \
-    android.hardware.drm@1.3.vendor
-    
+    android.hardware.drm@1.4-service.clearkey
     
 # Vendor service manager
 PRODUCT_PACKAGES += \
@@ -219,12 +213,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sec_touchscreen.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/sec_touchscreen.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl
 
-# Keymaster HAL
+# Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0-service-qti.rc \
-    android.hardware.keymaster@4.1.vendor \
-    android.hardware.keymaster@4.1-service \
-    android.hardware.gatekeeper@1.0-service.software
+   android.hardware.keymaster@3.0-impl \
+   android.hardware.keymaster@3.0-service
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -466,11 +458,4 @@ PRODUCT_PACKAGES += \
     RemoveGallery2 \
     RemoveTrebuchet \
     RemoveEleven
-    
-# CAF repos
-SRC_MEDIA_HAL_DIR := hardware/qcom-caf/msm8916/media
-SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/msm8916/display
-SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8916/audio
-
-PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom-caf/msm8916
+   
