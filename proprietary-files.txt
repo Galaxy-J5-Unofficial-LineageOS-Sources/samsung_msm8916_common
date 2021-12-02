@@ -4,6 +4,10 @@
 bin/adsprpcd
 vendor/lib/libadsprpc.so
 
+# WIFI
+vendor/bin/cnss-daemon
+vendor/lib/libcld80211.so
+
 # Audio
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
