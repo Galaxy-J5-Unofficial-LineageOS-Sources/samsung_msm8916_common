@@ -208,8 +208,8 @@ TARGET_RECOVERY_PIXEL_FORMAT	:= "RGB_565"
 
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
-#include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/samsung/msm8916-common/sepolicy-minimal
+include device/qcom/sepolicy-legacy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/samsung/msm8916-common/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
