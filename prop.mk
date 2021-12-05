@@ -165,7 +165,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Render Engine
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.renderengine.backend=threaded
+    debug.renderengine.backend=gles
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
