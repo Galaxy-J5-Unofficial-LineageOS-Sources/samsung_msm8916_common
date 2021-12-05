@@ -104,10 +104,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
     
-# ConfigStore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Data configuration files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
