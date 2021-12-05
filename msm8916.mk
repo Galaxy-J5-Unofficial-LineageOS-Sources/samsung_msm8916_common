@@ -103,6 +103,10 @@ PRODUCT_PACKAGES += \
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
+    
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # Data configuration files
 PRODUCT_COPY_FILES += \
