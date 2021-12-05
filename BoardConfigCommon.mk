@@ -25,6 +25,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
 # Extra Flags
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true # Builds deprecated elf files in vendor
+BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
 
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true # Actually needed for non-treble devices
