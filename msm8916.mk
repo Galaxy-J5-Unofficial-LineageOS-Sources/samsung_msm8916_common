@@ -464,4 +464,12 @@ PRODUCT_PACKAGES += \
     RemoveGallery2 \
     RemoveTrebuchet \
     RemoveEleven
+    
+ # CAF repos
+SRC_MEDIA_HAL_DIR := hardware/qcom-caf/msm8916/media
+SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/msm8916/display
+SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8916/audio
+
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/msm8916
    
