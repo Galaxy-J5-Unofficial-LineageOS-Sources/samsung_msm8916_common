@@ -35,7 +35,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.binary_xml=false \
     ro.kernel.ebpf.supported=false \
-    debug.renderengine.backend=threaded
+    debug.renderengine.backend=gles
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
