@@ -121,11 +121,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     TrebuchetQuickStep \
     Settings \
     SystemUI
-    
-# API
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vndk.version=current    
-    
+   
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
