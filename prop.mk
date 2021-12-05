@@ -2,7 +2,6 @@
 ro.product.first_api_level=22
 ro.vndk.version=22
 
-
 # Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
@@ -48,7 +47,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.vendor.shutdown.waittime=500 \
-    ro.build.shutdown_timeout=0
+    ro.build.shutdown_timeout=0 
+ 
+# BPF
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.binary_xml=false
 
 # Camera
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -159,6 +162,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.sib16_support=1
+    
+# Render Engine
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.renderengine.backend=threaded
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -186,6 +193,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
+
+# TWRP
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.binary_xml=false
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
