@@ -1,5 +1,7 @@
 # API
 ro.product.first_api_level=22
+ro.vndk.version=22
+
 
 # Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
