@@ -25,9 +25,6 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
 # Extra Flags
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true # Builds deprecated elf files in vendor
-RELAX_USES_LIBRARY_CHECK := true 
-BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
-BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true # Actually needed for non-treble devices
@@ -151,6 +148,7 @@ TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SELINUX_LOG_CONFIG := selinux_log_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8916
 TARGET_HAS_MEMFD_BACKPORT := true
+BOARD_RAMDISK_USE_XZ := true
 
 # Kernel - Toolchain
 ifneq ($(wildcard $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-7.2/bin),)
