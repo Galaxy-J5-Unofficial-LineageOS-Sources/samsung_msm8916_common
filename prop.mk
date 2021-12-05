@@ -1,3 +1,6 @@
+# API
+ro.product.first_api_level=21
+
 # Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
