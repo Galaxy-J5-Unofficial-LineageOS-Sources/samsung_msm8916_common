@@ -31,12 +31,6 @@ $(call inherit-product, $(LOCAL_PATH)/hidl.mk)
 PRODUCT_PACKAGES += \
     SamsungDoze
 
-# System
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.binary_xml=false \
-    ro.kernel.ebpf.supported=false \
-    debug.renderengine.backend=gles
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
