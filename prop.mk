@@ -104,8 +104,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_gl_backpressure=1 \
     debug.composition.type=c2d \
-    debug.egl.hw=0 \
-    debug.sf.hw=0 \
+    debug.egl.hw=1 \
+    debug.sf.hw=1 \
     debug.hwui.use_buffer_age=false
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
