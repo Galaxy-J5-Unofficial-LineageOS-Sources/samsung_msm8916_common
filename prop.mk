@@ -48,10 +48,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.vendor.shutdown.waittime=500 \
     ro.build.shutdown_timeout=0 
- 
-# BPF
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.binary_xml=false
 
 # Camera
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -165,7 +161,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Render Engine
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.renderengine.backend=gles
+    debug.renderengine.backend=gles \
     ro.hardware.egl=adreno
 
 # RIL
