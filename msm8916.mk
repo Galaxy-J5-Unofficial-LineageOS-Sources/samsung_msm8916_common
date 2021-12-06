@@ -24,9 +24,6 @@ $(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-v
 LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
 
-# HIDL HALs
-$(call inherit-product, $(LOCAL_PATH)/hidl.mk)
-
 # Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
