@@ -118,6 +118,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.gps.agps_provider=1 \
     ro.pip.gated=0
 
+# Graphics 
+PRODUCT_PROPERTY_OVERRIDES += \
+debug.egl.hw=0
+debug.sf.hw=0
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
