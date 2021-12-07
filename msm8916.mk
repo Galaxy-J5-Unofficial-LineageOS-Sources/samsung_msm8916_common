@@ -262,6 +262,10 @@ PRODUCT_PACKAGES += \
     libcurl \
     libkeyutils \
     tcpdump
+    
+# Netmgrd
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \
