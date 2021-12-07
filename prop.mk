@@ -160,8 +160,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Render Engine
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.renderengine.backend=gles \
-    ro.hardware.egl=adreno
+    debug.renderengine.backend=threaded
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
