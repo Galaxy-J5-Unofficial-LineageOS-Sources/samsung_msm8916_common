@@ -70,6 +70,8 @@
             <name>IMapper</name>
             <instance>default</instance>
         </interface>
+        <fqname>@3.0::IMapper/default</fqname>
+        <fqname>@4.0::IMapper/default</fqname> add 3.0 and 4.0 IMapper instance to manifest
     </hal>
     <hal format="hidl">
         <name>android.hardware.ir</name>
