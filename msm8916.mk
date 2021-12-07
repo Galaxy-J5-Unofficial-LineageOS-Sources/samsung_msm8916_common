@@ -364,9 +364,10 @@ PRODUCT_PACKAGES += \
      
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.secure_element@1.2.vendor
  
 # NFC
 PRODUCT_PACKAGES += \
