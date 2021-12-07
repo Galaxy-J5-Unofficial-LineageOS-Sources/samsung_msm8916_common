@@ -101,7 +101,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_gl_backpressure=1 \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
-    debug.sf.hw=1 
+    debug.sf.hw=1 \
+    ro.hardware.egl=adreno \
+    debug.renderengine.backend=threaded
     
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
@@ -157,10 +159,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.sib16_support=1
-    
-# Render Engine
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.renderengine.backend=threaded
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
