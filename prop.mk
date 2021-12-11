@@ -103,10 +103,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.has_HDR_display=false \
-    ro.surface_flinger.has_wide_color_display=false \
     ro.surface_flinger.start_graphics_allocator_service=true \
-    ro.surface_flinger.use_context_priority=true \
     debug.sf.enable_gl_backpressure=1 \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
