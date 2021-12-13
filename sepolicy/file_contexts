@@ -13,5 +13,9 @@
 # Camera
 /sys/devices/virtual/camera(/.*)?                           u:object_r:sysfs_camera:s0
 
+# Bootanimation
+/sys/devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video0/name  u:object_r:sysfs_graphics:s0
+/sys/devices/platform/cam_sync/video4linux/video1/name              u:object_r:sysfs_graphics:s0
+
 # Gatekeeper
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software	u:object_r:hal_gatekeeper_default_exec:s0
