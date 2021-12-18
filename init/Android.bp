@@ -17,8 +17,9 @@ cc_defaults {
     name: "libinit_msm8916_defaults",
     recovery_available: true,
     include_dirs: [
-        "system/core/include",
         "system/core/init"
+        "system/libbase/include"
+
     ],
     shared_libs: ["libbase"],
 }
