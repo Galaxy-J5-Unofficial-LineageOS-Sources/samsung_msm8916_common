@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     libcamera_shim \
     libmm-qcamera \
-    camera.msm8916 
+    camera.msm8916 \
+    Camera2
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
