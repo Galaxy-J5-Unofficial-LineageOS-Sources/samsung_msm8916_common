@@ -139,7 +139,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.4-service.clearkey \
-    android.hardware.drm@1.3.vendor
+    android.hardware.drm@1.4.vendor
     
 # Vendor service manager
 PRODUCT_PACKAGES += \
@@ -190,7 +190,7 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss@1.0.vendor
     android.hardware.gnss@1.0-service \
     com.android.location.provider \
     com.android.location.provider.xml \
