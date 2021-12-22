@@ -105,7 +105,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.renderengine.backend=threaded
     
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=1
 
 # GPS Properties
 PRODUCT_PROPERTY_OVERRIDES += \
