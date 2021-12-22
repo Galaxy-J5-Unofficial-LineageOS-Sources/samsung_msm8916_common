@@ -218,8 +218,8 @@ TARGET_RECOVERY_UI_BLANK_UNBLANK_ON_INIT := true
 TARGET_RECOVERY_QCOM_RTC_FIX	:= true
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += device/samsung/msm8916-common/sepolicy
+#include device/qcom/sepolicy-legacy/sepolicy.mk
+#BOARD_VENDOR_SEPOLICY_DIRS += device/samsung/msm8916-common/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
