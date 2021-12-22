@@ -179,7 +179,6 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/bin/mediaserver=22 \
-    /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
 # Power
