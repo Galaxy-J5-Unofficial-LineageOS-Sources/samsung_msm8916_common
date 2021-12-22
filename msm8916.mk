@@ -119,13 +119,13 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
    
 # Display
 PRODUCT_PACKAGES += \
-    disable_configstore \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    android.hardware.configstore@1.1-service \
     android.hardware.renderscript@1.0-impl \
     android.hardware.renderscript@1.0-service \
     gralloc.msm8916 \
