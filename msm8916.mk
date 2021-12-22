@@ -190,7 +190,7 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0.vendor
+    android.hardware.gnss@1.0.vendor \
     android.hardware.gnss@1.0-service \
     com.android.location.provider \
     com.android.location.provider.xml \
