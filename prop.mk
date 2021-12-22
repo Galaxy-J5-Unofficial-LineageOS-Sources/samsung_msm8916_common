@@ -102,13 +102,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.start_graphics_allocator_service=true \
     debug.sf.enable_gl_backpressure=1 \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
-    ro.hardware.egl=adreno \
     debug.renderengine.backend=threaded
     
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
