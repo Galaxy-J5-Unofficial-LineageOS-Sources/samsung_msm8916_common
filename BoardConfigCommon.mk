@@ -220,6 +220,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX	:= true
 # SELinux
 #include device/qcom/sepolicy-legacy/sepolicy.mk
 #BOARD_VENDOR_SEPOLICY_DIRS += device/samsung/msm8916-common/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += device/samsung/msm8916-common/sepolicy-minimal
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
