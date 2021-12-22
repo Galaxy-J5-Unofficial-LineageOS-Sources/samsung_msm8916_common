@@ -396,11 +396,11 @@ on fs
     chown system system /dev/radio0
 
 on late-fs
-    # Start HW service manager early
-    start hwservicemanager
     # Start services for bootanim
+    start servicemanager
     start surfaceflinger
     start bootanim
+    start vendor.configstore-hal
     start vendor.gralloc-2-0
 
     # Wait for hwservicemanager ready since fsck might be triggered in mount_all --late
