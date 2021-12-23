@@ -30,6 +30,8 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 
 on init
 
+    setprop ro.kernel.ebpf.supported false
+
 on early-init
     mount debugfs debugfs /sys/kernel/debug
 
@@ -379,11 +381,8 @@ on property:persist.usb.chgdisabled=1
 
 on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
-    
-    setprop ro.kernel.ebpf.supported false
-    
+        
 on fs
-
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
 
