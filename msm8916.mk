@@ -122,6 +122,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.configstore@1.1-service \
+    android.hardware.renderscript@1.0-impl \
+    android.hardware.renderscript@1.0-service \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
     libtinyxml \
