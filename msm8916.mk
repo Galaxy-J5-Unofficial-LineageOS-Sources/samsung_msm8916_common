@@ -24,10 +24,6 @@ $(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-v
 LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
 
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
