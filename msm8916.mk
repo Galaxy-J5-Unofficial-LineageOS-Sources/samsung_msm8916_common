@@ -185,9 +185,10 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss@1.0-service \
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss@2.0.vendor \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
     com.android.location.provider \
     com.android.location.provider.xml \
     gps.msm8916 \
