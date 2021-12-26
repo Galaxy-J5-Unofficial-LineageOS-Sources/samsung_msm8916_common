@@ -307,6 +307,9 @@ PRODUCT_PACKAGES += \
 # Properties
 include $(LOCAL_PATH)/prop.mk
 
+# PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
+PRODUCT_SHIPPING_API_LEVEL := 22
+
 # Radio
 PRODUCT_PACKAGES += \
     libshim_secril \
