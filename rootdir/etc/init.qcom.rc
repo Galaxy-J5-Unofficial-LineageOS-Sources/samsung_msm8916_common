@@ -381,6 +381,8 @@ on property:persist.usb.chgdisabled=1
 
 on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
+    
+setprop ro.kernel.ebpf.supported false
         
 on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
@@ -396,10 +398,12 @@ on fs
 # fm_radio
     chmod 0777 /dev/radio0
     chown system system /dev/radio0
+    
+    # Start HW service manager early
+    start hwservicemanager
 
 on late-fs
     # Start services for bootanim
-    start hwservicemanager
     start servicemanager
     start surfaceflinger
     start bootanim
