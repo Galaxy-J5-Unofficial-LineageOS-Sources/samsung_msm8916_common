@@ -107,7 +107,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
     ro.hardware.egl=adreno \
-    debug.renderengine.backend=gles
+    debug.renderengine.backend=threaded
     
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=1
