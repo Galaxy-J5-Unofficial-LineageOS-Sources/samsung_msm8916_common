@@ -117,19 +117,17 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.hardware.configstore@1.1-service \
+    android.hardware.renderscript@1.0-impl \
+    android.hardware.renderscript@1.0-service \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
     libtinyxml \
     libtinyxml2 \
-    memtrack.msm8916 \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom
-
+    memtrack.msm8916 
 
 # DRM
 PRODUCT_PACKAGES += \
