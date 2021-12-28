@@ -106,7 +106,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
-    debug.renderengine.backend=threaded
+    debug.renderengine.backend=gles
     
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=1
