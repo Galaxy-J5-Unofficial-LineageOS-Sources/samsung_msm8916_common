@@ -111,6 +111,7 @@ vendor/lib/libllvm-qcom.so|8c40927b9b56047447c42d0a23081ef1
 vendor/lib/libOpenCL.so|e1f8c3fdb58fa9fbb1465d909e9ab7ba31176bd6
 vendor/lib/librs_adreno.so|40dbf893c0fd2ad8583d9937e9c92d3f
 vendor/lib/librs_adreno_sha1.so|4f695154805ab290651af850fad24d81
+vendor/lib/libRSDriver_adreno.so|bd572f3fc34e9dd747753f14a73fb133
 vendor/lib/libsc-a2xx.so
 vendor/lib/libsc-a3xx.so|42193ceddf52b1c6e5914d8c20c9f4ab
 vendor/lib/libscale.so|811e35d84497eeafd66952fba530c8b8
