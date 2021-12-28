@@ -106,6 +106,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
+    ro.hardware.egl=adreno \
     debug.renderengine.backend=gles
     
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
