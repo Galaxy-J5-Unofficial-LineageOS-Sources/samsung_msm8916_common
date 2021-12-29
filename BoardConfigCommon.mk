@@ -137,10 +137,14 @@ TARGET_INIT_VENDOR_LIB := libinit_msm8916
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8916
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23
-BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x3F ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += \
+	console=null \
+	androidboot.hardware=qcom \
+	user_debug=23 \
+	msm_rtb.filter=0x3F \
+	ehci-hcd.park=3 \
+	androidboot.bootdevice=7824900.sdhci \
+	androidboot.selinux=permissive 
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_DTBTOOL_ARGS := -2
@@ -203,7 +207,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 PROTOBUF_SUPPORTED := true
 
 # Qualcomm support
-TARGET_USES_QCOM_BSP_LEGACY := true
+TARGET_USES_QCOM_BSP := true
 HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE   := true
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY := true
 
@@ -226,7 +230,8 @@ TARGET_RECOVERY_QCOM_RTC_FIX	:= true
 
 # SELinux
 #include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += device/samsung/msm8916-common/sepolicy-minimal
+    BOARD_SEPOLICY_DIRS += \
+    $(COMMON_PATH)/sepolicy-minimal
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
