@@ -121,8 +121,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.hardware.renderscript@1.0-impl \
-    android.hardware.renderscript@1.0-service \
+    android.hardware.configstore@1.1-service \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
     libtinyxml \
@@ -135,10 +134,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.4.vendor
-    
-# Vendor service manager
-PRODUCT_PACKAGES += \
-    vndservicemanager
     
 # Protobuf
 PRODUCT_COPY_FILES += \
@@ -305,9 +300,6 @@ PRODUCT_PACKAGES += \
 # Properties
 include $(LOCAL_PATH)/prop.mk
 
-# PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
-PRODUCT_SHIPPING_API_LEVEL := 22
-
 # Radio
 PRODUCT_PACKAGES += \
     libshim_secril \
@@ -335,10 +327,14 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
-    ueventd.qcom.rc 
+    ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+    
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS := \
@@ -417,6 +413,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
+    
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
 
 # Wifi configuration files
 PRODUCT_COPY_FILES += \
@@ -440,7 +440,6 @@ PRODUCT_PACKAGES += \
     hostapd_cli \
     libwpa_client \
     libwcnss_qmi \
-    libcld80211 \
     wcnss_service\
     wificond \
     wpa_supplicant
