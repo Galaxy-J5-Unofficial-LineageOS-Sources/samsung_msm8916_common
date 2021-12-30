@@ -30,11 +30,6 @@ BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true # Builds deprecated elf files in vendor
 # ----------------------------------------------------------------------------------------------------
 
-# Platform
-PRODUCT_BOARD_PLATFORM_GPU := qcom-adreno306
-PRODUCT_BOARD_PLATFORM := msm8916
-PRODUCT_USES_QCOM_HARDWARE := true
-
 # Architecture/platform
 FORCE_32_BIT := true
 TARGET_ARCH := arm
