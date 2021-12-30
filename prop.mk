@@ -191,11 +191,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.config.spcm_db_enable=true \
     sys.config.spcm_db_launcher=true \
     sys.config.spcm_preload_enable=true
-    
-# SoC
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.soc.manufacturer=Qualcomm \
-	ro.soc.model=MSM8916
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
