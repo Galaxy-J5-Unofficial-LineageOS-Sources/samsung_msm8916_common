@@ -159,22 +159,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=0
     
-# OpenGLES
-# Set OpenGLES version checking the SoC variant
-
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610 \
-    media.msm8929hw=1
-else ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8939)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610 \
-    media.msm8939hw=1
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196608
-endif
-
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
