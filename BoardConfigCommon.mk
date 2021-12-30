@@ -15,6 +15,7 @@
 
 COMMON_PATH := device/samsung/msm8916-common
 DEVICE_PATH := device/samsung/msm8916-common
+VENDOR_PATH := device/samsung/msm8916-common
 BOARD_VENDOR := samsung
 
 # Inherit from common
@@ -230,8 +231,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX	:= true
 
 # SELinux
 #include device/qcom/sepolicy-legacy/sepolicy.mk
-    BOARD_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy-minimal
+BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy-minimal
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
