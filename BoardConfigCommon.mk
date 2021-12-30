@@ -27,9 +27,6 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 # HACKS
 # ----------------------------------------------------------------------
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true # Builds deprecated elf files in vendor
-BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
-RELAX_USES_LIBRARY_CHECK=true # this will set compiler filter "verify" and disable AOT-compilation in dexpreopt
-BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 # ----------------------------------------------------------------------------------------------------
 
 # Platform
