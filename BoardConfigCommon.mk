@@ -32,9 +32,6 @@ RELAX_USES_LIBRARY_CHECK=true # this will set compiler filter "verify" and disab
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 # ----------------------------------------------------------------------------------------------------
 
-# HIDL
-PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true # Actually needed for non-treble devices
-
 # Platform
 PRODUCT_BOARD_PLATFORM_GPU := qcom-adreno306
 PRODUCT_BOARD_PLATFORM := msm8916
