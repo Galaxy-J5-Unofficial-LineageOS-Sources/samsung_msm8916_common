@@ -102,7 +102,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
-    ro.hardware.egl=adreno \
+    debug.hwui.use_buffer_age=false \
     debug.renderengine.backend=threaded
     
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
