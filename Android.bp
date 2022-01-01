@@ -1,5 +1,6 @@
 subdirs = [
     "light",
-    "camera",
-    "recovery",
 ]
+
+soong_namespace {
+}
