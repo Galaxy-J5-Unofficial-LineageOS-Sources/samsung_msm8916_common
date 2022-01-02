@@ -36,6 +36,8 @@
         </interface>
         <fqname>@2.0::ISoundTriggerHw/default</fqname>
         <fqname>@2.1::ISoundTriggerHw/default</fqname>
+        <fqname>@2.2::ISoundTriggerHw/default</fqname>
+        <fqname>@2.3::ISoundTriggerHw/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
