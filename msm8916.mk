@@ -437,7 +437,16 @@ PRODUCT_PACKAGES += \
     
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
-    RemoveCamera2
+    RemoveCamera2 \
+    RemoveJely \
+    RemoveCalculator2 \
+    RemoveMessaging \
+    RemoveEtar \
+    RemoveContacts \
+    RemoveRecorder \
+    RemoveGallery2 \
+    RemoveTrebuchet \
+    RemoveEleven
 
 # Use a profile based boot image for this device. Note that this is currently a
 # generic profile and not Android Go optimized.
