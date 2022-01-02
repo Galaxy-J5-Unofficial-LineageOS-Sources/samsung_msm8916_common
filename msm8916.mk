@@ -13,38 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-  
-# Release name
-PRODUCT_RELEASE_NAME := Samsung Galaxy J5
-
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-# Include Bluetooth config
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Inherit from common
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
 # Include proprietary blobs
 $(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
-
-# Inherit from vendor
-$(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
-
-## Device identifier. This must come after all inclusions
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_CHARACTERISTICS := phone
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
-
 
 LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
