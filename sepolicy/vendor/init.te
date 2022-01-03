@@ -19,4 +19,5 @@ allow init vfat:dir search;
 allow init vfat:file { getattr open read };
 allow init vndbinder_device:chr_file { ioctl open read write };
 allow init wcnss_device:chr_file { open read write };
+allow init media_data_file:dir { create getattr setattr };
 
