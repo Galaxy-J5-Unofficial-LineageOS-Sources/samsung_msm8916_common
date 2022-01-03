@@ -1,2 +1,2 @@
 #============= wcnss_service ==============
-allow wcnss_service unlabeled:dir {open read search getattr;
+allow wcnss_service unlabeled:dir {open read search getattr};
