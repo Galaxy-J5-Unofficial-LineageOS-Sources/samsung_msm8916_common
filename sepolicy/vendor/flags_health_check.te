@@ -1,7 +1,6 @@
 allow flags_health_check aac_drc_prop:file { open getattr };
 allow flags_health_check ab_update_gki_prop:file { open getattr };
 allow flags_health_check adbd_config_prop:file { open getattr };
-allow flags_health_check adbd_prop:file { open getattr };
 allow flags_health_check audio_config_prop:file { open getattr };
 allow flags_health_check alarm_boot_prop:file { open getattr };
 allow flags_health_check alarm_handled_prop:file { open getattr };
@@ -45,7 +44,7 @@ allow flags_health_check mmi_prop:file { open getattr };
 allow flags_health_check mpdecision_prop:file { open getattr };
 allow flags_health_check msm_irqbalance_prop:file { open getattr };
 allow flags_health_check msm_irqbl_sdm630_prop:file { open getattr };
-¡allow flags_health_check netd_prop:file { open getattr };
+allow flags_health_check netd_prop:file { open getattr };
 allow flags_health_check nfc_nq_prop:file { open getattr };
 allow flags_health_check opengles_prop:file { open getattr };
 allow flags_health_check per_mgr_state_prop:file { open getattr };
