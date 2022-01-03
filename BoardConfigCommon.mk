@@ -221,8 +221,11 @@ TARGET_RECOVERY_UI_BLANK_UNBLANK_ON_INIT := true
 TARGET_RECOVERY_QCOM_RTC_FIX	:= true
 
 # SELinux
+ifeq ($(TARGET_BUILD_VARIANT),user)
+	SELINUX_IGNORE_NEVERALLOWS := true
+endif
 include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
