@@ -1,7 +1,7 @@
 <manifest version="1.0" type="device" target-level="legacy">
     <hal format="hidl" optional="true">
         <name>android.hardware.usb.gadget</name>
-        <transport>hwbinder</transport>
+        <transport arch="32">passthrough</transport>
         <version>1.0</version>
         <interface>
             <name>IUsbGadget</name>
