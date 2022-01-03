@@ -1,0 +1,1 @@
+allow getprop default_prop:file { open read getattr };
