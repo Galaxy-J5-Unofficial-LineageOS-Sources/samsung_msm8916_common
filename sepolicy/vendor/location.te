@@ -1,4 +1,6 @@
 #============= location ==============
 allow location system_data_file:dir { add_name remove_name write };
 allow location system_data_file:sock_file { create setattr unlink };
+allow location default_prop:file { open read getattr };
+allow location system_prop:file { open read getattr };
 
