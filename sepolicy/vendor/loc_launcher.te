@@ -1,1 +1,2 @@
+# ====================== loc_launcher ======================
 allow loc_launcher default_prop:file { open read getattr };
