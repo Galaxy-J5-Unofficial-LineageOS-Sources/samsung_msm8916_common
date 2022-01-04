@@ -1,3 +1,4 @@
+#================== cameraserver ==========================
 allow cameraserver sysfs_batteryinfo:file r_file_perms;
 allow cameraserver sysfs_batteryinfo:dir search;
 allow cameraserver camera_socket:dir rw_dir_perms;
