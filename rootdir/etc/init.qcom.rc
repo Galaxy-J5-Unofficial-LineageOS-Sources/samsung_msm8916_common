@@ -28,10 +28,6 @@
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 
-# Copy prebuilt ld.config.txt into linkerconfig directory
-copy /system/etc/swcodec/ld.config.txt /linkerconfig/ld.config.txt
-chmod 444 /linkerconfig/ld.config.txt
-
 on init
 
 on early-init
