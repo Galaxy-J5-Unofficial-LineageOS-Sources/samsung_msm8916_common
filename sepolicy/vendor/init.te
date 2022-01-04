@@ -20,4 +20,7 @@ allow init vfat:file { getattr open read };
 allow init vndbinder_device:chr_file { ioctl open read write };
 allow init wcnss_device:chr_file { open read write };
 allow init media_data_file:dir { create getattr setattr };
+allow init radio_core_data_file:file {create write open setattr};
+allow init radio_core_data_file:dir {add_name write};
+allow init shell_exec:dir execute_no_trans;
 
