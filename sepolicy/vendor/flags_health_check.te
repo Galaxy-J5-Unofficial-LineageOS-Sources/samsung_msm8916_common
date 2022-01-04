@@ -97,7 +97,7 @@ get_prop(flags_health_check,vm_bms_prop)
 get_prop(flags_health_check,wififtmd_prop)
 get_prop(flags_health_check,wigig_prop)
 get_prop(flags_health_check,xlat_prop)
-get_prop(flags_health_check,cache_file:file write;
+get_prop(flags_health_check,cache_file)
 get_prop(flags_health_check,bluetooth_a2dp_offload_prop)
 get_prop(flags_health_check,bluetooth_audio_hal_prop)
 get_prop(flags_health_check,bluetooth_prop)
