@@ -1,0 +1,2 @@
+#============== audioserver =======================
+allow audioserver vendor_default_prop:file { read open getattr };
