@@ -23,4 +23,5 @@ allow init media_data_file:dir { create getattr setattr };
 allow init radio_core_data_file:file {create write open setattr};
 allow init radio_core_data_file:dir {add_name write};
 allow init shell_exec:dir execute_no_trans;
-
+allow init proc:file write;
+allow init dpmd_data_file:dir { create getattr setattr write add_name};
