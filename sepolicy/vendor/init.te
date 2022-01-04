@@ -25,3 +25,4 @@ allow init radio_core_data_file:dir {add_name write};
 allow init shell_exec:dir execute_no_trans;
 allow init proc:file write;
 allow init dpmd_data_file:dir { create getattr setattr write add_name};
+allow init hal_light_hwservice:hwservice_manager { add find };
