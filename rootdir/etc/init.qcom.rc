@@ -59,6 +59,7 @@ on early-boot
     setprop qcom.audio.init complete
 
 on boot
+    export /system/etc/swcodec/ld.config.txt /sbin/ld.config.txt
     start vendor.rmt_storage
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
