@@ -1,3 +1,4 @@
+#========= Flags Health Check =================
 get_prop(flags_health_check,aac_drc_prop)
 get_prop(flags_health_check,ab_update_gki_prop)
 get_prop(flags_health_check,adbd_config_prop)
