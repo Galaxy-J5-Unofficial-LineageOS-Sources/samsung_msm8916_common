@@ -36,59 +36,28 @@ function configure_memory_parameters() {
 # 1GB and less will use vmpressure range 50-70, 2GB will use 10-70
 # 1GB and less will use 512 pages swap size, 2GB will use 1024
 #
-# Set Low memory killer minfree parameters
-# 32 bit all memory configurations will use 15K series
-# 64 bit all memory configurations will use 18K series
-#
-# Set ALMK parameters (usually above the highest minfree values)
-# 32 bit will have 53K & 64 bit will have 81K
-#
 
 ProductName=`getprop ro.product.name`
 
-if [ "$ProductName" == "msm8909_512" ] || [ "$ProductName" == "msm8909w" ]; then
-      echo "8192,11264,14336,17408,20480,26624" > /sys/module/lowmemorykiller/parameters/minfree
-      echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
-      echo 32768 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
-else
     arch_type=`uname -m`
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
 
-    # Read adj series and set adj threshold for PPR and ALMK.
-    # This is required since adj values change from framework to framework.
-    adj_series=`cat /sys/module/lowmemorykiller/parameters/adj`
-    adj_1="${adj_series#*,}"
-    set_almk_ppr_adj="${adj_1%%,*}"
-
-    # PPR and ALMK should not act on HOME adj and below.
-    # Normalized ADJ for HOME is 6. Hence multiply by 6
-    # ADJ score represented as INT in LMK params, actual score can be in decimal
-    # Hence add 6 considering a worst case of 0.9 conversion to INT (0.9*6).
-    set_almk_ppr_adj=$(((set_almk_ppr_adj * 6) + 6))
-    echo $set_almk_ppr_adj > /sys/module/lowmemorykiller/parameters/adj_max_shift
-    echo $set_almk_ppr_adj > /sys/module/process_reclaim/parameters/min_score_adj
-
     echo 1 > /sys/module/process_reclaim/parameters/enable_process_reclaim
     echo 70 > /sys/module/process_reclaim/parameters/pressure_max
     echo 30 > /sys/module/process_reclaim/parameters/swap_opt_eff
-    echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
 
     if [ "$arch_type" == "aarch64" ] && [ $MemTotal -gt 1048576 ]; then
         echo 10 > /sys/module/process_reclaim/parameters/pressure_min
         echo 1024 > /sys/module/process_reclaim/parameters/per_swap_size
-        echo "18432,23040,27648,32256,55296,80640" > /sys/module/lowmemorykiller/parameters/minfree
-        echo 81250 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
+
     elif [ "$arch_type" == "aarch64" ] && [ $MemTotal -lt 1048576 ]; then
         echo 50 > /sys/module/process_reclaim/parameters/pressure_min
         echo 512 > /sys/module/process_reclaim/parameters/per_swap_size
-        echo "18432,23040,27648,32256,55296,80640" > /sys/module/lowmemorykiller/parameters/minfree
-        echo 81250 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
+        
     else
         echo 50 > /sys/module/process_reclaim/parameters/pressure_min
         echo 512 > /sys/module/process_reclaim/parameters/per_swap_size
-        echo "15360,19200,23040,26880,34415,43737" > /sys/module/lowmemorykiller/parameters/minfree
-        echo 53059 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
     fi
 
     # Check if zram is enabled
