@@ -394,9 +394,6 @@ on fs
 # fm_radio
     chmod 0777 /dev/radio0
     chown system system /dev/radio0
-
-    # Start HW service manager early
-    start hwservicemanager
     
     rm /cache/boot_lc_main.txt
     rm /cache/boot_dmesg.txt
@@ -405,15 +402,13 @@ on fs
 
 on late-fs
     # Start services for bootanim
+    start hwservicemanager
+    start servicemanager
     start surfaceflinger
     start bootanim
     start vendor.configstore-hal
     start vendor.gralloc-2-0
 
-    # Wait for hwservicemanager ready since fsck might be triggered in mount_all --late
-    # In such case, init won't responce the property_set from hwservicemanager and then
-    # cause services for bootanim not running.
-    wait_for_prop hwservicemanager.ready true
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
 
