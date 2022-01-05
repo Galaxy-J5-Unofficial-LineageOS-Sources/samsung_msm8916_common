@@ -22,6 +22,15 @@ namespace.default.visible = true
 namespace.default.search.paths      = /apex/com.android.media.swcodec/${LIB}
 namespace.default.asan.search.paths = /apex/com.android.media.swcodec/${LIB}
 
+###############################################################################
+# "default" namespace
+#
+# This namespace is for the binaries and libraries on the art APEX.
+###############################################################################
+
+namespace.default.search.paths      = /apex/com.android.art/${LIB}
+namespace.default.asan.search.paths = /apex/com.android.art/${LIB}
+
 # Below lines are required to be able to access libs in APEXes which are
 # actually symlinks to the files under /system/lib. The symlinks exist for
 # bundled APEXes to reduce space.
