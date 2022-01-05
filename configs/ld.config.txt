@@ -22,15 +22,6 @@ namespace.default.visible = true
 namespace.default.search.paths      = /apex/com.android.media.swcodec/${LIB}
 namespace.default.asan.search.paths = /apex/com.android.media.swcodec/${LIB}
 
-###############################################################################
-# "default" namespace
-#
-# This namespace is for the binaries and libraries on the art APEX.
-###############################################################################
-
-namespace.default.search.paths      = /apex/com.android.art/${LIB}
-namespace.default.asan.search.paths = /apex/com.android.art/${LIB}
-
 # Below lines are required to be able to access libs in APEXes which are
 # actually symlinks to the files under /system/lib. The symlinks exist for
 # bundled APEXes to reduce space.
@@ -43,16 +34,6 @@ namespace.default.links = platform
 # namespace.default.link.platform.shared_libs  = %LLNDK_LIBRARIES%
 # namespace.default.link.platform.shared_libs += %SANITIZER_RUNTIME_LIBRARIES%
 namespace.default.link.platform.shared_libs = libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libc.so:libcgrouprc.so:libclang_rt.asan-aarch64-android.so:libclang_rt.asan-arm-android.so:libclang_rt.hwasan-aarch64-android.so:libclang_rt.asan-i686-android.so:libclang_rt.asan-x86_64-android.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libsync.so:libvndksupport.so:libdl_android.so:libvulkan.so:libashmemd_client.so:libbinder_ndk.so
-
-# When libnetd_resolv.so can't be found in the default namespace, search for it
-# in the resolv namespace. Don't allow any other libraries from the resolv namespace
-# to be loaded in the default namespace.
-namespace.default.link.resolv.shared_libs = libnetd_resolv.so
-
-# Search for libnativeloader.so
-namespace.default.link.vndk.allow_all_shared_libs = true
-namespace.default.link.runtime.shared_libs = libnativeloader.so
-namespace.system.link.runtime.shared_libs += libnativeloader.so
 
 ###############################################################################
 # "platform" namespace
