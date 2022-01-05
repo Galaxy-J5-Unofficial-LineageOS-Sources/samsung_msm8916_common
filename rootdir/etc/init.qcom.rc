@@ -896,3 +896,5 @@ on property:init.svc.recovery=running
 
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
+    mount none /system/etc/swcodec/ld.config.txt /linkerconfig/ld.config.txt bind
+
