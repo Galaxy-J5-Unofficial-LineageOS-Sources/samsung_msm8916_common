@@ -35,6 +35,7 @@ FORCE_32_BIT := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_BOARD_PLATFORM := msm8916
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
@@ -137,6 +138,7 @@ BOARD_KERNEL_CMDLINE += \
 	ehci-hcd.park=3 \
 	androidboot.bootdevice=7824900.sdhci \
 	androidboot.selinux=permissive 
+	
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_DTBTOOL_ARGS := -2
@@ -202,6 +204,7 @@ PROTOBUF_SUPPORTED := true
 TARGET_USES_QCOM_BSP := true
 HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE   := true
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY := true
+BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := $(COMMON_PATH)/recovery/recovery_keys.c
@@ -237,6 +240,12 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|libbase_shim.so \
     /system/vendor/lib/libgeofence.so|liblocadapterbase_shim.so \
+
+# Sp-shim
+TARGET_LD_PRELOAD := \
+    /system/lib/libboringssl-compat.so \
+    /system/lib/libnativeloader.so \
+    /system/lib/libnetd_resolv.so
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
