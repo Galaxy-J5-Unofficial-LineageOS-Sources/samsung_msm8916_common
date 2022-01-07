@@ -623,6 +623,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
     
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+    
 # Time services - Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
