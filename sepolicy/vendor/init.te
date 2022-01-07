@@ -24,3 +24,8 @@ allow init radio_core_data_file:file {create write open setattr};
 allow init radio_core_data_file:dir {add_name write};
 allow init proc:file write;
 allow init hal_light_hwservice:hwservice_manager { add find };
+allow init cache_file:dir { remove_name };
+allow init cache_file:file  { unlink };
+allow init shell_exec:file  { execute_no_trans };
+allow init radio_core_data_file:file  { open setattr write };
+allow init dpmd_data_file:dir { setattr getattr };
