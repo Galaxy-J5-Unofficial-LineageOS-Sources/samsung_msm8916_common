@@ -28,4 +28,4 @@ allow init cache_file:dir { remove_name };
 allow init cache_file:file  { unlink };
 allow init shell_exec:file  { execute_no_trans };
 allow init radio_core_data_file:file  { open setattr write };
-allow init dpmd_data_file:dir { setattr getattr };
+#allow init dpmd_data_file:dir { setattr getattr };
