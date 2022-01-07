@@ -20,3 +20,6 @@
 
 # Gatekeeper
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software	u:object_r:hal_gatekeeper_default_exec:s0
+
+# clean_scratch_files
+/system/bin/clean_scratch_files u:object_r:clean_scratch_files_exec:s0
