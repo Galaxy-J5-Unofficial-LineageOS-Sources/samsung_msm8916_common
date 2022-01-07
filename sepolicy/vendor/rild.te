@@ -12,4 +12,7 @@ allow rild system_data_file:file { create open read setattr unlink write };
 allow rild unlabeled:dir search;
 allow rild unlabeled:file { getattr open read };
 allow rild vendor_rild_libpath_prop:file { getattr open read };
+allow rild default_prop:file { getattr open read };
+allow rild radio_core_data_file:dir { add_name getattr remove_name search setattr write };
+allow rild radio_core_data_file:file { create getattr open read setattr unlink write };
 
