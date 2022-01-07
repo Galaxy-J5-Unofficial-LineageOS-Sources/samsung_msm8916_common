@@ -139,6 +139,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.1 \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth.a2dp@1.0-impl.mock
@@ -236,6 +237,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.configstore@1.1-service \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
@@ -310,6 +312,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
     android.hardware.gnss@1.0-service \
+    android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.0.vendor \
     libavservices_minijail \
@@ -355,7 +358,9 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
-    android.hardware.keymaster@4.1-service
+    android.hardware.keymaster@4.1-service \
+    android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.keymaster@4.1.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -382,7 +387,9 @@ PRODUCT_PACKAGES += \
     libdashplayer \
     libdivxdrmdecrypt \
     libdrmclearkeyplugin \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_soft_flacdec \
+    android.hardware.media.c2@1.0.vendor
 
 # Media - OpenMAX
 PRODUCT_PACKAGES += \
@@ -446,6 +453,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Netmgrd
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
+    
+# Neuralnetworks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
     
 # OEM Unlock - Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -570,6 +581,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensor HAL
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     sensors.msm8916
@@ -679,6 +691,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service.legacy \
+    android.hardware.wifi@1.5.vendor \
     hostapd \
     hostapd_cli \
     libwpa_client \
