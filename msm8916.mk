@@ -31,6 +31,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Assistant - Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
+    
+# AuthSecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0-service
 
 # SoC - Properties
 # Defines SoC manufacturer and model
