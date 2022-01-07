@@ -19,10 +19,9 @@ cc_defaults {
     include_dirs: [
         "system/libbase/include",
         "system/core/init"
-
-
     ],
-    shared_libs: ["libbase"],
+    whole_static_libs: ["libbase"],
+    header_libs: ["libbase_headers"],
 }
 
 cc_library_static {
