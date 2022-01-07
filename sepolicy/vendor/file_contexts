@@ -25,11 +25,11 @@
 /system/bin/clean_scratch_files                                                            u:object_r:clean_scratch_files_exec:s0
 
 # Shell-exec
-/system/bin/sh                                                                             u:object_r:shell_exec:s0
+#/system/bin/sh                                                                            u:object_r:shell_exec:s0
 /vendor/bin/init.link_ril_db.sh                                                            u:object_r:vendor_file:s0
 
 # Miscellaneous
 /data/dpm                                                                                  u:object_r:dpmd_data_file:s0
 /data/misc/radio/copy_complete                                                             u:object_r:radio_core_data_file:s0
-/dev/__properties__/                                                                       u:object_r:system_prop:s0
+#/dev/__properties__/                                                                      u:object_r:system_prop:s0
 
