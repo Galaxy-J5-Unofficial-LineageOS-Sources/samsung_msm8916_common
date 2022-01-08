@@ -25,7 +25,7 @@
 /data/vendor/mediadrm(/.*)?                                                                u:object_r:media_data_file:s0
 
 # Gatekeeper
-/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software	       u:object_r:hal_gatekeeper_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software	      u:object_r:hal_gatekeeper_default_exec:s0
 
 # Light
 /vendor/bin/hw/android.hardware.light@2.0-service.msm8916                                  u:object_r:vendor_file:s0
@@ -37,6 +37,10 @@
 
 # Power stats
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock          u:object_r:hal_power_stats_default_exec:s0
+
+# Radio
+/data/misc/radio/db_check_done                                                             u:object_r:radio_core_data_file:s0
+/data/misc/radio/copy_complete                                                             u:object_r:radio_core_data_file:s0
 
 # RIL
 /vendor/bin/init.link_ril_db.sh                                                            u:object_r:vendor_file:s0
