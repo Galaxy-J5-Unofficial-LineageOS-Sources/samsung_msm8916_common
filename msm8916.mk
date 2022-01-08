@@ -69,8 +69,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # APEX
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt \
-    $(LOCAL_PATH)/configs/ld.config.legacy.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.legacy.txt
+    $(LOCAL_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
 
 # Audio
 PRODUCT_PACKAGES += \
