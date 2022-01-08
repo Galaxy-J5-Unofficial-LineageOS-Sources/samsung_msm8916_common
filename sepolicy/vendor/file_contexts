@@ -40,7 +40,8 @@
 
 # RIL
 /vendor/bin/init.link_ril_db.sh                                                            u:object_r:vendor_file:s0
-
+/dev/alarm                                                                                 u:object_r:device:s0
+     
 # Shell-exec
 #/system/bin/sh                                                                            u:object_r:shell_exec:s0
                                                         
