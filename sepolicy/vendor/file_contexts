@@ -31,6 +31,9 @@
 /vendor/bin/hw/android.hardware.light@2.0-service.msm8916                                  u:object_r:vendor_file:s0
 /sys/devices/soc.0/1a00000.qcom,mdss_mdp/qcom,mdss_fb_primary.137/leds/lcd-backlight/brightness u:object_r:sysfs_graphics:s0
 
+# Logcat
+/cache/boot_lc_main.txt                                                                    u:object_r:cache_file:s0
+
 # Miscellaneous
 /data/dpm                                                                                  u:object_r:dpmd_data_file:s0
 /data/misc/radio/copy_complete                                                             u:object_r:radio_core_data_file:s0
