@@ -12,4 +12,5 @@ allow mediaserver socket_device:sock_file write;
 allow mediaserver sysfs:file { open read };
 allow mediaserver thermal-engine:unix_stream_socket connectto;
 allow mediaserver sysfs_camera:file { getattr open read };
+allow mediaserver hal_camera_default:binder { call transfer };
 
