@@ -31,5 +31,6 @@ allow init radio_core_data_file:file  { open setattr write };
 #allow init dpmd_data_file:dir { setattr getattr };
 allow init system_prop:file { open read getattr };
 allow init btnvtool_exec:file { execute_no_trans };
-#allow init proc:file { write };
+allow init proc:file { write };
+allow init sysfs_graphics:file 
 
