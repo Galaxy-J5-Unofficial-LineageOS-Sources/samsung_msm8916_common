@@ -1,2 +1,3 @@
 #============== init-qcom-sh ========================
-allow init.qcom.sh radio_core_data_file:file { write open};
+allow init-qcom-sh radio_core_data_file:file { write open};
+
