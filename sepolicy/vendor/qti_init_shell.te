@@ -20,3 +20,5 @@ allow qti_init_shell radio_core_data_file:dir { getattr read open write remove_n
 allow qti_init_shell radio_control_prop:file { read open getattr};
 allow qti_init_shell default_prop:file { read open getattr};
 allow qti_init_shell media_data_file:dir { getattr};
+allow qti_init_shell sysfs_android_usb:file { write};
+allow qti_init_shell radio_core_data_file:file { write open };
