@@ -219,7 +219,7 @@ vendor/lib/libqti-at.so
 
 # RIL
 lib/libaudio-ril.so
-lib/libsecril-client.so
+lib/libsecril-client-samsung.so
 vendor/lib/libril-qcril-hook-oem.so
 
 # Samsung libs
