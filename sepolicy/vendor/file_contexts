@@ -46,6 +46,7 @@
 # RIL
 /vendor/bin/init.link_ril_db.sh                                                            u:object_r:vendor_file:s0
 /dev/alarm                                                                                 u:object_r:device:s0
+/data/misc/radio/modem_config                                                              u:object_r:radio_core_data_file:s0
 
 # Sensors
 /sys/devices/virtual/input/input5                                                          u:object_r:sysfs:s0
