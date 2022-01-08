@@ -27,7 +27,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 # HACKS
 # ----------------------------------------------------------------------
 BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true # Builds deprecated elf files in vendor
+RELAX_USES_LIBRARY_CHECK=true 
 # ----------------------------------------------------------------------------------------------------
 
 # Architecture/platform
