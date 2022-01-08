@@ -1,0 +1,2 @@
+#=================== qcomsysd ===================================
+allow qcomsysd default_prop:file { read open getattr };
