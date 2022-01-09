@@ -24,9 +24,10 @@ $(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-v
 # Define paths
 LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
+DEVICE_PATH := device/samsung/msm8916-common
 
 # Include build.prop 
-TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
     
 # AuthSecret
 PRODUCT_PACKAGES += \
