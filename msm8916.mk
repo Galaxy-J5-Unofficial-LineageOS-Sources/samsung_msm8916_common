@@ -266,9 +266,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor
 
 # Protobuf
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v28.so \
-    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-full-v28.so
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite-v28 \
+    libprotobuf-cpp-full-v28
 
 # Encryption
 PRODUCT_PACKAGES += \
