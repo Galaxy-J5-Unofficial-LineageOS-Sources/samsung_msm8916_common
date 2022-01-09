@@ -26,7 +26,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
 # HACKS
 # ----------------------------------------------------------------------
-RELAX_USES_LIBRARY_CHECK=true 
+BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
 # ----------------------------------------------------------------------------------------------------
 
 # Architecture/platform
