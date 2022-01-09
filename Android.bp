@@ -1,15 +1,16 @@
 
 cc_prebuilt_library_shared {
-        name: "libprotobuf-cpp-lite",
+        name: "libprotobuf-cpp-lite-v28",
         owner: "samsung",
         strip: {
                 none: true,
         },
         target: {
                 android_arm: {
-                        srcs: ["libprotobuf-cpp-lite-v28.so"],
+                        srcs: ["prebuilts/libprotobuf-cpp-lite-v28.so"],
                 },
         },
+        relative_install_path: "system/vendor/lib",
         compile_multilib: "32",
         check_elf_files: false,
         prefer: true,
@@ -26,16 +27,17 @@ cc_prebuilt_library_shared {
 
 
 cc_prebuilt_library_shared {
-        name: "libprotobuf-cpp-full",
+        name: "libprotobuf-cpp-full-v28",
         owner: "samsung",
         strip: {
                 none: true,
         },
         target: {
                 android_arm: {
-                        srcs: ["libprotobuf-cpp-full-v28.so"],
+                        srcs: ["prebuilts/libprotobuf-cpp-full-v28.so"],
                 },
         },
+        relative_install_path: "system/vendor/lib",
         compile_multilib: "32",
         check_elf_files: false,
         prefer: true,
