@@ -26,7 +26,7 @@ LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
 
 # Include build.prop 
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
     
 # AuthSecret
 PRODUCT_PACKAGES += \
