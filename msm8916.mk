@@ -223,8 +223,8 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     com.android.location.provider \
     com.android.location.provider.xml \
-    gps.msm8916 \
-    libshim_gps \
+    # gps.msm8916 \
+    # libshim_gps \
     liblocadapterbase_shim
 
 # Health HAL
@@ -514,7 +514,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     hostapd_cli \
     libwpa_client \
-    libwcnss_qmi \
+#   libwcnss_qmi \
     wcnss_service\
     wificond \
     wpa_supplicant
