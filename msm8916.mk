@@ -355,13 +355,6 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/srm.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/srm.bin \
-    $(LOCAL_PATH)/prebuilts/plmn_delta.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/plmn_delta.bin \
-    $(LOCAL_PATH)/prebuilts/plmn_se13.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/plmn_se13.bin \
-    $(LOCAL_PATH)/prebuilts/libcutils-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-old.so \
-    $(LOCAL_PATH)/prebuilts/libprotobuf-cpp-full-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-cpp-full-old.so \
-    $(LOCAL_PATH)/prebuilts/libprotobuf-cpp-lite-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-cpp-lite-old.so \
-    $(LOCAL_PATH)/prebuilts/libstagefright_foundation-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_foundation-old.so \
     $(LOCAL_PATH)/prebuilts/libart.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libart.so \
     $(LOCAL_PATH)/prebuilts/libartbase.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libartbase.so \
     $(LOCAL_PATH)/prebuilts/libartpalette.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libartpalette.so \
