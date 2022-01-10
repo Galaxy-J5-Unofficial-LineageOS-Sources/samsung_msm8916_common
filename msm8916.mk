@@ -363,7 +363,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/libnativebridge.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnativebridge.so \
     $(LOCAL_PATH)/prebuilts/libprofile.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprofile.so \
     $(LOCAL_PATH)/prebuilts/libsigchain.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsigchain.so \
-    $(LOCAL_PATH)/prebuilts/libnetd_resolv.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnetd_resolv.so
+    $(LOCAL_PATH)/prebuilts/libnetd_resolv.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnetd_resolv.so \
+    $(LOCAL_PATH)/prebuilts/libdexfile.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdexfile.so
+
 
 # Radio
 PRODUCT_PACKAGES += \
