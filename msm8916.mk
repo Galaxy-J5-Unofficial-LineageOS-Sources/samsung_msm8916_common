@@ -361,7 +361,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/libcutils-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-old.so \
     $(LOCAL_PATH)/prebuilts/libprotobuf-cpp-full-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-cpp-full-old.so \
     $(LOCAL_PATH)/prebuilts/libprotobuf-cpp-lite-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-cpp-lite-old.so \
-    $(LOCAL_PATH)/prebuilts/libstagefright_foundation-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_foundation-old.so
+    $(LOCAL_PATH)/prebuilts/libstagefright_foundation-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_foundation-old.so \
+    $(LOCAL_PATH)/prebuilts/libart.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libart.so \
+    $(LOCAL_PATH)/prebuilts/libartbase.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libartbase.so \
+    $(LOCAL_PATH)/prebuilts/libartpalette.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libartpalette.so \
+    $(LOCAL_PATH)/prebuilts/libnativeloader.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnativeloader.so \
+    $(LOCAL_PATH)/prebuilts/libnativehelper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnativehelper.so  \
+    $(LOCAL_PATH)/prebuilts/libnativebridge.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnativebridge.so \
+    $(LOCAL_PATH)/prebuilts/libprofile.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprofile.so \
+    $(LOCAL_PATH)/prebuilts/libsigchain.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsigchain.so \
+    $(LOCAL_PATH)/prebuilts/libnetd-resolv.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnetd-resolv.so
 
 # Radio
 PRODUCT_PACKAGES += \
