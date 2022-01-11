@@ -33,4 +33,5 @@ allow init system_prop:file { open read getattr };
 allow init btnvtool_exec:file { execute_no_trans };
 allow init proc:file { write };
 allow init sysfs_graphics:file { open write read};
+allow init hal_authsecret_hwservice:hwservice_manager { add find };
 
