@@ -37,6 +37,7 @@
 # Miscellaneous
 /data/dpm                                                                                  u:object_r:dpmd_data_file:s0
 /data/misc/radio/copy_complete                                                             u:object_r:radio_core_data_file:s0
+/data/dpm(/.*)?                                                     u:object_r:dpmd_data_file:s0
 #/dev/__properties__/                                                                      u:object_r:system_prop:s0
 
 # Power stats
@@ -45,9 +46,10 @@
 # Radio
 /data/misc/radio/db_check_done(/.*)?                                                       u:object_r:radio_core_data_file:s0
 /data/misc/radio/copy_complete(/.*)?                                                       u:object_r:radio_core_data_file:s0
+/data/misc/radio(/.*)?                                                                     u:object_r:radio_core_data_file:s0
 
 # RIL
-/vendor/bin/init.link_ril_db.sh                                                            u:object_r:vendor_file:s0
+/vendor/bin/init\.link_ril_db\.sh                                                          u:object_r:vendor_file:s0
 /dev/alarm                                                                                 u:object_r:device:s0
 /data/misc/radio/modem_config                                                              u:object_r:radio_core_data_file:s0
 
