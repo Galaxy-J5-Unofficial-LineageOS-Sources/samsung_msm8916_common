@@ -11,3 +11,5 @@ allow hal_graphics_composer_default sysfs_graphics:file { getattr open read };
 allow hal_graphics_composer_default system_prop:file { getattr open read };
 
 #allow hal_graphics_composer_default init_service_status_private_prop:file { read open getattr };
+
+allow hal_graphics_composer_default default_prop:file { read open getattr};
