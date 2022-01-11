@@ -1,3 +1,6 @@
+subdirs = [
+     "light",
+]
 
 cc_prebuilt_library_shared {
         name: "libprotobuf-cpp-lite-v28",
