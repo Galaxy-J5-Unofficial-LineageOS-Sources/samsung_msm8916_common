@@ -223,8 +223,8 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     com.android.location.provider \
     com.android.location.provider.xml \
-    # gps.msm8916 \
-    # libshim_gps \
+    gps.msm8916 \
+    libshim_gps \
     liblocadapterbase_shim
 
 # Health HAL
@@ -352,21 +352,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
-
-# Prebuilts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/libart.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libart.so \
-    $(LOCAL_PATH)/prebuilts/libartbase.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libartbase.so \
-    $(LOCAL_PATH)/prebuilts/libartpalette.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libartpalette.so \
-    $(LOCAL_PATH)/prebuilts/libnativeloader.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnativeloader.so \
-    $(LOCAL_PATH)/prebuilts/libnativehelper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnativehelper.so  \
-    $(LOCAL_PATH)/prebuilts/libnativebridge.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnativebridge.so \
-    $(LOCAL_PATH)/prebuilts/libprofile.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprofile.so \
-    $(LOCAL_PATH)/prebuilts/libsigchain.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsigchain.so \
-    $(LOCAL_PATH)/prebuilts/libnetd_resolv.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libnetd_resolv.so \
-    $(LOCAL_PATH)/prebuilts/libdexfile.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdexfile.so
-
-
+    
 # Radio
 PRODUCT_PACKAGES += \
     libshim_secril \
@@ -514,7 +500,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     hostapd_cli \
     libwpa_client \
-#   libwcnss_qmi \
+    libwcnss_qmi \
     wcnss_service\
     wificond \
     wpa_supplicant
