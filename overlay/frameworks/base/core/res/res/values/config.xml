@@ -58,4 +58,11 @@
       
     <!-- The max scale for the wallpaper when it's zoomed in -->
     <item name="config_wallpaperMaxScale" format="float" type="dimen">1.00</item>
+      
+          <!-- Disable rounded corners -->
+    <dimen name="config_dialogCornerRadius">0.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">0.0dip</dimen>
+    <dimen name="rounded_corner_radius">0dp</dimen>
+    <dimen name="config_progressBarCornerRadius">0.0dip</dimen>
+      
 </resources>
