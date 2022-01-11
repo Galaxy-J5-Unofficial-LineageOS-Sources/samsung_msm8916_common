@@ -36,7 +36,7 @@
 
 # Miscellaneous
 /data/misc/radio/copy_complete                                                             u:object_r:radio_core_data_file:s0
-/data/dpm(/.*)?                                                                            u:object_r:dpmd_data_file:s0
+/data/dpm                                                                                  u:object_r:dpmd_data_file:s0
 #/dev/__properties__/                                                                      u:object_r:system_prop:s0
 
 # Power stats
