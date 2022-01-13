@@ -307,8 +307,8 @@ PRODUCT_PACKAGES += \
     tcpdump
     
 # Netmgrd
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
+#PRODUCT_PACKAGES += \
+#    android.system.net.netd@1.1.vendor
     
 # Neuralnetworks
 PRODUCT_PACKAGES += \
