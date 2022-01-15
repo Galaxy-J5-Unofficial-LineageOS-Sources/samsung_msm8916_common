@@ -176,17 +176,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-v28 \
     libprotobuf-cpp-full-v28
     
-
-# Prebuilt Packages
-PRODUCT_PACKAGES += \
-    srm \
-    plmn_delta \
-    plmn_se13 \
-    libprotobuf-cpp-full-old \
-    libprotobuf-cpp-lite-old \
-    libstagefright_foundation-old \
-    libcutils-old 
-
 # Encryption
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
