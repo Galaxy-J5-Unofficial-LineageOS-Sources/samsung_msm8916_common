@@ -182,8 +182,8 @@ PRODUCT_PACKAGES += \
     srm \
     plmn_delta \
     plmn_se13 \
-    libprotobuf-cpp-full \
-    libprotobuf-cpp-lite \
+    libprotobuf-cpp-full-old \
+    libprotobuf-cpp-lite-old \
     libstagefright_foundation-old \
     libcutils-old 
 
