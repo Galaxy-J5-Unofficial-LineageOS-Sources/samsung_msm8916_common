@@ -352,6 +352,12 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
     
+# Prebuilts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/srm.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/srm.bin \
+    $(LOCAL_PATH)/prebuilts/plmn_delta.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/plmn_delta.bin \
+    $(LOCAL_PATH)/prebuilts/plmn_se13.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/plmn_se13.bin     
+    
 # Radio
 PRODUCT_PACKAGES += \
     libshim_secril \
