@@ -61,7 +61,7 @@ cc_prebuilt_library_shared {
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/lib/libcutils-old.so"],
+			srcs: ["prebuilts/libcutils-old.so"],
 		},
 	},
 	compile_multilib: "32",
@@ -78,7 +78,7 @@ cc_prebuilt_library_shared {
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/lib/libprotobuf-cpp-full-old.so"],
+			srcs: ["prebuilts/libprotobuf-cpp-full-old.so"],
 		},
 	},
 	compile_multilib: "32",
@@ -95,7 +95,7 @@ cc_prebuilt_library_shared {
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/lib/libprotobuf-cpp-lite-old.so"],
+			srcs: ["prebuilts/libprotobuf-cpp-lite-old.so"],
 		},
 	},
 	compile_multilib: "32",
@@ -112,7 +112,7 @@ cc_prebuilt_library_shared {
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/lib/libstagefright_foundation-old.so"],
+			srcs: ["prebuilts/libstagefright_foundation-old.so"],
 		},
 	},
 	compile_multilib: "32",
@@ -129,7 +129,7 @@ cc_prebuilt_binary {
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/etc/srm.bin"],
+			srcs: ["prebuilts/srm.bin"],
 		},
 	},
 	relative_install_path: "etc",
@@ -148,7 +148,7 @@ cc_prebuilt_binary {
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/etc/plmn_delta.bin"],
+			srcs: ["prebuilts/plmn_delta.bin"],
 		},
 	},
 	relative_install_path: "etc",
@@ -166,7 +166,7 @@ cc_prebuilt_binary {
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/etc/plmn_se13.bin"],
+			srcs: ["prebuilts/plmn_se13.bin"],
 		},
 	},
 	relative_install_path: "etc",
