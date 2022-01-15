@@ -175,6 +175,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-v28 \
     libprotobuf-cpp-full-v28
+    
+
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+    srm \
+    plmn_delta \
+    plmn_se13 \
+    libprotobuf-cpp-full \
+    libprotobuf-cpp-lite \
+    libstagefright_foundation-old \
+    libcutils-old 
 
 # Encryption
 PRODUCT_PACKAGES += \
