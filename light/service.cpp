@@ -16,7 +16,7 @@
 
 #define LOG_TAG "android.hardware.light-service.msm8916"
 
-#include "Light.h"
+#include "Lights.h"
 
 #include <android/binder_manager.h>
 #include <android/binder_process.h>
