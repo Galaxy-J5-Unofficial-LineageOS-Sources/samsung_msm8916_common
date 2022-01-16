@@ -489,7 +489,7 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 VNDK_SP_LIBRARIES := \
-    libdexfile_support
+    com.android.vndk.current 
 
 # WiDi
 PRODUCT_PACKAGES += \
