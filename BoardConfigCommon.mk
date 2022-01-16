@@ -231,6 +231,9 @@ TARGET_LD_SHIM_LIBS := \
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
+# Treble
+BOARD_VNDK_VERSION := current
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HOSTAPD_DRIVER := NL80211
