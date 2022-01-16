@@ -261,8 +261,8 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.msm8916
-
+    android.hardware.light-service.msm8916
+    
 # Media configurations
 ifneq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
 PRODUCT_COPY_FILES += \
