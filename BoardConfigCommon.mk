@@ -103,7 +103,7 @@ TARGET_DISABLE_POSTRENDER_CLEANUP := true
 TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 TARGET_HW_DISK_ENCRYPTION := true
 
-# VNDK
+# Dedupe VNDK libraries with identical core variants.
 TARGET_VNDK_USE_CORE_VARIANT := true
 
 # Filesystems
