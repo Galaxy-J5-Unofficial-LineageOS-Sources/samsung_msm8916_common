@@ -132,19 +132,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     TrebuchetQuickStep \
     Settings \
     SystemUI
-   
-# Debloater
-PRODUCT_PACKAGES += \
-    RemoveCamera2 \
-    RemoveJely \
-    RemoveCalculator2 \
-    RemoveMessaging \
-    RemoveEtar \
-    RemoveContacts \
-    RemoveRecorder \
-    RemoveGallery2 \
-    RemoveTrebuchet \
-    RemoveEleven
     
 # Display
 PRODUCT_PACKAGES += \
