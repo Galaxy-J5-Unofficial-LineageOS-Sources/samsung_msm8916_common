@@ -123,6 +123,9 @@ persist.sys.storage_preload=1
 ro.data.large_tcp_window_size=true 
 sys.disable_ext_animation=1
 
+# OEM Unlock
+ro.oem_unlock_supported=0
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
