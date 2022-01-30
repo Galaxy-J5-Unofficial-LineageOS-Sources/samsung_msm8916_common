@@ -1,3 +1,6 @@
+# Adoptable Storage
+ro.crypto.volume.options=aes-256-xts
+
 # API
 ro.vndk.version=current
 
