@@ -36,6 +36,9 @@
 /data/dpm                                                                                  u:object_r:dpmd_data_file:s0
 #/dev/__properties__/                                                                      u:object_r:system_prop:s0
 
+# Power stats
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock          u:object_r:hal_power_stats_default_exec:s0
+
 # Radio
 /data/misc/radio/db_check_done(/.*)?                                                       u:object_r:radio_core_data_file:s0
 /data/misc/radio/copy_complete(/.*)?                                                       u:object_r:radio_core_data_file:s0
