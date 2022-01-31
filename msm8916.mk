@@ -296,6 +296,10 @@ PRODUCT_PACKAGES += \
 # Netmgrd
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
+      
+# Net
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0    
     
 # Neuralnetworks
 PRODUCT_PACKAGES += \
