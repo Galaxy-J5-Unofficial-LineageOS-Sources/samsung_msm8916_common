@@ -325,8 +325,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
     android.hardware.power@1.0-service \
-    android.hardware.power@1.0-impl \
-    android.hardware.power.stats@1.0-service.mock
+    android.hardware.power@1.0-impl 
     
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
