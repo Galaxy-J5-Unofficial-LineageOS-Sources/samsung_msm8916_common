@@ -31,8 +31,8 @@
         <item>"/system/framework/oat/arm/services.odex"</item>
         <item>"/system/framework/oat/arm/services.vdex"</item>
         <item>"/system/framework/services.jar"</item>
-        <item>"/system/framework/boot.vdex"</item>
-        <item>"/system/framework/boot-core-libart.vdex"</item>
+        <item>"/apex/com.android.art/javalib/arm/boot.vdex"</item>
+        <item>"/apex/com.android.art/javalib/arm/boot-core-libart.vdex"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
