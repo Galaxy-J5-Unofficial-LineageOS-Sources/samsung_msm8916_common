@@ -7,7 +7,7 @@
 #
 #      http://www.apache.org/licenses/LICENSE-2.0
 #
-# Unless required by applicable law or agreed to in wrFiting, software
+# Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
@@ -228,6 +228,10 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Input Classifier
+PRODUCT_PACKAGES += \
+    android.hardware.input.classifier@1.0-impl  
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sec_touchkey.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/sec_touchkey.kl \
@@ -280,6 +284,10 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc
+    
+# Media - C2
+PRODUCT_PACKAGES += \
+    android.hardare.media.c2@1.0-impl 
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -295,6 +303,10 @@ PRODUCT_PACKAGES += \
 # Neuralnetworks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
+    
+    #Oemlock
+PRODUCT_PACKAGES += \
+    android.hardware.oemlock@1.0-impl     
     
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -390,6 +402,8 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
+    android.hardware.sensors@2.0-impl \
+    android.hardware.sensors@2.1-impl \
     android.hardware.sensors@2.0 \
     android.hardware.sensors@2.1 \
     sensors.msm8916
@@ -435,6 +449,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
    
+#Secure element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0-impl    
+  
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -471,6 +489,10 @@ PRODUCT_COPY_FILES += \
 # VNDK
 VNDK_SP_LIBRARIES := \
     com.android.vndk.current 
+
+# Weaver
+PRODUCT_PACKAGES += \
+    android.hardware.weaver@1.0-impl 
 
 # WiDi
 PRODUCT_PACKAGES += \
