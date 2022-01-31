@@ -25,8 +25,10 @@
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm/boot-framework.oat"</item>
         <item>"/system/framework/boot-framework.vdex"</item>
         <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/oat/arm/services.odex"</item>
         <item>"/system/framework/oat/arm/services.vdex"</item>
         <item>"/system/framework/services.jar"</item>
         <item>"/system/framework/boot.vdex"</item>
@@ -36,7 +38,7 @@
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
         <item>"/system_ext/priv-app/SystemUI/oat/arm/SystemUI.odex"</item>
-        <item>"/system/bin/libsurfaceflinger.so"</item>
+        <item>"/system/bin/surfaceflinger"</item>
     </string-array>
 
     <!-- List of files pinned by the Pinner Service with the JIT Zygote boot image b/119800099 -->
@@ -47,7 +49,7 @@
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/system/bin/libsurfaceflinger.so"</item>
+        <item>"/system/bin/surfaceflinger"</item>
     </string-array>
 
     <!-- Whether to allow process with media UID to access CameraServiceProxy -->
