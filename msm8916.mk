@@ -200,9 +200,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
     android.hardware.gnss@1.0-service \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss@2.0.vendor \
     libavservices_minijail \
     libavservices_minijail.vendor \
     com.android.location.provider \
@@ -399,13 +396,9 @@ PRODUCT_COPY_FILES += \
 
 # Sensor HAL
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
-    android.hardware.sensors@2.0-impl \
-    android.hardware.sensors@2.1-impl \
     android.hardware.sensors@2.0 \
-    android.hardware.sensors@2.1 \
+    android.hardware.sensors@2.1
     sensors.msm8916
     
  # Thermal
