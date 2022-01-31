@@ -6,9 +6,6 @@
 # Authsecret
 /(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service                  u:object_r:vendor_file:s0
 
-# btnvtool
-/(vendor|system/vendor)/bin/btnvtool                                                       u:object_r:btnvtool_exec:s0
-
 # Bootanimation
 /sys/devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video0/name                     u:object_r:sysfs_graphics:s0
 /sys/devices/platform/cam_sync/video4linux/video1/name                                     u:object_r:sysfs_graphics:s0
