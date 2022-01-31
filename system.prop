@@ -119,6 +119,7 @@ ro.lmk.upgrade_pressure=40
 ro.lmk.use_psi=false
 
 # Misc
+debug.fdsan=0
 debug.mdpcomp.logs=0 
 dev.pm.dyn_samplingrate=1
 persist.hwc.enable_vds=1 
