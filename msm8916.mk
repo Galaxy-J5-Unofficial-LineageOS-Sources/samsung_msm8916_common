@@ -7,7 +7,7 @@
 #
 #      http://www.apache.org/licenses/LICENSE-2.0
 #
-# Unless required by applicable law or agreed to in writing, software
+# Unless required by applicable law or agreed to in wrFiting, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
@@ -92,8 +92,6 @@ endif
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-service \
-    android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.1 \
@@ -101,9 +99,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl.mock
 
 PRODUCT_PACKAGES += \
-    libbase_shim \
-    libbt-vendor
-
+    libbase_shim 
+    
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
@@ -394,8 +391,6 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
-    android.hardware.sensors@2.0 \
-    android.hardware.sensors@2.1 \
     sensors.msm8916
     
  # Thermal
