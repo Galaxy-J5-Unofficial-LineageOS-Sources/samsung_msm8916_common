@@ -95,10 +95,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.1 \
     android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.bluetooth.a2dp@1.0-impl.mock
+    android.hardware.bluetooth.a2dp@1.0-impl.mock \
+    android.hardware.bluetooth.a2dp@1.0.vendor
 
 PRODUCT_PACKAGES += \
     libbase_shim \
@@ -115,7 +115,13 @@ PRODUCT_PACKAGES += \
     libcamera_shim \
     libmm-qcamera \
     camera.msm8916 \
-    Camera2
+    Snap \
+    android.hardware.camera.provider@2.4 \
+    android.hardware.camera.provider@2.4.vendor \
+    android.hardware.camera.provider@2.5 \
+    android.hardware.camera.provider@2.5.vendor \
+    android.hardware.camera.provider@2.6 \
+    android.hardware.camera.provider@2.6.vendor
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
@@ -136,6 +142,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Display
 PRODUCT_PACKAGES += \
     disable_configstore \
+    android.hidl.allocator@1.0 \
+    android.hidl.allocator@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
@@ -185,7 +193,8 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service.software
+    android.hardware.gatekeeper@1.0-service.software \
+    android.hardware.gatekeeper@1.0.vendor 
 
 # Google Photos
 PRODUCT_COPY_FILES += \
@@ -202,6 +211,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
     android.hardware.gnss@1.0-service \
+    android.hardware.gnss@2.0 \
+    android.hardware.gnss@2.0.vendor \
+    android.hardware.gnss@2.1 \
+    android.hardware.gnss@2.1.vendor
     libavservices_minijail \
     libavservices_minijail.vendor \
     com.android.location.provider \
@@ -324,7 +337,17 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
     android.hardware.power@1.0-service \
     android.hardware.power.stats@1.0-service.mock \
-    android.hardware.power@1.0-impl 
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0 \
+    android.hardware.power@1.0.vendor \
+    android.hardware.power@1.1 \
+    android.hardware.power@1.1.vendor \
+    android.hardware.power@1.2 \
+    android.hardware.power@1.2.vendor \
+    android.hardware.power@1.3 \
+    android.hardware.power@1.3.vendor \
+    android.hardware.power-V1-ndk_platform \
+    android.hardware.power-V1-ndk_platform.vendor
     
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
@@ -382,14 +405,18 @@ PRODUCT_COPY_FILES += \
 
 # Sensor HAL
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
+    libsensorndkbridge \
+    android.hardware.sensors@2.0 \
+    android.hardware.sensors@2.0.vendor \
     sensors.msm8916
     
  # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
+    android.hardware.thermal@2.0-impl \
+    android.hardware.thermal@2.0 \
+    android.hardware.thermal@2.0.vendor
     thermal.msm8916
      
 # RIL
