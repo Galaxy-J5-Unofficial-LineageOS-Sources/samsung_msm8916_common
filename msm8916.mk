@@ -214,7 +214,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0 \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1 \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor \
     libavservices_minijail \
     libavservices_minijail.vendor \
     com.android.location.provider \
@@ -416,7 +416,7 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-service \
     android.hardware.thermal@2.0-impl \
     android.hardware.thermal@2.0 \
-    android.hardware.thermal@2.0.vendor
+    android.hardware.thermal@2.0.vendor \
     thermal.msm8916
      
 # RIL
