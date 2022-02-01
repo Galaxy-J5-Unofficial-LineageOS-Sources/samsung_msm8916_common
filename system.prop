@@ -155,6 +155,7 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1 
 vendor.rild.libpath=/vendor/lib/libsec-ril.so 
 ro.multisim.set_audio_params=true
+persist.sys.fflag.override.settings_provider_model=false
 
 # SAMP SPCM
 sys.config.samp_spcm_enable=true 
