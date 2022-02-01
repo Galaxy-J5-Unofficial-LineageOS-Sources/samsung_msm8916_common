@@ -365,10 +365,6 @@ PRODUCT_COPY_FILES += \
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
-    
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
 
 # Seccomp
 PRODUCT_COPY_FILES += \
