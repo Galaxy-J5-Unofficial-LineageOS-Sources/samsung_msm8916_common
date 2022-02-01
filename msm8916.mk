@@ -92,6 +92,8 @@ endif
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.1 \
@@ -99,7 +101,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl.mock
 
 PRODUCT_PACKAGES += \
-    libbase_shim 
+    libbase_shim \
+    libbt-vendor
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
@@ -224,10 +227,6 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
-# Input Classifier
-PRODUCT_PACKAGES += \
-    android.hardware.input.classifier@1.0-impl  
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sec_touchkey.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/sec_touchkey.kl \
@@ -266,9 +265,8 @@ PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \
     libdrmclearkeyplugin \
     libstagefrighthw \
-    libstagefright_soft_flacdec \
-    android.hardware.media.c2@1.0.vendor
-
+    libstagefright_soft_flacdec 
+    
 # Media - OpenMAX
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service \
@@ -281,10 +279,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc
     
-# Media - C2
-PRODUCT_PACKAGES += \
-    android.hardare.media.c2@1.0-impl 
-
 # Misc
 PRODUCT_PACKAGES += \
     curl \
@@ -298,15 +292,7 @@ PRODUCT_PACKAGES += \
       
 # Net
 PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0    
-    
-# Neuralnetworks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
-    
-    #Oemlock
-PRODUCT_PACKAGES += \
-    android.hardware.oemlock@1.0-impl     
+    netutils-wrapper-1.0       
     
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -401,8 +387,7 @@ PRODUCT_COPY_FILES += \
 # Sensor HAL
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@2.0 \
-    android.hardware.sensors@2.1
+    android.hardware.sensors@1.0-service \
     sensors.msm8916
     
  # Thermal
@@ -444,11 +429,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
-   
-#Secure element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0-impl    
+    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml  
   
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -482,14 +463,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-
-# VNDK
-VNDK_SP_LIBRARIES := \
-    com.android.vndk.current 
-
-# Weaver
-PRODUCT_PACKAGES += \
-    android.hardware.weaver@1.0-impl 
 
 # WiDi
 PRODUCT_PACKAGES += \
