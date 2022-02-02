@@ -94,9 +94,9 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service \
-    android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth@1.0-impl-1.1 \
+    android.hardware.bluetooth@1.1-impl \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1 \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.1 \
     android.hardware.bluetooth.audio@2.1-impl \
@@ -433,12 +433,13 @@ PRODUCT_PACKAGES += \
 
 #Secure element
 PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0-impl \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.0.vendor \
     android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.1.vendor \
     android.hardware.secure_element@1.2 \
-    android.hardware.secure_element@1.2.vendor \
+    android.hardware.secure_element@1.2.vendor 
     
 # NFC
 PRODUCT_PACKAGES += \
