@@ -3,6 +3,7 @@ ro.crypto.volume.options=aes-256-xts
 
 # API
 ro.vndk.version=current
+ro.product.first_api_level=21
 
 # Assistant
 ro.opa.eligible_device=true
