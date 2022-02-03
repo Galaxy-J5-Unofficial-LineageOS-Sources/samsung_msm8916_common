@@ -1,48 +1,48 @@
 cc_prebuilt_binary {
     name: "init.class_main.sh",
-    srcs: ["etc/init.class_main.sh"],
+    srcs: ["bin/init.class_main.sh"],
     vendor: true,
 }
 
 cc_prebuilt_binary {
     name: "init.link_ril_db.sh",
-    srcs: ["etc/init.link_ril_db.sh"],
+    srcs: ["bin/init.link_ril_db.sh"],
     vendor: true,
 }
 
 cc_prebuilt_binary {
     name: "init.qcom.bt.sh",
-    srcs: ["etc/init.qcom.bt.sh"],
+    srcs: ["bin/init.qcom.bt.sh"],
     vendor: true,
 }
 
 cc_prebuilt_binary {
     name: "init.qcom.fm.sh",
-    srcs: ["etc/init.qcom.fm.sh"],
+    srcs: ["bin/init.qcom.fm.sh"],
     vendor: true,
 }
 
 cc_prebuilt_binary {
     name: "init.qcom.post_boot.sh",
-    srcs: ["etc/init.qcom.post_boot.sh"],
+    srcs: ["bin/init.qcom.post_boot.sh"],
     vendor: true,
 }
 
 cc_prebuilt_binary {
     name: "init.qcom.sh",
-    srcs: ["etc/init.qcom.sh"],
+    srcs: ["bin/init.qcom.sh"],
     vendor: true,
 }
 
 cc_prebuilt_binary {
     name: "init.qcom.uicc.sh",
-    srcs: ["etc/init.qcom.uicc.sh"],
+    srcs: ["bin/init.qcom.uicc.sh"],
     vendor: true,
 }
 
 cc_prebuilt_binary {
     name: "init.qcom.usb.sh",
-    srcs: ["etc/init.qcom.usb.sh"],
+    srcs: ["bin/init.qcom.usb.sh"],
     vendor: true,
 }
 
