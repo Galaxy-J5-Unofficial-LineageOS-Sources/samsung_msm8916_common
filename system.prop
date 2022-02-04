@@ -135,7 +135,7 @@ ro.data.large_tcp_window_size=true
 sys.disable_ext_animation=1
 
 # OEM Unlock
-ro.oem_unlock_supported=0
+ro.oem_unlock_supported=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
