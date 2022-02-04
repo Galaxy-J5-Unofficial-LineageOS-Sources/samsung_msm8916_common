@@ -20,7 +20,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.gapless.enabled=true \
     audio.offload.min.duration.secs=30 \
     vendor.audio.offload.track.enable=true \
-    vendor.audio.tunnel.encode=false
+    vendor.audio.tunnel.encode=false \
+    audio.offload.video=false
 
 # Audio voice recording
 PRODUCT_PROPERTY_OVERRIDES += \
