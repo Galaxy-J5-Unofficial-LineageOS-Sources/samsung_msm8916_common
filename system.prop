@@ -45,6 +45,7 @@ vendor.qcom.bluetooth.soc=pronto
 # Boot
 sys.vendor.shutdown.waittime=500 
 ro.build.shutdown_timeout=0 
+ro.enable_boot_charger_mode=1
 
 # BPF
 ro.kernel.ebpf.supported=false
