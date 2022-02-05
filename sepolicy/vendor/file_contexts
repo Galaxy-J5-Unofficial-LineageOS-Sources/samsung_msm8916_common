@@ -4,7 +4,7 @@
 /tombstones                                                                                u:object_r:rootfs:s0
 
 # Authsecret
-/(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service                  u:object_r:vendor_file:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service                  u:object_r:hal_authsecret_default_exec:s0
 
 # Bootanimation
 /sys/devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video0/name                     u:object_r:sysfs_graphics:s0
@@ -25,7 +25,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software	      u:object_r:hal_gatekeeper_default_exec:s0
 
 # Light
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8916              u:object_r:vendor_file:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8916               u:object_r:hal_light_default_exec:s0
 /sys/devices/soc.0/1a00000.qcom,mdss_mdp/qcom,mdss_fb_primary.137/leds/lcd-backlight/brightness u:object_r:sysfs_graphics:s0
 
 # Logcat
@@ -44,7 +44,7 @@
 /data/misc/radio/copy_complete(/.*)?                                                       u:object_r:radio_core_data_file:s0
 
 # RIL
-/(vendor|system/vendor)/bin/init\.link_ril_db\.sh                                          u:object_r:vendor_file:s0
+#/(vendor|system/vendor)/bin/init\.link_ril_db\.sh                                          u:object_r:vendor_file:s0
 /dev/alarm                                                                                 u:object_r:device:s0
 /data/misc/radio/modem_config                                                              u:object_r:radio_core_data_file:s0
 
@@ -52,5 +52,5 @@
 /sys/devices/virtual/input/input5                                                          u:object_r:sysfs:s0
 
 # Shell-exec
-/system/bin/sh(/.*)? 		                                                                   u:object_r:shell_exec:s0
+#/system/bin/sh(/.*)? 		                                                                   u:object_r:shell_exec:s0
                                                         
