@@ -47,9 +47,6 @@ sys.vendor.shutdown.waittime=500
 ro.build.shutdown_timeout=0 
 ro.enable_boot_charger_mode=1
 
-# BPF
-ro.kernel.ebpf.supported=false
-
 # Camera
 camera2.portability.force_api=1
 camera.disable_treble=true
