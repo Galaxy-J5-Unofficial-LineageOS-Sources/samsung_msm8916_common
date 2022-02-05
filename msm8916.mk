@@ -93,6 +93,8 @@ endif
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
+    android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.1-impl \
     android.hardware.bluetooth.audio@2.1 \
     android.hardware.bluetooth.audio@2.1-impl \
