@@ -216,6 +216,7 @@ vendor/media/PFFprec_600.emd
 -vendor/lib/libxml.so
 -vendor/lib/libqti-perfd-client.so
 -vendor/lib/libqti-at.so
+-vendor/lib/libdsi_netctrl.so|e95cd957ec2d95b072f76734a1557d03bdc30702
 
 # RIL
 -lib/libaudio-ril.so
