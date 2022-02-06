@@ -92,18 +92,15 @@ endif
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1-impl \
-    android.hardware.bluetooth.audio@2.1 \
-    android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.bluetooth.a2dp@1.0-impl.mock \
     android.hardware.bluetooth.a2dp@1.0.vendor
 
 PRODUCT_PACKAGES += \
     libbase_shim \
     libbt-vendor
+    
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbase-v28.so
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
