@@ -97,10 +97,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libbase_shim \
+    libbase-v28 \
     libbt-vendor
-    
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbase-v28.so
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
