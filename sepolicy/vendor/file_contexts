@@ -23,6 +23,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service                  u:object_r:hal_authsecret_default_exec:s0
 
 # Bluetooth
+/(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.1-service u:object_r:hal_bluetooth_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti-lazy		       u:object_r:hal_bluetooth_qti_exec:s0
 /efs/bluetooth(/.*)?    u:object_r:bluetooth_efs_file:s0
 
