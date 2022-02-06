@@ -39,4 +39,4 @@ allow init hal_light_service:service_manager {add find};
 allow init hal_lineage_livedisplay_hwservice:hwservice_manager {add find};
 allow init media_data_file:dir {create setattr};
 allow init sysfs_livedisplay_tuneable:file {read write open};
-allow init hal_bluetooth_hwservice:hwservice_manager {add find}
+allow init hal_bluetooth_hwservice:hwservice_manager {add find};
