@@ -42,6 +42,9 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.4-service\.clearkey               u:object_r:hal_drm_clearkey_exec:s0
 /data/vendor/mediadrm(/.*)?                                                                u:object_r:media_data_file:s0
 
+# Dolby DMS
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service      u:object_r:hal_dms_default_exec:s0
+
 # Gatekeeper
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software	      u:object_r:hal_gatekeeper_default_exec:s0
 
