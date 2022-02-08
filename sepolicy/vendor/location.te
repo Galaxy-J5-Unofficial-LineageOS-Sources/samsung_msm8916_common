@@ -3,4 +3,7 @@ allow location system_data_file:dir { add_name remove_name write };
 allow location system_data_file:sock_file { create setattr unlink };
 allow location default_prop:file { open read getattr };
 allow location system_prop:file { open read getattr };
-
+allow location wpa_data_file:dir create_dir_perms;
+allow location wpa_data_file:sock_file { create setattr write };
+allow location hal_wifi_supplicant_default:unix_dgram_socket { sendto };
+allow location wifi_vendor_data_file:dir r_dir_perms;

@@ -1,0 +1,2 @@
+allow hal_gnss_qti hal_health_default:binder { call transfer };
+allow hal_gnss_qti hal_health_hwservice:hwservice_manager find;
