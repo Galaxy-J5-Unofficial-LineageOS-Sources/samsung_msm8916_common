@@ -199,26 +199,19 @@ PRODUCT_COPY_FILES += \
 
 # GPS Configs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/flp.conf \
-    $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.conf \
-    $(LOCAL_PATH)/configs/gps/izat.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/izat.conf \
-    $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/sap.conf
+    $(LOCAL_PATH)/gps/apdr.conf:system/vendor/etc/apdr.conf \
+    $(LOCAL_PATH)/gps/flp.conf:system/vendor/etc/flp.conf \
+    $(LOCAL_PATH)/gps/gps.conf:system/vendor/etc/gps.conf \
+    $(LOCAL_PATH)/gps/izat.conf:system/vendor/etc/izat.conf \
+    $(LOCAL_PATH)/gps/lowi.conf:system/vendor/etc/lowi.conf \
+    $(LOCAL_PATH)/gps/sap.conf:system/vendor/etc/sap.conf \
+    $(LOCAL_PATH)/gps/xtwifi.conf:system/vendor/etc/xtwifi.conf
+
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0-service \
-    android.hardware.gnss@2.0 \
-    android.hardware.gnss@2.0.vendor \
-    android.hardware.gnss@2.1 \
-    android.hardware.gnss@2.1.vendor \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    com.android.location.provider \
-    com.android.location.provider.xml \
-    gps.msm8916 \
-    libshim_gps \
-    liblocadapterbase_shim
+    libandroid_net \
+    libcurl
 
 # Health HAL
 PRODUCT_PACKAGES += \
