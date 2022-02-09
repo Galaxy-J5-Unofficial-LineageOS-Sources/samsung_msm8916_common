@@ -210,8 +210,7 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_PACKAGES += \
     libandroid_net \
-    libcurl \
-    libshim_gps 
+    libcurl 
     
 # Health HAL
 PRODUCT_PACKAGES += \
