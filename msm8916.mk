@@ -210,8 +210,9 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_PACKAGES += \
     libandroid_net \
-    libcurl
-
+    libcurl \
+    libshim_gps 
+    
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
