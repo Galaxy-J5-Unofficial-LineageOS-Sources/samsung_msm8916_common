@@ -336,8 +336,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	libril \
 	librilutils \
-	rild \
-	librmnetctl
+	rild 
 
 # Security configuration file
 PRODUCT_COPY_FILES += \
