@@ -226,7 +226,9 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    libjson \
+    libjson.vendor 
 
 # Keylayout
 PRODUCT_COPY_FILES += \
