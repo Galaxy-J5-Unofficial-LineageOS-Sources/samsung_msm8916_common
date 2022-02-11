@@ -28,10 +28,6 @@ DEVICE_PATH := device/samsung/msm8916-common
 
 # Include build.prop 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-    
-# AuthSecret
-PRODUCT_PACKAGES += \
-    android.hardware.authsecret@1.0-service
 
 # Chipset - Properties
 ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
