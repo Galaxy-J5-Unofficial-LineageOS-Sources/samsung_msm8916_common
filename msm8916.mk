@@ -209,6 +209,8 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_PACKAGES += \
     libandroid_net \
+    libloc_net_iface \
+    liblocdiagiface \
     libcurl 
     
 # Health HAL
