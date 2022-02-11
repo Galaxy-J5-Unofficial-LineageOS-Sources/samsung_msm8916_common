@@ -93,6 +93,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1 \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth.a2dp@1.0-impl.mock \
+    libldacBT_bco \
     libbase_shim \
     libbase-v28 \
     libbt-vendor
