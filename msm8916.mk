@@ -253,10 +253,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.msm8916
     
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sysfs    
-    
 # Media configurations
 ifneq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
 PRODUCT_COPY_FILES += \
