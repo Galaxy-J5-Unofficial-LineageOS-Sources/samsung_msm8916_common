@@ -1,5 +1,4 @@
 # API
-ro.vndk.version=current
 ro.product.first_api_level=21
 
 # Assistant
