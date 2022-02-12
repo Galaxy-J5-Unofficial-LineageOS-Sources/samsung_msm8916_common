@@ -23,7 +23,8 @@ TARGET_FLATTEN_APEX := true
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=21 \
     ro.vndk.version=current \
-    ro.telephony.iwlan_operation_mode=legacy
+    ro.telephony.iwlan_operation_mode=legacy \
+    ro.telephony.call_ring.multiple=false
 
 # Include Bluetooth config
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
