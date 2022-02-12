@@ -47,10 +47,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
 
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
@@ -138,13 +134,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Display
 PRODUCT_PACKAGES += \
     disable_configstore \
-    android.hidl.allocator@1.0 \
-    android.hidl.allocator@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.allocator@3.0-impl \
-    android.hardware.graphics.allocator@4.0-impl \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
@@ -167,16 +159,13 @@ PRODUCT_PACKAGES += \
     
 # Encryption
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+    vendor.qti.hardware.cryptfshw@1.0-base \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee \
 
 # FM
 PRODUCT_PACKAGES += \
     qcom.fmradio \
     FMRadio
-    
-# Quick Charge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.usb
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -185,11 +174,6 @@ PRODUCT_PACKAGES += \
 # FS
 PRODUCT_PACKAGES += \
     fsck.f2fs
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service.software \
-    android.hardware.gatekeeper@1.0.vendor 
 
 # Google Photos
 PRODUCT_COPY_FILES += \
@@ -237,12 +221,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sec_touchscreen.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/sec_touchscreen.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl
 
-# Keymaster
+# Keymaster HAL
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster@4.1-service \
-    android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.keymaster@4.1.vendor
+    android.hardware.gatekeeper@1.0-service.software
 
 # Keystore
 PRODUCT_PACKAGES += \
@@ -293,10 +275,6 @@ PRODUCT_PACKAGES += \
     libcurl \
     libkeyutils \
     tcpdump
-    
-# Netmgrd
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
       
 # Net
 PRODUCT_PACKAGES += \
@@ -330,19 +308,7 @@ PRODUCT_COPY_FILES += \
 # Power HAL
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    android.hardware.power@1.0-service \
-    android.hardware.power.stats@1.0-service.mock \
-    android.hardware.power@1.0-impl \
-    android.hardware.power@1.0 \
-    android.hardware.power@1.0.vendor \
-    android.hardware.power@1.1 \
-    android.hardware.power@1.1.vendor \
-    android.hardware.power@1.2 \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power@1.3 \
-    android.hardware.power@1.3.vendor \
-    android.hardware.power-V1-ndk_platform \
-    android.hardware.power-V1-ndk_platform.vendor
+    android.hardware.power.stats@1.0-service.mock 
     
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
@@ -405,40 +371,14 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
-    android.hardware.sensors@2.0 \
-    android.hardware.sensors@2.0.vendor \
     sensors.msm8916
     
  # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
-    android.hardware.thermal@2.0-impl \
-    android.hardware.thermal@2.0 \
-    android.hardware.thermal@2.0.vendor \
     thermal.msm8916
-     
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.6.vendor \
-    android.hardware.radio@1.1-impl \
-    android.hardware.radio@1.2-impl \
-    android.hardware.radio@1.3-impl \
-    android.hardware.radio@1.4-impl \
-    android.hardware.radio@1.5-impl \
-    android.hardware.radio@1.6-impl \
-    android.hardware.radio.config@1.0-impl \
-    android.hardware.radio.config@1.1-impl \
-    android.hardware.radio.config@1.3-impl \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor 
-    
 
-#Secure element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0-impl \
-    android.hardware.secure_element@1.2.vendor 
-    
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1 \
