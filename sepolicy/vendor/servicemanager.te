@@ -1,0 +1,2 @@
+# ================= servicemanager ========================00
+allow servicemanager hal_power_default:file {search read open getattr};
