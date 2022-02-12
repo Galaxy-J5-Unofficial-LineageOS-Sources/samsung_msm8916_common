@@ -19,10 +19,11 @@ SKIP_BOOT_JARS_CHECK := true
 # APEX
 TARGET_FLATTEN_APEX := true
 
-# First api level, device has been commercially launched
+# Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=21 \
-    ro.vndk.version=current
+    ro.vndk.version=current \
+    ro.telephony.iwlan_operation_mode=legacy
 
 # Include Bluetooth config
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
