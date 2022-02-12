@@ -111,19 +111,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.5-impl \
+    android.hardware.camera.provider@2.5-service-lazy \
     camera.device@1.0-impl \
     libcamera_shim \
     libmm-qcamera \
     camera.msm8916 \
-    Snap \
-    android.hardware.camera.provider@2.4 \
-    android.hardware.camera.provider@2.4.vendor \
-    android.hardware.camera.provider@2.5 \
-    android.hardware.camera.provider@2.5.vendor \
-    android.hardware.camera.provider@2.6 \
-    android.hardware.camera.provider@2.6.vendor
+    Camera2
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
