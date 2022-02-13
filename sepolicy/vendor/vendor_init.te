@@ -17,6 +17,7 @@ allow vendor_init cache_file:dir { write remove_name};
 allow vendor_init cache_file:file { unlink };
 allow vendor_init unlabeled:file { setattr };
 #allow vendor_init dpmd_data_file:dir { getattr setattr };
-allow vendor_init radio_core_data_file:file { write open setattr };
+allow vendor_init radio_core_data_file:file { create write open setattr };
+allow vendor_init radio_core_data_file:dir { write add_name };
 
 
