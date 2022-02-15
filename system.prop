@@ -43,7 +43,6 @@ ro.vendor.bluetooth.lazyhal=true
 # Boot
 sys.vendor.shutdown.waittime=500 
 ro.build.shutdown_timeout=0 
-ro.enable_boot_charger_mode=1
 
 # Camera
 ro.camera.enableLazyHal=true
