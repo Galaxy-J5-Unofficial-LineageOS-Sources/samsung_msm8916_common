@@ -19,7 +19,6 @@ cc_library_shared {
     relative_install_path: "hw",
 
     include_dirs: [
-        "framework/native/include",
         "system/media/camera/include",
     ],
 
