@@ -1,0 +1,2 @@
+#================ netmgrd ===========================
+allow netmgrd default_prop:file {read open getattr};
