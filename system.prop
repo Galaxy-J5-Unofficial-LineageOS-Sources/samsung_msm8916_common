@@ -1,7 +1,6 @@
-# Force disable updating of APEXes when flatten APEX flag is enabled
-ifeq ($(OVERRIDE_TARGET_FLATTEN_APEX),true)
-PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=false
-endif
+# Apex
+ro.product.first_api_level=21
+ro.vndk.version=current
 
 # Assistant
 ro.opa.eligible_device=true
@@ -148,6 +147,7 @@ persist.radio.apm_sim_not_pwdn=1
 persist.radio.sib16_support=1
 
 # RIL
+ro.telephony.iwlan_operation_mode=legacy 
 persist.rild.nitz_long_ons_0="" 
 persist.rild.nitz_long_ons_1="" 
 persist.rild.nitz_long_ons_2="" 
