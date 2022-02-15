@@ -426,7 +426,6 @@ PRODUCT_PACKAGES += \
     
  #Secure element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0-impl \
     android.hardware.secure_element@1.2.vendor 
 
 # NFC
