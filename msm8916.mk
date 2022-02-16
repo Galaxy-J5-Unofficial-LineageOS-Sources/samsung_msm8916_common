@@ -29,6 +29,11 @@ DEVICE_PATH := device/samsung/msm8916-common
 # Include build.prop 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# Apex - Force disable updating of APEXes when flatten APEX flag is enabled
+ifeq ($(OVERRIDE_TARGET_FLATTEN_APEX),true)
+PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=false
+endif
+
 # Chipset - Properties
 ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
 PRODUCT_PROPERTY_OVERRIDES += \
