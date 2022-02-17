@@ -1,0 +1,2 @@
+# FastCharge
+persist.vendor.fastcharge.enabled     u:object_r:fastcharge_prop:s0
