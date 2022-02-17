@@ -7,3 +7,5 @@ persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_p
 # Bluetooth
 persist.vendor.service.bdroid.bdaddr          u:object_r:bluetooth_prop:s0
     
+# FastCharge
+persist.vendor.fastcharge.enabled     u:object_r:fastcharge_prop:s0
