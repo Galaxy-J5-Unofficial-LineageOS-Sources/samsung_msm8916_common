@@ -459,6 +459,8 @@ on late-fs
     start vendor.gralloc-2-0
     start vendor.hwcomposer-2-1
 
+    wait_for_prop hwservicemanager.ready true
+
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
 
