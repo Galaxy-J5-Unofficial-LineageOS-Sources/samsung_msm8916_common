@@ -164,10 +164,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-v28 \
     libprotobuf-cpp-full-v28
-    
-# Encryption
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 # FastCharge
 PRODUCT_PACKAGES += \
