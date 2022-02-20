@@ -197,13 +197,13 @@ PRODUCT_COPY_FILES += \
 
 # GPS Configs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps/apdr.conf:system/vendor/etc/apdr.conf \
-    $(LOCAL_PATH)/configs/gps/flp.conf:system/vendor/etc/flp.conf \
-    $(LOCAL_PATH)/configs/gps/gps.conf:system/vendor/etc/gps.conf \
-    $(LOCAL_PATH)/configs/gps/izat.conf:system/vendor/etc/izat.conf \
-    $(LOCAL_PATH)/configs/gps/lowi.conf:system/vendor/etc/lowi.conf \
-    $(LOCAL_PATH)/configs/gps/sap.conf:system/vendor/etc/sap.conf \
-    $(LOCAL_PATH)/configs/gps/xtwifi.conf:system/vendor/etc/xtwifi.conf
+    $(LOCAL_PATH)/configs/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
+    $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
+    $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+    $(LOCAL_PATH)/configs/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+    $(LOCAL_PATH)/configs/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+    $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
+    $(LOCAL_PATH)/configs/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
 # GPS
 PRODUCT_PACKAGES += \
