@@ -29,6 +29,10 @@ DEVICE_PATH := device/samsung/msm8916-common
 # Include build.prop 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# AuthSecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0-service
+
 # Apex - Force disable updating of APEXes when flatten APEX flag is enabled
 ifeq ($(OVERRIDE_TARGET_FLATTEN_APEX),true)
 PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=false
