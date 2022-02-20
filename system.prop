@@ -1,3 +1,7 @@
+# ART
+dalvik.vm.dex2oat-filter=speed-profile
+dalvik.vm.image-dex2oat-filter=speed-profile
+
 # Apex
 ro.product.first_api_level=21
 ro.vndk.version=current
