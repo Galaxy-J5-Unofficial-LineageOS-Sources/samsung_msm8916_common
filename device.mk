@@ -19,6 +19,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Apex
 PRODUCT_COMPRESSED_APEX := false
 
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.iwlan_operation_mode=legacy
+
 # Include Bluetooth config
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
