@@ -13,11 +13,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-# Apex
-PRODUCT_COMPRESSED_APEX := false
+# Enable flatten APEX
+TARGET_FLATTEN_APEX := true
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
