@@ -442,7 +442,6 @@ on late-fs
     # Start services for bootanim
     start hwservicemanager
     start servicemanager
-    start vendor.configstore-hal
     start surfaceflinger
     start bootanim
     start vendor.gralloc-2-0
