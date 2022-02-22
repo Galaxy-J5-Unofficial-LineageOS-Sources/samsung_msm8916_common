@@ -143,7 +143,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     
 # Display
 PRODUCT_PACKAGES += \
-    disable_configstore \
     android.hidl.allocator@1.0 \
     android.hidl.allocator@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
