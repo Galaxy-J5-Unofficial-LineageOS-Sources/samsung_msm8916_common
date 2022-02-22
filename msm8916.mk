@@ -154,6 +154,13 @@ PRODUCT_PACKAGES += \
     libtinyxml2 \
     memtrack.msm8916 
 
+# Surface Flinger properties
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays \
+    ro.surface_flinger.max_virtual_display_dimension \
+    ro.surface_flinger.start_graphics_allocator_service \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
