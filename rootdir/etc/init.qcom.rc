@@ -442,6 +442,11 @@ on late-fs
     # Start services for bootanim
     start hwservicemanager
     start servicemanager
+    start vendor.configstore-hal
+    start surfaceflinger
+    start bootanim
+    start vendor.gralloc-2-0
+    start vendor.hwcomposer-2-1
     start vendor.power
     start vendor.power.stats-hal-1-0-mock
     start vendor.sensors-hal-1-0
@@ -455,10 +460,7 @@ on late-fs
     start vendor.rmt_storage
     start vendor.thermal-engine
     start vendor.qcomsysd
-    start surfaceflinger
-    start bootanim
-    start vendor.gralloc-2-0
-    start vendor.hwcomposer-2-1
+
 
     wait_for_prop hwservicemanager.ready true
 
