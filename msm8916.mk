@@ -28,10 +28,6 @@ DEVICE_PATH := device/samsung/msm8916-common
 # Include build.prop 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
-# AuthSecret
-PRODUCT_PACKAGES += \
-    android.hardware.authsecret@1.0-service
-
 # Chipset - Properties
 ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -112,13 +108,7 @@ PRODUCT_PACKAGES += \
     libcamera_shim \
     libmm-qcamera \
     camera.msm8916 \
-    Snap \
-    android.hardware.camera.provider@2.4 \
-    android.hardware.camera.provider@2.4.vendor \
-    android.hardware.camera.provider@2.5 \
-    android.hardware.camera.provider@2.5.vendor \
-    android.hardware.camera.provider@2.6 \
-    android.hardware.camera.provider@2.6.vendor
+    Snap 
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
@@ -155,11 +145,22 @@ PRODUCT_PACKAGES += \
     memtrack.msm8916 
 
 # Surface Flinger properties
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_virtual_display_dimension=2048 \
     ro.surface_flinger.start_graphics_allocator_service=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    debug.renderengine.backend=gles \
+    debug.sf.enable_gl_backpressure=1 \
+    debug.composition.type=c2d \
+    debug.egl.hw=1 \
+    debug.sf.hw=1 \
+    debug.hwui.use_buffer_age=false 
+    
+# API
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=21 \
+    ro.vndk.version=current
 
 # DRM
 PRODUCT_PACKAGES += \
