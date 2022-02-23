@@ -2,10 +2,6 @@
 dalvik.vm.dex2oat-filter=speed-profile
 dalvik.vm.image-dex2oat-filter=speed-profile
 
-# Apex
-ro.product.first_api_level=21
-ro.vndk.version=current
-
 # Assistant
 ro.opa.eligible_device=true
 
@@ -73,14 +69,6 @@ dalvik.vm.heapmaxfree=8m
 
 # Data modules
 persist.data.netmgrd.qos.enable=false 
-
-# Display
-debug.sf.enable_gl_backpressure=1
-debug.composition.type=c2d
-debug.egl.hw=1
-debug.sf.hw=1
-debug.hwui.use_buffer_age=false
-debug.renderengine.backend=threaded
 
 # Dolby Atmos
 ro.feature.dolby_enable=true
