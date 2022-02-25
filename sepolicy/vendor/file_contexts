@@ -56,6 +56,7 @@
 
 # Light
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8916               u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light\-service\.msm8916                   u:object_r:hal_light_default_exec:s0
 /sys/class/leds(/.*)? u:object_r:sysfs_leds:s0
 
 # Logcat
