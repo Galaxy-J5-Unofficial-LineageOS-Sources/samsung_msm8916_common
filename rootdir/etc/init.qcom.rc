@@ -675,13 +675,15 @@ service perfd /system/bin/perfd
    user root
    disabled
 
-service vendor.thermal-engine /vendor/bin/thermal-engine
-   class main
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-   group root
+service thermal-engine /system/vendor/bin/thermal-engine
+    class hal
+    user root
+    socket thermal-send-client stream 0666 system system
+    socket thermal-recv-client stream 0660 system system
+    socket thermal-recv-passive-client stream 0666 system system
+    socket thermal-send-rule stream 0660 system system
+    group root system diag
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.time_daemon /vendor/bin/time_daemon
    class late_start
@@ -731,6 +733,7 @@ service boot_dmesg /system/bin/sh -c "dmesg -w > /cache/boot_dmesg.txt"
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
+    write /sys/module/msm_thermal/core_control/enabled 1
 
 # corefile limit and ETB enabling
 on property:persist.debug.trace=1
@@ -962,6 +965,9 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/swappiness 60
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
+
+on charger
+    start thermal-engine
 
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind

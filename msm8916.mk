@@ -422,14 +422,16 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1 \
     sensors.msm8916
     
- # Thermal
+# Thermal HAL
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
-    android.hardware.thermal@2.0-impl \
-    android.hardware.thermal@2.0 \
-    android.hardware.thermal@2.0.vendor \
-    thermal.msm8916
+    android.hardware.thermal@2.0-service.msm8916
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.thermal.config=thermal_info_config.json
     
  #Secure element
 PRODUCT_PACKAGES += \
