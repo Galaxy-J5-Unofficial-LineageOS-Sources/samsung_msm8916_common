@@ -292,9 +292,7 @@ PRODUCT_PACKAGES += \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc
+    libOmxQcelp13Enc
     
 # Misc
 PRODUCT_PACKAGES += \
