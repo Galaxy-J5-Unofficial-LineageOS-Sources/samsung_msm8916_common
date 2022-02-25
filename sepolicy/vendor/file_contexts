@@ -64,7 +64,7 @@
 /cache/boot_lc_main.txt                                                                    u:object_r:cache_file:s0
 
 # btnvtool
-/(vendor|system/vendor)/bin/btnvtool u:object_r:btnvtool_exec:s0
+#/(vendor|system/vendor)/bin/btnvtool u:object_r:btnvtool_exec:s0
 
 
 # Power stats
