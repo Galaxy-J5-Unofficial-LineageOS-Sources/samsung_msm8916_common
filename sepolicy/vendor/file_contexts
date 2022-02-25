@@ -6,6 +6,7 @@
 /vendor/bin/netmgrd                                         u:object_r:netmgrd_exec:s0
 /vendor/bin/qmuxd                                           u:object_r:qmuxd_exec:s0
 /vendor/bin/rmt_storage                                     u:object_r:rmt_storage_exec:s0
+/system/bin/sh                                              u:object_r:shell_exec:s0
 
 # Radio
 /dev/alarm u:object_r:alarm_device:s0
