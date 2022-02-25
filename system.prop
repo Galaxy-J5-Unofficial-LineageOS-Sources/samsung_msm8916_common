@@ -101,12 +101,11 @@ mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
 
 # Memory
-ro.lmk.critical_upgrade=true 
-ro.lmk.downgrade_pressure=60 
-ro.lmk.kill_heaviest_task=false 
-ro.lmk.log_stats=true 
-ro.lmk.upgrade_pressure=40 
-ro.lmk.use_psi=false
+ro.lmk.critical_upgrade=true
+ro.lmk.upgrade_pressure=0
+ro.lmk.downgrade_pressure=70
+ro.lmk.kill_heaviest_task=false
+ro.statsd.enable=true
 
 # Misc
 debug.fdsan=0
