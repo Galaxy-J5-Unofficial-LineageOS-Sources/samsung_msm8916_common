@@ -1,7 +1,3 @@
-# ART
-dalvik.vm.dex2oat-filter=speed-profile
-dalvik.vm.image-dex2oat-filter=speed-profile
-
 # Assistant
 ro.opa.eligible_device=true
 
