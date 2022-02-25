@@ -253,6 +253,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.msm8916
     
+# Low Memory Killer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.config.ulmk_memcg=true \
+    ro.lmk.use_psi=false \
+    ro.lmk.critical=0 \
+    ro.lmk.low=950 \
+    ro.lmk.swap_free_low_percentage=15    
+    
 # Media configurations
 ifneq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
 PRODUCT_COPY_FILES += \
