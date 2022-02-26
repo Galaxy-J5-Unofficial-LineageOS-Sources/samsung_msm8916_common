@@ -400,6 +400,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor 
 
+PRODUCT_PROPERTY_OVERRIDES += \
+# Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
+ro.telephony.call_ring.multiple=0
+
 # Security configuration file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ril/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
