@@ -34,7 +34,7 @@ cc_prebuilt_library_shared {
         },
         target: {
                 android_arm: {
-                        srcs: ["bluetooth/libbt-vendor.so"],
+                        srcs: ["configs/bluetooth/libbt-vendor.so"],
                 },
         },
 	compile_multilib: "32",
