@@ -56,7 +56,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@2\.1-service-qti  u:object_r:hal_gnss_qti_exec:s0
 
 # Light
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.samsung                  u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.msm8916                  u:object_r:hal_light_default_exec:s0
 /sys/class/leds(/.*)? u:object_r:sysfs_leds:s0
 
 # Logcat
