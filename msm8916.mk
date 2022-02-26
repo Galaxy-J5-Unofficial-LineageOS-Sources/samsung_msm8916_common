@@ -168,6 +168,11 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service-lazy \
     android.hardware.drm@1.4-service-lazy.clearkey
 
+
+# Encryption
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-v28 \

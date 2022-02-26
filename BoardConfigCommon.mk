@@ -99,6 +99,11 @@ BOARD_VNDK_VERSION := current
 # Dedupe VNDK libraries with identical core variants.
 TARGET_VNDK_USE_CORE_VARIANT := true
 
+# Encryption
+TARGET_LEGACY_HW_DISK_ENCRYPTION := true
+TARGET_HW_DISK_ENCRYPTION := true
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+
 # Filesystems
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE   := ext4
