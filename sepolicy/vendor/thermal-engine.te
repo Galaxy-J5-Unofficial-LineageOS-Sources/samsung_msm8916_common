@@ -1,5 +1,5 @@
 #============= thermal-engine ==============
-allow thermal-engine self:capability dac_override;
+allow thermal-engine self:capability { dac_override sys_nice };
 allow thermal-engine socket_device:sock_file { create setattr };
 allow thermal-engine sysfs:dir { open read };
 allow thermal-engine sysfs:file { getattr open read };
@@ -8,4 +8,4 @@ allow thermal-engine sysfs_spmi_dev:lnk_file read;
 allow thermal-engine default_prop:file { open read getattr };
 allow thermal-engine radio_prop:file { open read getattr };
 
-
+r_dir_file(thermal-engine, sysfs_batteryinfo)
