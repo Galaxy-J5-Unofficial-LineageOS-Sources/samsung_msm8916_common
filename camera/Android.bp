@@ -22,7 +22,10 @@ cc_library_shared {
         "system/media/camera/include",
     ],
 
-    srcs: ["CameraWrapper.cpp"],
+    srcs: [
+    ":libcamera_client_aidl",
+    "CameraWrapper.cpp",
+    ],
 
     shared_libs: [
         "libcamera_client",
