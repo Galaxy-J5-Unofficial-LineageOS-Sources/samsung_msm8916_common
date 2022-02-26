@@ -28,7 +28,6 @@ cc_library_shared {
     ],
 
     shared_libs: [
-        "libcamera_client",
         "liblog",
         "libutils",
         // additional libs for original camera HAL
