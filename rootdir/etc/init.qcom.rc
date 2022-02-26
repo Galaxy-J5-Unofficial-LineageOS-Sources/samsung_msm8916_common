@@ -447,21 +447,6 @@ on late-fs
     start vendor.gralloc-2-0
     start vendor.hwcomposer-2-1
     start vendor.power
-    start vendor.power.stats-hal-1-0-mock
-    start vendor.sensors-hal-1-0
-    start vendor.thermal-hal-1-0
-    start vendor.usb-hal-1-0
-    start vendor.vibrator-1-0
-    start vendor.wifi_hal_legacy
-    start vendor.fastcharge-hal-1-0
-    start vendor.power-hal-1-0
-    start vendor.config_bt_addr
-    start vendor.rmt_storage
-    start vendor.thermal-engine
-    start vendor.qcomsysd
-
-
-    wait_for_prop hwservicemanager.ready true
 
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
