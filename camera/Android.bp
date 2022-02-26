@@ -22,12 +22,10 @@ cc_library_shared {
         "system/media/camera/include",
     ],
 
-    srcs: [
-    ":libcamera_client_aidl",
-    "CameraWrapper.cpp",
-    ],
+    srcs: ["CameraWrapper.cpp"],
 
     shared_libs: [
+        "libcamera_client",
         "liblog",
         "libutils",
         // additional libs for original camera HAL
