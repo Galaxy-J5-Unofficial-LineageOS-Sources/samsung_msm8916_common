@@ -94,7 +94,7 @@ TARGET_USE_COMPAT_GRALLOC_PERFORM := true
 TARGET_DISABLE_POSTRENDER_CLEANUP := true
 
 # VNDK VERSION
-BOARD_VNDK_VERSION := current
+#BOARD_VNDK_VERSION := current
 
 # Dedupe VNDK libraries with identical core variants.
 TARGET_VNDK_USE_CORE_VARIANT := true
