@@ -1,0 +1,2 @@
+# =========================== llkd ======================
+allow llkd init:process {ptrace};
