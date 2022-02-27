@@ -14,3 +14,5 @@ allow mediaserver thermal-engine:unix_stream_socket connectto;
 allow mediaserver sysfs_camera:file { getattr open read };
 allow mediaserver hal_camera_default:binder { call transfer };
 
+binder_call(hal_camera_default, mediaserver);
+
