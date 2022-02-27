@@ -390,7 +390,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-	librmnetctl
+	librmnetctl \
         android.hardware.radio@1.1 \
         android.hardware.radio@1.1.vendor 
 
