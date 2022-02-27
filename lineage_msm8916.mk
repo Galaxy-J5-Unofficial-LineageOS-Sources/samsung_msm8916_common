@@ -245,14 +245,9 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor \
-    android.hardware.keymaster@4.1-service \
-    android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.keymaster@4.1.vendor
-
-# Keystore
-PRODUCT_PACKAGES += \
-    android.system.keystore2
+   android.hardware.keymaster@3.0-impl \
+   android.hardware.keymaster@3.0-service \
+    android.hardware.gatekeeper@1.0.vendor 
 
 # Lights
 PRODUCT_PACKAGES += \
