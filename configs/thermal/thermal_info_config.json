@@ -130,22 +130,6 @@
             "Monitor":true
         }
         {
-            "Name":"pm8916_tz",
-            "Type":"MODEM",
-            "HotThreshold":[
-                "NAN",
-                "NAN",
-                "NAN",
-                62.0,
-                "NAN",
-                80.0,
-                120.0
-            ],
-            "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":true
-        }
-        {
             "Name":"battery",
             "Type":"BATTERY",
             "HotThreshold":[
