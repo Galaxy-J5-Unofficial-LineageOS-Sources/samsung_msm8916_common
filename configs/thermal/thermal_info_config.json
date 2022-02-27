@@ -115,7 +115,7 @@
         },
         {
             "Name":"sm5703-fuelgauge",
-            "Type":"CHARGER",
+            "Type":"CPU",
             "HotThreshold":[
                 "NAN",
                 "NAN",
