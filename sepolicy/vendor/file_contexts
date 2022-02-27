@@ -58,6 +58,7 @@
 # Light
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.msm8916                  u:object_r:hal_light_default_exec:s0
 /sys/class/leds(/.*)? u:object_r:sysfs_leds:s0
+/sys/devices/virtual/lcd/panel/panel/max_brightness                                       u:object_r:sysfs_lights:s0
 
 # Logcat
 /cache/boot_lc_main.txt                                                                    u:object_r:cache_file:s0
