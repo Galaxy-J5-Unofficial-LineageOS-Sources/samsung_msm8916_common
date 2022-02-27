@@ -390,15 +390,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-        libril \
-	librilutils \
-	rild \
 	librmnetctl
-
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.6.vendor \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor 
 
 PRODUCT_PROPERTY_OVERRIDES += \
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
