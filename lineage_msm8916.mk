@@ -477,7 +477,8 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.1-service.msm8916
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
     
 # Vendor service manager
 PRODUCT_PACKAGES += \
