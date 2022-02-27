@@ -65,7 +65,7 @@
             "Multiplier":1,
             "Monitor":true
         },
-     {
+        {
             "Name":"tsens_tz_sensor5",
             "Type":"CPU",
             "HotThreshold":[
@@ -96,7 +96,7 @@
             "VrThreshold":"NAN",
             "Multiplier":0.001,
             "Monitor":true
-        }
+        },
         {
             "Name":"pa_therm0",
             "Type":"MODEM",
@@ -112,7 +112,7 @@
             "VrThreshold":"NAN",
             "Multiplier":0.001,
             "Monitor":true
-        }
+        },
         {
             "Name":"sm5703-fuelgauge",
             "Type":"CHARGER",
@@ -128,7 +128,7 @@
             "VrThreshold":"NAN",
             "Multiplier":0.001,
             "Monitor":true
-        }
+        },
         {
             "Name":"battery",
             "Type":"BATTERY",
