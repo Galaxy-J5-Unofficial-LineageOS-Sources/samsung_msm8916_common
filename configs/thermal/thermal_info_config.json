@@ -99,7 +99,7 @@
         },
         {
             "Name":"pa_therm0",
-            "Type":"MODEM",
+            "Type":"ADC",
             "HotThreshold":[
                 "NAN",
                 "NAN",
