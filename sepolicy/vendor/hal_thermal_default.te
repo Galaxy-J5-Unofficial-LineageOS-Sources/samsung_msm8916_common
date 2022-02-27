@@ -1,2 +1,2 @@
 # ===================== hal_thermal_default ===============
-allow hal_thermal_default self:netlink_kobject_uevent_socket {create setopt getopt bind};
+allow hal_thermal_default self:netlink_kobject_uevent_socket {read create setopt getopt bind};
