@@ -117,6 +117,9 @@ persist.sys.storage_preload=1
 ro.data.large_tcp_window_size=true 
 sys.disable_ext_animation=1
 
+# Network manager
+ro.telephony.iwlan_operation_mode=legacy
+
 # OEM Unlock
 ro.oem_unlock_supported=1
 
