@@ -16,10 +16,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Enable flatten APEX
 TARGET_FLATTEN_APEX := true
 
-# Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.iwlan_operation_mode=legacy
-
 # Include Bluetooth config
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/configs/bluetooth
 
