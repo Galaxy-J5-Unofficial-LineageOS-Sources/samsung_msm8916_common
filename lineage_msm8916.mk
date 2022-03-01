@@ -104,7 +104,7 @@ PRODUCT_COPY_FILES += \
 # Everything lives inside vendor!
 PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
-    camera.device@3.2-impl.so \
+    camera.device@3.2-impl \
     libcamera_shim
 
 # Connectivity Engine support
