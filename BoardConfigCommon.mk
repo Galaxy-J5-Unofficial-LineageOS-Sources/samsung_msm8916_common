@@ -27,6 +27,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 # HACKS
 # ----------------------------------------------------------------------
 BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 # ----------------------------------------------------------------------------------------------------
 
 # Architecture/platform
