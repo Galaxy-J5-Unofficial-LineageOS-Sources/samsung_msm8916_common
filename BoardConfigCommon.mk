@@ -28,7 +28,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 # ----------------------------------------------------------------------
 BUILD_BROKEN_DUP_RULES := true  # Allow duplicate rules to override them
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
-PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+RELAX_USES_LIBRARY_CHECK=true
 # ----------------------------------------------------------------------------------------------------
 
 # Architecture/platform
