@@ -1,0 +1,2 @@
+# ===================== hal_perf_default ======================0
+allow hal_perf_default system_prop:file {read open getattr};
