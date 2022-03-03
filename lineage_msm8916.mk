@@ -158,6 +158,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=21 \
     ro.vndk.version=current
 
+# Debloater
+PRODUCT_PACKAGES += \
+    RemoveCamera2 \
+    RemoveGallery2 \
+    RemoveEleven
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
