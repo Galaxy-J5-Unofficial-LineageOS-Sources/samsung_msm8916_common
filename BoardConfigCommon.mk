@@ -61,6 +61,9 @@ USE_CUSTOM_AUDIO_POLICY := 1
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
+# Initial API Level of the Device
+PRODUCT_SHIPPING_API_LEVEL := 22
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
