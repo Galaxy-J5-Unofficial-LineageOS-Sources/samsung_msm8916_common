@@ -623,15 +623,13 @@ service perfd /system/bin/perfd
    user root
    disabled
 
-service thermal-engine /system/vendor/bin/thermal-engine
-    class hal
-    user root
-    socket thermal-send-client stream 0666 system system
-    socket thermal-recv-client stream 0660 system system
-    socket thermal-recv-passive-client stream 0666 system system
-    socket thermal-send-rule stream 0660 system system
-    group root system diag
-    writepid /dev/cpuset/system-background/tasks
+service vendor.thermal-engine /vendor/bin/thermal-engine
+   class main
+   user root
+   socket thermal-send-client stream 0666 system system
+   socket thermal-recv-client stream 0660 system system
+   socket thermal-recv-passive-client stream 0666 system system
+   group root
 
 service vendor.time_daemon /vendor/bin/time_daemon
    class late_start
