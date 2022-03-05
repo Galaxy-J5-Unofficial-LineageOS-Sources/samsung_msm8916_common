@@ -136,9 +136,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
+    copybit.msm8916 \
+    memtrack.msm8916 \
     libtinyxml \
-    libtinyxml2 \
-    memtrack.msm8916 
+    libtinyxml2 
 
 # Surface Flinger properties
 PRODUCT_PROPERTY_OVERRIDES += \
