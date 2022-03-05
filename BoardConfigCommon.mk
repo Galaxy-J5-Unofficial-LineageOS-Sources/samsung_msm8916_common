@@ -216,6 +216,7 @@ ifeq ($(TARGET_BUILD_VARIANT),user)
 endif
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
