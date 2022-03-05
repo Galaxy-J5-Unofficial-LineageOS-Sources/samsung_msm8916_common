@@ -16,6 +16,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Enable flatten APEX
 TARGET_FLATTEN_APEX := true
 
+# Enable Incremental on the device
+PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=yes
+
 # Include Bluetooth config
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/configs/bluetooth
 
