@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl \
+    sound_trigger.stub.default \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.msm8916 \
