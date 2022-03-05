@@ -95,8 +95,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl.mock \
     libbase_shim \
     libbase-v28 \
-    libbt-vendor
-    
+    libbt-vendor \
+    libldacBT_bco
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
     
