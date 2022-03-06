@@ -1,1 +1,0 @@
-allow hal_graphics_composer_default init_service_status_private_prop:file { read open getattr };
