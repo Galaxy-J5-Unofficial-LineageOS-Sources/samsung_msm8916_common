@@ -212,12 +212,13 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libgnss \
-    libgnsspps
-
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl-qti \
-    android.hardware.gnss@1.0-service-qti
+    android.hardware.gnss@1.0-impl \
+    android.hardware.gnss@1.0-service \
+    com.android.location.provider \
+    com.android.location.provider.xml \
+    gps.msm8916 \
+    libshim_gps \
+    liblocadapterbase_shim
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/flp.conf \
