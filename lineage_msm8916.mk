@@ -391,9 +391,7 @@ PRODUCT_PACKAGES += \
 	libril \
 	librilutils \
 	rild \
-	librmnetctl \
-        android.hardware.radio@1.1 \
-	android.hardware.radio.config@1.0
+	librmnetctl 
 
 PRODUCT_PROPERTY_OVERRIDES += \
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
