@@ -355,7 +355,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.3-impl \
     android.hardware.radio@1.4-impl \
     android.hardware.radio@1.5-impl \
-    android.hardware.radio@1.6-impl \ 
+    android.hardware.radio@1.6-impl \
     libshim_secril \
     libshim_ril \
     libxml2 \
