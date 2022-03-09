@@ -351,6 +351,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.0-impl \
     android.hardware.radio@1.0-service \
     android.hardware.radio@1.1-impl \
+    android.hardware.radio@1.1-service \
     android.hardware.radio@1.2-impl \
     android.hardware.radio@1.3-impl \
     android.hardware.radio@1.4-impl \
