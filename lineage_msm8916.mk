@@ -348,6 +348,14 @@ PRODUCT_COPY_FILES += \
     
 # Radio
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0-impl \
+    android.hardware.radio@1.0-service \
+    android.hardware.radio@1.1-impl \
+    android.hardware.radio@1.2-impl \
+    android.hardware.radio@1.3-impl \
+    android.hardware.radio@1.4-impl \
+    android.hardware.radio@1.5-impl \
+    android.hardware.radio@1.6-impl \ 
     libshim_secril \
     libshim_ril \
     libxml2 \
