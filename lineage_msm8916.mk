@@ -458,7 +458,12 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-    
+
+# Su Binary
+PRODUCT_PACKAGES += \
+    phh-su \
+    SuperUser
+
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay

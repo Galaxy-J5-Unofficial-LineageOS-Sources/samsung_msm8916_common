@@ -74,6 +74,9 @@
 # Sysfs entry for the FastCharge node
 /sys/kernel/fast_charge(/.*)?                           u:object_r:sysfs_fastcharge_switch:s0
 
+# Su
+/system/bin/phh-su                   u:object_r:phhsu_exec:s0
+
 # Thermal
 /(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@2\.0-service.msm8916    u:object_r:hal_thermal_default_exec:s0
                                                         
