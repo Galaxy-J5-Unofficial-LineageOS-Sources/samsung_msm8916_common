@@ -15,7 +15,7 @@ allow { appdomain shell } phhsu_exec:file { getattr read open execute execute_no
 
 create_pty(shell)
 allowxperm shell devpts:chr_file ioctl { TCSETSF TCGETS unpriv_tty_ioctls };
-allowxperm { phhsu_daemon untrusted_app untrusted_app_27 } untrusted_app_all_devpts:chr_file ioctl { TCSETSF TCGETS unpriv_tty_ioctls };
+#allowxperm { phhsu_daemon untrusted_app untrusted_app_27 } untrusted_app_all_devpts:chr_file ioctl { TCSETSF TCGETS unpriv_tty_ioctls };
 
 allow servicemanager phhsu_daemon:dir { search read };
 allow servicemanager phhsu_daemon:file { open read };
@@ -40,8 +40,8 @@ net_domain(phhsu_daemon)
 
 hwbinder_use(phhsu_daemon)
 
-allow domain untrusted_app_all_devpts:chr_file { getattr read write };
-allow phhsu_daemon untrusted_app_all_devpts:chr_file { getattr read write open ioctl };
+#allow domain untrusted_app_all_devpts:chr_file { getattr read write };
+#allow phhsu_daemon untrusted_app_all_devpts:chr_file { getattr read write open ioctl };
 allow phhsu_daemon untrusted_app_all:fifo_file { getattr read write open ioctl };
 allow phhsu_daemon zygote_exec:file { execute read open execute_no_trans getattr };
 
@@ -87,7 +87,7 @@ allow phhsu_daemon self:process { ptrace setexec execmem setfscreate };
 allow phhsu_daemon app_data_file:file { rwx_file_perms create rename setattr unlink };
 allow phhsu_daemon app_data_file:dir rw_dir_perms;
 allow phhsu_daemon ashmem_device:chr_file { execute };
-allow phhsu_daemon dex2oat_exec:file rx_file_perms;
+#allow phhsu_daemon dex2oat_exec:file rx_file_perms;
 
 
 allow phhsu_daemon phhsu_daemon_tmpfs:file rwx_file_perms;
