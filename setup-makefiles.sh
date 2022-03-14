@@ -9,8 +9,9 @@
 set -e
 
 DEVICES_J5="j53gxx j5lte j5ltechn j5nlte"
+DEVICES_J5X="j5xnlte j5xlte j5xltecmcc"
 
-DEVICES_ALL="$DEVICES_J5"
+DEVICES_ALL="$DEVICES_J5 $DEVICES_J5X"
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
