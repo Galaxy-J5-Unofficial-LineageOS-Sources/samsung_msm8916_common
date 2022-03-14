@@ -102,11 +102,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
     
 # Camera
-# Everything lives inside vendor!
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl \
-    camera.device@3.2-impl \
-    libcamera_shim
+    libcamera_shim \
+    libmm-qcamera \
+    camera.msm8916 
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
