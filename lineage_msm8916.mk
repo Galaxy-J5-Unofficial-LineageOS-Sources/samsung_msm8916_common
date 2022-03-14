@@ -143,6 +143,10 @@ PRODUCT_PACKAGES += \
     memtrack.msm8916 \
     libtinyxml \
     libtinyxml2 
+    
+# Display Device Config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/displayconfig/display_id_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_0.xml
 
 # Surface Flinger properties
 PRODUCT_PROPERTY_OVERRIDES += \
