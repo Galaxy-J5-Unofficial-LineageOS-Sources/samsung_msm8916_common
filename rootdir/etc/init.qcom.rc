@@ -29,16 +29,15 @@ import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 
 on init
-    setprop ro.kernel.ebpf.supported false
-    
+
 on early-init
     mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
+
     write /sys/block/mmcblk0/queue/scheduler noop
+
     chown system system /sys/kernel/debug/kgsl/proc
     chmod 644 /proc/cmdline
-    chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
-    
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
@@ -123,7 +122,7 @@ on boot
     chmod 2770 /dev/socket/qmux_gps
     chmod 660 /dev/socket/qmux_gps/qmux_client_socket
     chmod 660 /dev/socket/qmux_gps/qmux_connect_socket
-
+    
     # Allow QMUX daemon to assign port open wait time
     chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
     chmod 666 /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
@@ -131,10 +130,6 @@ on boot
     mkdir /persist/drm 0770 system system
     mkdir /persist/misc 0770 system system
     mkdir /persist/alarm 0770 system system
-
-    #create netmgr log dir
-    mkdir /data/vendor/netmgr 0770 radio radio
-    chmod 0770 /data/vendor/netmgr
 
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
@@ -167,26 +162,6 @@ on boot
     setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
     setprop net.tcp.buffersize.evdo    4094,87380,524288,4096,16384,262144
-
-    # Create directory for radio
-    mkdir /data/vendor/radio 0770 system radio
-
-    # Mark the copy complete flag to not completed
-    write /data/vendor/radio/copy_complete 0
-    chown radio radio /data/vendor/radio/copy_complete
-    chmod 0660 /data/vendor/radio/copy_complete
-
-    # copy prebuilt qcril.db files always
-    copy /vendor/radio/qcril_database/qcril.db /data/vendor/radio/qcril_prebuilt.db
-    chown radio radio /data/vendor/radio/qcril_prebuilt.db
-    chmod 0660 /data/vendor/radio/qcril_prebuilt.db
-    # File flags for prebuilt ril db file
-    write /data/vendor/radio/prebuilt_db_support 1
-    chown radio radio /data/vendor/radio/prebuilt_db_support
-    chmod 0400 /data/vendor/radio/prebuilt_db_support
-    write /data/vendor/radio/db_check_done 0
-    chown radio radio /data/vendor/radio/db_check_done
-    chmod 0660 /data/vendor/radio/db_check_done
 
 #   Assign TCP buffer thresholds to be ceiling value of technology maximums
 #   Increased technology maximums should be reflected here.
@@ -401,25 +376,6 @@ on property:persist.usb.chgdisabled=1
 on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
 
-on property:persist.env.fastdorm.enabled=true
-    setprop persist.radio.data_no_toggle 1
-
-service dpmQmiMgr /system/vendor/bin/dpmQmiMgr
-    class main
-    user system
-    group radio system
-
-service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
-    class core
-    user root
-    oneshot
-
-service rmt_storage /vendor/bin/rmt_storage
-    class core
-    user root
-    shutdown critical
-    ioprio rt 0
-
 on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -435,21 +391,23 @@ on fs
     chmod 0777 /dev/radio0
     chown system system /dev/radio0
 
-    rm /cache/boot_lc_main.txt
-    rm /cache/boot_dmesg.txt
-    start boot_lc_main
-    start boot_dmesg
+    # Start HW service manager early
+    start hwservicemanager
 
 on late-fs
     # Start services for bootanim
-    start hwservicemanager
-    start servicemanager
     start surfaceflinger
     start bootanim
+    start vendor.configstore-hal
     start vendor.gralloc-2-0
 
+    # Wait for hwservicemanager ready since fsck might be triggered in mount_all --late
+    # In such case, init won't responce the property_set from hwservicemanager and then
+    # cause services for bootanim not running.
+    wait_for_prop hwservicemanager.ready true
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
+
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -495,7 +453,6 @@ on post-fs-data
     write /data/.wifiver.info 0
     chown system root /data/.wifiver.info
     chmod 0666 /data/.wifiver.info
-
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
     chown system system /data/connectivity
@@ -546,13 +503,12 @@ on post-fs-data
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
 
     #Create directories for Location services
-    mkdir /data/vendor/location 0770 gps gps
-    mkdir /data/vendor/location/mq 0770 gps gps
-    mkdir /data/vendor/location/xtwifi 0770 gps gps
-    mkdir /dev/socket/location 0770 gps gps
-    mkdir /dev/socket/location/mq 0770 gps gps
-    mkdir /dev/socket/location/xtra 0770 gps gps
-    mkdir /dev/socket/location/dgnss 0770 gps gps
+    mkdir /data/misc/location 0770 gps gps
+    mkdir /data/misc/location/mq 0770 gps gps
+    mkdir /data/misc/location/xtwifi 0770 gps gps
+    mkdir /data/misc/location/gpsone_d 0770 system gps
+    mkdir /data/misc/location/quipc 0770 gps system
+    mkdir /data/misc/location/gsiff 0770 gps gps
 
     #Create directory from IMS services
     mkdir /data/shared 0755
@@ -581,7 +537,7 @@ on post-fs-data
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
     mkdir /persist/drm 0770 system system
-    
+
     # NFC local data and nfcee xml storage
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
@@ -613,7 +569,7 @@ on post-fs-data
     write /data/misc/radio/db_check_done 0
     chown radio radio /data/misc/radio/db_check_done
     chmod 0660 /data/misc/radio/db_check_done
-
+    
     chown system radio /sys/devices/platform/mdm_hsic_pm0/waketime
     chmod 0666 /sys/devices/platform/mdm_hsic_pm0/waketime
     chown radio radio /sys/class/sec/switch/uart_sel
@@ -699,24 +655,8 @@ on property:persist.sys.ssr.enable_ramdumps=1
 on property:persist.sys.ssr.enable_ramdumps=0
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
 
-service boot_lc_main /system/bin/logcat -f /cache/boot_lc_main.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service boot_dmesg /system/bin/sh -c "dmesg -w > /cache/boot_dmesg.txt"
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    write /sys/module/msm_thermal/core_control/enabled 1
 
 # corefile limit and ETB enabling
 on property:persist.debug.trace=1
@@ -810,11 +750,6 @@ service vendor.qmuxd /vendor/bin/qmuxd
     user root
     group radio audio bluetooth gps nfc diag
 
-service netmgrd /system/vendor/bin/netmgrd
-    class main
-    group system wakelock inet
-    writepid /dev/cpuset/system-background/tasks
-
 service vendor.netmgrd /vendor/bin/netmgrd
     class main
     user root
@@ -869,7 +804,7 @@ service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     user root
     disabled
     oneshot
-
+    
 service ipacm /system/bin/ipacm
     class main
     user net_admin
@@ -948,9 +883,6 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/swappiness 60
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
-
-on charger
-    start thermal-engine
 
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
