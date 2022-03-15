@@ -109,6 +109,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
+    vendor.qti.hardware.camera.device@1.0.vendor \
     camera.device@1.0-impl \
     libcamera_shim \
     libmm-qcamera \
