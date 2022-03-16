@@ -28,6 +28,9 @@ get_prop(system_server, exported_camera_prop);
 # Bluetooth
 allow system_server bluetooth:process {getattr};
 
+#Media
+allow system_server mediaextractor:process {getattr};
+
 allow system_server platform_app:process {getattr};
 allow system_server mediametrics:process {getattr};
 allow system_server priv_app:process {getattr};
