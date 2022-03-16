@@ -14,7 +14,7 @@ get_prop(system_server, vendor_security_patch_level_prop);
 
 #Reboot
 get_prop(system_server, userspace_reboot_exported_prop);
-get_prop(system_server, userspace_reboot_config_prop
+get_prop(system_server, userspace_reboot_config_prop);
 
 #Radio
 allow system_server radio:process {getattr};
