@@ -11,3 +11,4 @@ allow surfaceflinger bootanim:file {getattr read open};
 allow surfaceflinger bootanim:dir {search};
 allow surfaceflinger bootanim_process {getattr};
 allow surfaceflinger platform_app:process {getattr};
+allow surfaceflinger priv_app:process {getattr};
