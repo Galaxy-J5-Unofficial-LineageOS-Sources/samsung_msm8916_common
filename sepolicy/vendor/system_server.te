@@ -19,6 +19,9 @@ get_prop(system_server, userspace_reboot_config_prop
 #Radio
 allow system_server radio:process {getattr};
 
+#Surfaceflinger
+allow system_server surfaceflinger:process {getattr};
+
 #Camera
 get_prop(system_server, exported_camera_prop);
 
