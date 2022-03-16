@@ -6,6 +6,9 @@ allow system_server init:binder call;
 allow system_server sysfs_batteryinfo:file { getattr open write };
 allow system_server vfat:dir { open read };
 
+#Audio
+allow system_server audioserver:process {getattr};
+
 #Vendor
 get_prop(system_server, vendor_security_patch_level_prop);
 
