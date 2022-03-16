@@ -28,6 +28,7 @@ allow system_server bluetooth:process {getattr};
 allow system_server platform_app:process {getattr};
 allow system_server mediametrics:process {getattr};
 allow system_server priv_app:process {getattr};
+allow system_server statsd:process {getattr};
 
 # Props
 allow system_server build_bootimage_prop:file { getattr open read };
