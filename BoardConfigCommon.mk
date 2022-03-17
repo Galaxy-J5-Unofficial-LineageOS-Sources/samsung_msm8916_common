@@ -227,8 +227,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/hw/camera.vendor.msm8916.so|libcamera_shim.so \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|libbase_shim.so \
-    /system/vendor/lib/vendor.qti.gnss@1.0_vendor.so|libshim_gnss.so \
-    /system/vendor/lib/vendor.qti.gnss@1.0.so|libshim_gnss.so \
+    /system/vendor/lib/vendor.qti.gnss@1.0_vendor.so|libshim_gps.so \
+    /system/vendor/lib/vendor.qti.gnss@1.0.so|libshim_gps.so \
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
