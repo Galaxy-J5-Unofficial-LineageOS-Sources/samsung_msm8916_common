@@ -19,4 +19,7 @@ static const char* process_name = "system_server";
 extern "C" const char*
 get_process_name(void) {
   return process_name;
+
+extern "C" void _ZN7android8hardware4gnss4V1_08toStringINS2_15IGnssNiCallback17GnssNiNotifyFlagsEEENSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEEj() {}
+
 }
