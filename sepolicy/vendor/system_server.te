@@ -40,6 +40,7 @@ allow system_server priv_app:process {getattr};
 allow system_server statsd:process {getattr};
 allow system_server system_app:process {getattr};
 allow system_server secure_element:process {getattr};
+allow system_server untrusted_app_29:process {getattr};
 
 # Props
 allow system_server build_bootimage_prop:file { getattr open read };
