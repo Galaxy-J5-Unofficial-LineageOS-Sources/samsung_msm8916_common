@@ -15,4 +15,5 @@
  */
 
 extern "C" void _ZN8loc_core14LocAdapterBase13reportCiqDataER10GpsCiqData(void) { };
+extern "C" void _ZN9izat_core15IzatAdapterBase14reportPositionER11UlpLocationR19GpsLocationExtended15loc_sess_statusj(void) { };
 
