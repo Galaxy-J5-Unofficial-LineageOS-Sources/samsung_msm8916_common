@@ -25,6 +25,9 @@ allow system_server surfaceflinger:process {getattr};
 #Camera
 get_prop(system_server, exported_camera_prop);
 
+# GPS
+allow system_server izat_service:service_manager {find};
+
 # Bluetooth
 allow system_server bluetooth:process {getattr};
 
