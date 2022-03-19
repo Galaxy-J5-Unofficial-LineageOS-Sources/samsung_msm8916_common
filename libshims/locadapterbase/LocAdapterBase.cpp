@@ -21,3 +21,4 @@ extern "C" void _ZN9izat_core15IzatAdapterBase12getLocationsEi26loc_batching_rep
 extern "C" void _ZN8loc_core14LocAdapterBase13reportSvEventERK18GnssSvNotificationb(void) { };
 extern "C" void _ZN8loc_core14LocAdapterBase15reportNmeaEventEPKcjb(void) { };
 extern "C" void _ZN8loc_core14LocAdapterBase16reportWwanZppFixER14LocGpsLocation(void) { };
+extern "C" void _ZN8loc_core14LocAdapterBase19reportPositionEventERK11UlpLocationRK19GpsLocationExtended15loc_sess_statusjb(void) { };
