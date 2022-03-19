@@ -19,3 +19,4 @@ extern "C" void _ZN9izat_core15IzatAdapterBase14reportPositionER11UlpLocationR19
 extern "C" void _ZN9izat_core15IzatAdapterBase23handleReportedLocationsEPK16FlpExtLocation_sii26loc_batching_reported_typePv(void) { };
 extern "C" void _ZN9izat_core15IzatAdapterBase12getLocationsEi26loc_batching_reported_typePv(void) { };
 extern "C" void _ZN8loc_core14LocAdapterBase13reportSvEventERK18GnssSvNotificationb(void) { };
+extern "C" void _ZN8loc_core14LocAdapterBase15reportNmeaEventEPKcjb(void) { };
