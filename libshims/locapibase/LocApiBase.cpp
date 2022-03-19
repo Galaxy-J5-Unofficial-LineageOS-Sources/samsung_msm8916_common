@@ -18,3 +18,4 @@ extern "C" void _ZN8loc_core10LocApiBase14reportPositionER11UlpLocationR19GpsLoc
 extern "C" void _ZN8loc_core10LocApiBase8reportSvER18GnssSvNotification(void) { };
 extern "C" void _ZN8loc_core10LocApiBase19reportSvMeasurementER20GnssSvMeasurementSet(void) { };
 extern "C" void _ZN8loc_core10LocApiBase18reportSvPolynomialER16GnssSvPolynomial(void) { };
+extern "C" void _ZN8loc_core10LocApiBase15requestNiNotifyER18GnssNiNotificationPKv(void) { };
