@@ -16,3 +16,4 @@
 
 extern "C" void _ZN8loc_core10LocApiBase14reportPositionER11UlpLocationR19GpsLocationExtended15loc_sess_statusj(void) { };
 extern "C" void _ZN8loc_core10LocApiBase8reportSvER18GnssSvNotification(void) { };
+extern "C" void _ZN8loc_core10LocApiBase19reportSvMeasurementER20GnssSvMeasurementSet(void) { };
