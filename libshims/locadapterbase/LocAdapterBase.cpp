@@ -25,3 +25,4 @@ extern "C" void _ZN8loc_core14LocAdapterBase19reportPositionEventERK11UlpLocatio
 extern "C" void _ZN8loc_core14LocAdapterBase20requestNiNotifyEventERK18GnssNiNotificationPKv(void) { };
 extern "C" void _ZN8loc_core14LocAdapterBase23reportSvPolynomialEventER16GnssSvPolynomial(void) { };
 extern "C" void _ZN8loc_core14LocAdapterBase24reportSvMeasurementEventER20GnssSvMeasurementSet(void) { };
+extern "C" void _ZN8loc_core14LocAdapterBase30reportGnssMeasurementDataEventERK28GnssMeasurementsNotificationi(void) { };
