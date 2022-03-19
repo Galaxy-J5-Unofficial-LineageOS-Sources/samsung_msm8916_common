@@ -230,7 +230,8 @@ PRODUCT_PACKAGES += \
     com.android.location.provider.xml \
     gps.msm8916 \
     libshim_gps \
-    liblocadapterbase_shim
+    liblocadapterbase_shim \
+    liblocapibase_shim
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/flp.conf \
