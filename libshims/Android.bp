@@ -26,6 +26,12 @@ cc_library_shared {
 }
 
 cc_library_shared {
+    name: "liblocapibase_shim",
+    srcs: ["locapibase/LocApiBase.cpp"],
+    vendor: true,
+}
+
+cc_library_shared {
     name: "libshim_gps",
     srcs: ["gps/gps_shim.cpp"],
     shared_libs: [
