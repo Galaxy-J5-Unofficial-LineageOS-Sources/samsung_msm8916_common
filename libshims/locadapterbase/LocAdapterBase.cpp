@@ -23,3 +23,4 @@ extern "C" void _ZN8loc_core14LocAdapterBase15reportNmeaEventEPKcjb(void) { };
 extern "C" void _ZN8loc_core14LocAdapterBase16reportWwanZppFixER14LocGpsLocation(void) { };
 extern "C" void _ZN8loc_core14LocAdapterBase19reportPositionEventERK11UlpLocationRK19GpsLocationExtended15loc_sess_statusjb(void) { };
 extern "C" void _ZN8loc_core14LocAdapterBase20requestNiNotifyEventERK18GnssNiNotificationPKv(void) { };
+extern "C" void _ZN8loc_core14LocAdapterBase23reportSvPolynomialEventER16GnssSvPolynomial(void) { };
