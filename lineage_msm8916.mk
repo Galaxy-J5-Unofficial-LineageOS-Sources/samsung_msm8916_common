@@ -175,7 +175,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     RemoveCamera2 \
     RemoveGallery2 \
-    RemoveEleven
+    RemoveEleven \
+    RemoveJely 
 
 # DRM
 PRODUCT_PACKAGES += \
