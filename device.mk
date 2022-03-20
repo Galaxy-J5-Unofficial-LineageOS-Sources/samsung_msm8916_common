@@ -4,13 +4,7 @@ PRODUCT_RELEASE_NAME := Samsung Galaxy J5
 # Inherit from j5 2015-2016 vendor
 ifeq ($(PRODUCT_DEVICE),j5xnlte)
     $(call inherit-product, vendor/samsung/j5x-common/j5x-common-vendor.mk)
-else ifeq ($(PRODUCT_DEVICE),j5nlte)
-    $(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
-else ifeq ($(PRODUCT_DEVICE),j5lte)
-    $(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
-else ifeq ($(PRODUCT_DEVICE),j5ltechn)
-    $(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
-else ifeq ($(PRODUCT_DEVICE),j53gxx)
+else
     $(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
 endif
 
