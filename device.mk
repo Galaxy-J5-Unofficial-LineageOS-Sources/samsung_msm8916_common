@@ -1,12 +1,8 @@
 # Release name
 PRODUCT_RELEASE_NAME := Samsung Galaxy J5
 
-# Inherit from j5 2015-2016 vendor
-ifeq ($(PRODUCT_DEVICE),j5xnlte)
-    $(call inherit-product, vendor/samsung/j5x-common/j5x-common-vendor.mk)
-else
-    $(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
-endif
+# Inherit from j5 2015 vendor
+$(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
