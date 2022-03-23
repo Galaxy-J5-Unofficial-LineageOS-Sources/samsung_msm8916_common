@@ -69,11 +69,6 @@ dalvik.vm.heapmaxfree=8m
 # Data modules
 persist.data.netmgrd.qos.enable=false 
 
-# Dolby Atmos
-ro.feature.dolby_enable=true
-vendor.audio.dolby.ds2.enabled=true
-vendor.audio.dolby.ds2.hardbypass=false
-
 # FM
 ro.fm.transmitter=false
 
