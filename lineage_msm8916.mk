@@ -97,11 +97,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
     
 PRODUCT_PROPERTY_OVERRIDES += \   
-    ro.vendor.bluetooth.lazyhal=true
+    ro.vendor.bluetooth.lazyhal=true \
+    persist.vendor.bluetooth.modem_nv_support=true
     
 # BPF
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.ebpf.supported=false    
+    ro.kernel.ebpf.supported=false
     
 # Camera
 PRODUCT_PACKAGES += \
