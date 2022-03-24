@@ -1,2 +1,4 @@
 #============= hal_bluetooth_default =======================
 allow hal_bluetooth_default default_prop:file {open getattr};
+allow hal_bluetooth_default vendor_wifi_vendor_data_file:dir { search };
+allow hal_bluetooth_default vendor_wifi_vendor_data_file:file { read open };
