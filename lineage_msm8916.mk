@@ -96,6 +96,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
     
+PRODUCT_PROPERTY_OVERRIDES += \   
+    ro.vendor.bluetooth.lazyhal=true
+    
 # BPF
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.ebpf.supported=false    
