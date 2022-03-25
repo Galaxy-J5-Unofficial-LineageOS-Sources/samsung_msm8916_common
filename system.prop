@@ -32,9 +32,9 @@ vendor.voice.voip.conc.disabled=true
 persist.bluetooth.disableabsvol=true
 vendor.qcom.bluetooth.soc=pronto
 ro.bluetooth.dun=true
-ro.bluetooth.hfp.ver=1.7 \
-ro.bluetooth.sap=true \
-vendor.bluetooth.soc=pronto \
+ro.bluetooth.hfp.ver=1.7
+ro.bluetooth.sap=true
+vendor.bluetooth.soc=pronto
 ro.qualcomm.bt.hci_transport=pronto
 
 # Boot
