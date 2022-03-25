@@ -377,6 +377,10 @@ PRODUCT_PACKAGES += \
     macloader \
     libcutils_shim
 
+# Repainter integration
+PRODUCT_PACKAGES += \
+    RepainterServicePriv
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.carrier.rc \
