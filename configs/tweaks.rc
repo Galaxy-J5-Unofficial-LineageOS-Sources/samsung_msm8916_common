@@ -1,0 +1,7 @@
+# This is Android init script to control some aspects of the kernel
+# Please make sure that you know what you are doing!
+# Uncomment all parts of the script you want to use by deleting the beginning "#" in the code-line.
+# "write ... 1" means enabled, "write ... 0" means disabled,
+# "write .... xx" means that you have to replace the "xx" with a value of your choice.
+# If something goes wrong, delete this file and reboot. It can also be deleted from TWRP file manager.
+# Based on init.d script written by darkened_sky
