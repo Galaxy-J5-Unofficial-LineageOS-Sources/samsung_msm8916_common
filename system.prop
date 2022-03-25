@@ -49,7 +49,6 @@ camera2.portability.force_api=1
 camera.disable_treble=true
 camera2.portability.force_api=1
 debug.camcorder.disablemeta=true
-ro.camera.enableLazyHal=true
 
 # Charger
 ro.charger.disable_init_blank=true
