@@ -368,7 +368,6 @@ on property:ro.config.ksm=true
 
  # Enable swap
     swapon_all /fstab.qcom
-    write /proc/sys/vm/swappiness 100
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
