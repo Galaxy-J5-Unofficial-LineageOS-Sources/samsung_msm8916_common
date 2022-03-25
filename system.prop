@@ -39,6 +39,7 @@ ro.qualcomm.bt.hci_transport=pronto
 ro.vendor.bluetooth.lazyhal=true
 persist.vendor.bluetooth.modem_nv_support=true
 persist.bluetooth.bluetooth_audio_hal.disabled=true
+ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
 
 # Boot
 sys.vendor.shutdown.waittime=500 
