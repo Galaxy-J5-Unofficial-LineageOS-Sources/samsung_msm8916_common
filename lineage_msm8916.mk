@@ -96,11 +96,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
-# Bluetooth properties
-PRODUCT_PROPERTY_OVERRIDES += \   
-    ro.vendor.bluetooth.lazyhal=true \
-    persist.vendor.bluetooth.modem_nv_support=true
-    
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-impl \
@@ -108,10 +103,7 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     libcamera_shim \
     libmm-qcamera \
-    camera.msm8916 
-    
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.camera.enableLazyHal=true
+    camera.msm8916
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
