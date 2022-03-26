@@ -230,6 +230,7 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/vendor.qti.gnss@1.0.so|libshim_gps.so \
     /system/vendor/lib/libgeofence.so|liblocadapterbase_shim.so \
     /system/vendor/lib/liblbs_core.so|liblocadapterbase_shim.so \
+    /system/vendor/lib/libizat_core.so|libshim_gps.so \
     /system/vendor/lib/libloc_api_v02.so|liblocapibase_shim.so \
 
 # Time services
