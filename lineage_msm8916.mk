@@ -107,6 +107,8 @@ PRODUCT_PACKAGES += \
     Camera2 \
     SnapdragonCamera
 
+DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/treble-manifest-camera.xml
+
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
