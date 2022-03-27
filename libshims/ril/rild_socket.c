@@ -18,3 +18,4 @@ void ril_service_name() {}
 void ril_service_name_base() {}
 void ds_system_call3() {}
 void ds_get_proc_name() {}
+void qmi_qos_srvc_process_nested_event_report_ind() {}
