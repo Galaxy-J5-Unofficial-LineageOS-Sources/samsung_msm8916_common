@@ -104,7 +104,7 @@ PRODUCT_PACKAGES += \
     libc_util \
     libboringssl-compat \
     libcamera_shim \
-    Camera2
+    SnapdragonCamera
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
