@@ -232,6 +232,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/liblbs_core.so|liblocadapterbase_shim.so \
     /system/vendor/lib/libizat_core.so|libshim_gps.so \
     /system/vendor/lib/libloc_api_v02.so|liblocapibase_shim.so \
+    /system/vendor/bin/netmgrd|libshim_ril.so \
+
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
