@@ -99,11 +99,12 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl \
+    camera.msm8916 \
+    libc_util \
+    libboringssl-compat \
     libcamera_shim \
-    libmm-qcamera \
-    camera.msm8916
+    Camera2
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
