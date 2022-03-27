@@ -26,7 +26,7 @@ LOCAL_AAPT_FLAGS := \
         --version-code $(version_code_package) \
 
 LOCAL_PACKAGE_NAME := SnapdragonCamera
-LOCAL_PRODUCT_MODULE := true
+LOCAL_VENDOR_MODULE := true
 LOCAL_PRIVILEGED_MODULE := true
 #LOCAL_PRIVATE_PLATFORM_APIS:=true
 
