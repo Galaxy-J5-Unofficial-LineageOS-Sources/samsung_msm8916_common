@@ -24,7 +24,6 @@ allow system_server surfaceflinger:process {getattr};
 
 #Camera
 get_prop(system_server, exported_camera_prop);
-allow system_server mediaprovider_app:process {getattr};
 allow system_server mediaserver:process {getattr};
 
 
