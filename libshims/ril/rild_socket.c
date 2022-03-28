@@ -19,3 +19,7 @@ void ril_service_name_base() {}
 void ds_system_call3() {}
 void ds_get_proc_name() {}
 void qmi_qos_srvc_process_nested_event_report_ind() {}
+void qos_get_service_object_internal_v01() {}
+void qmi_qos_process_get_primary_granted_qos_req() {}
+void qmi_qos_process_get_secondary_granted_qos_req() {}
+void qmi_qos_srvc_extract_return_code() {}

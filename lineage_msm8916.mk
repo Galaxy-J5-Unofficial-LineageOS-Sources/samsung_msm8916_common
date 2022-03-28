@@ -98,9 +98,11 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.5-impl \
+    android.hardware.camera.provider@2.5-service-lazy \
+    vendor.qti.hardware.camera.device@1.0.vendor \
     camera.device@1.0-impl \
+    camera.device@3.2-impl \
     camera.msm8916 \
     libcamera_shim \
     libmm-qcamera \
@@ -362,13 +364,13 @@ PRODUCT_COPY_FILES += \
     
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.0-service \
-    android.hardware.radio@1.6.vendor \
     libshim_secril \
     libshim_ril \
     libxml2 \
     macloader \
     libcutils_shim
+
+DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/radio-manifest.xml
 
 # Repainter integration
 PRODUCT_PACKAGES += \
