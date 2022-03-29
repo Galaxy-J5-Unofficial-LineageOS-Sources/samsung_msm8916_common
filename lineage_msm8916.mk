@@ -88,13 +88,21 @@ endif
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.a2dp@1.0-impl.mock
+
+PRODUCT_PACKAGES += \
     libbase_shim \
-    libbase-v28 \
-    libbt-vendor \
-    libldacBT_bco
+    libbt-vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
+DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/bluetooth-manifest.xml
 
 # Camera
 PRODUCT_PACKAGES += \
