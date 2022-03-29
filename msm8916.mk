@@ -139,7 +139,7 @@ PRODUCT_PACKAGES += \
 # FM
 PRODUCT_PACKAGES += \
     qcom.fmradio \
-    FMRadio
+    FM2
 
 # Quick Charge
 PRODUCT_PACKAGES += \
