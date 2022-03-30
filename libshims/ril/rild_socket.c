@@ -23,3 +23,4 @@ void qos_get_service_object_internal_v01() {}
 void qmi_qos_process_get_primary_granted_qos_req() {}
 void qmi_qos_process_get_secondary_granted_qos_req() {}
 void qmi_qos_srvc_extract_return_code() {}
+void qmi_qos_process_get_granted_qos_resp() {}
