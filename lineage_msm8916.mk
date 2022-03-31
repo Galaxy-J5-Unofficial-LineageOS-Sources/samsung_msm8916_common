@@ -187,7 +187,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.4-service.clearkey
-
+    
+DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/drm-manifest.xml
 
 # Encryption
 PRODUCT_PACKAGES += \
