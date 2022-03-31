@@ -51,11 +51,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.0-impl \
-    android.hardware.soundtrigger@2.1-impl \
-    android.hardware.soundtrigger@2.2-impl \
-    android.hardware.soundtrigger@2.3-impl \
-    sound_trigger.stub.default \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.msm8916 \
@@ -88,19 +83,11 @@ endif
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service \
+    android.hardware.bluetooth@1.0.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth.a2dp@1.0-impl.mock
-
-PRODUCT_PACKAGES += \
-    libbase_shim \
-    libbt-vendor
-
-PRODUCT_COPY_FILES += \
-$(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
 DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/bluetooth-manifest.xml
 
