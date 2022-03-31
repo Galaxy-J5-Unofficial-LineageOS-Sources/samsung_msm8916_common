@@ -234,6 +234,7 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libizat_core.so|libshim_gps.so \
     /system/vendor/lib/libloc_api_v02.so|liblocapibase_shim.so \
     /system/vendor/bin/netmgrd|libshim_ril.so \
+    /system/vendor/lib/libdsi_netctrl.so|libshim_ril.so \
 
 
 # Time services
