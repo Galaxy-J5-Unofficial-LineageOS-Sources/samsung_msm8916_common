@@ -26,3 +26,4 @@ void qmi_qos_srvc_extract_return_code() {}
 void qmi_qos_process_get_granted_qos_resp() {}
 void ds_log_mask() {}
 void ds_get_epid() {}
+void ds_get_target() {}
