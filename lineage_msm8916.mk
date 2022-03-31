@@ -93,8 +93,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libldacBT_bco \
     libldacBT_dec \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.bluetooth.a2dp@1.0-impl.mock
+    android.hardware.bluetooth.audio@2.0-impl
 
 DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/bluetooth-manifest.xml
 
@@ -107,9 +106,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.msm8916 \
     libcamera_shim \
-    libmm-qcamera \
-    Camera2 \
-    SnapdragonCamera
+    libmm-qcamera
 
 DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/camera-manifest.xml
 
