@@ -97,12 +97,12 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor
+    android.hardware.bluetooth@1.1.vendor \
+    libbase_shim
 
 PRODUCT_PACKAGES += \
     libldacBT_bco \
-    libldacBT_dec \
-    android.hardware.bluetooth.audio@2.0-impl
+    libldacBT_dec
 
 DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/bluetooth-manifest.xml
 
