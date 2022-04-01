@@ -30,3 +30,5 @@ void ds_get_target() {}
 void qmi_qos_process_get_filter_params_req() {}
 void qmi_qos_process_get_filter_params_resp() {}
 void ds_get_target_str() {}
+void qmi_platform_qxdm_init() {}
+void ds_cmdq_flush() {}
