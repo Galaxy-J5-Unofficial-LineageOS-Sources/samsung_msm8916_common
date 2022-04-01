@@ -232,6 +232,7 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libgeofence.so|liblocadapterbase_shim.so \
     /system/vendor/lib/liblbs_core.so|liblocadapterbase_shim.so \
     /system/vendor/lib/libloc_api_v02.so|liblocapibase_shim.so \
+    /system/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|libbase_shim.so \
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
