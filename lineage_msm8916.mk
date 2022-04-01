@@ -45,11 +45,12 @@ DEVICE_PACKAGE_OVERLAYS += \
 # APEX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/apex/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
-
+    
 # A2DP
 PRODUCT_PACKAGES += \
   audio.a2dp.default \
-  android.hardware.bluetooth.a2dp@1.0-impl
+  android.hardware.bluetooth.a2dp@1.0-impl \
+  android.hardware.bluetooth.a2dp@1.0-service
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -93,6 +94,8 @@ endif
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor
 
