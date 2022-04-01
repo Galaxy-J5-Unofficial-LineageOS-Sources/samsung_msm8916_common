@@ -187,8 +187,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service-lazy \
     android.hardware.drm@1.4-service-lazy.clearkey
     
-DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/drm-manifest.xml
-
 # Encryption
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
