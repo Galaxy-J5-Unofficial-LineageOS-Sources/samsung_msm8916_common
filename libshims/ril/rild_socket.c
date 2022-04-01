@@ -34,3 +34,4 @@ void qmi_platform_qxdm_init() {}
 void ds_cmdq_flush() {}
 void qdi_flush_cmdq() {}
 void qmi_format_diag_log_msg() {}
+void qmi_qos_process_request_qos_req() {}
