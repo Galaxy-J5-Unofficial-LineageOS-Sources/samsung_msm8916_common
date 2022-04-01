@@ -28,12 +28,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth.a2dp</name>
-        <transport arch="32">passthrough</transport>
-	    <version>1.0</version>
-        <interface>
-            <name>IBluetoothAudioOffload</name>
-            <instance>default</instance>
-        </interface>
+        <transport>hwbinder</transport>
         <fqname>@1.0::IBluetoothAudioOffload/default</fqname>
-       </hal>
+    </hal>
   </manifest>
