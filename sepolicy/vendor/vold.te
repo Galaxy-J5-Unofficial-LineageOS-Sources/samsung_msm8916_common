@@ -4,3 +4,6 @@ allow vold efs_file:dir { ioctl open read };
 allow vold hal_bootctl_hwservice:hwservice_manager find;
 allow vold persist_data_file:dir { ioctl open read };
 allow vold system_server:process {getattr};
+allow vold keystore:dir {search};
+allow vold keystore:file {read open};
+allow vold keystore:process {getattr};
