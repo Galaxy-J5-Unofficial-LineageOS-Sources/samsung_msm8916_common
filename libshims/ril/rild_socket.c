@@ -28,3 +28,5 @@ void ds_log_mask() {}
 void ds_get_epid() {}
 void ds_get_target() {}
 void qmi_qos_process_get_filter_params_req() {}
+void qmi_qos_process_get_filter_params_resp() {}
+void ds_get_target_str() {}
