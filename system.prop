@@ -29,13 +29,13 @@ vendor.voice.record.conc.disabled=true
 vendor.voice.voip.conc.disabled=true
 
 # Bluetooth
-bluetooth.hfp.client=1 \
-ro.bluetooth.dun=true \
-ro.bluetooth.hfp.ver=1.7 \
-ro.bluetooth.sap=true \
-ro.bt.bdaddr_path=/efs/bluetooth/bt_addr \
-ro.qualcomm.bt.hci_transport=smd \
-vendor.bluetooth.soc=pronto \
+bluetooth.hfp.client=1
+ro.bluetooth.dun=true
+ro.bluetooth.hfp.ver=1.7
+ro.bluetooth.sap=true
+ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
+ro.qualcomm.bt.hci_transport=smd
+vendor.bluetooth.soc=pronto
 vendor.qcom.bluetooth.soc=pronto
 
 # Boot
