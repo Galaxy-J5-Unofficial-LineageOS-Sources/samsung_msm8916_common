@@ -178,19 +178,19 @@ case "$platform" in
             then
                 if [ $soc_hwplatform == "SBC" ]
                 then
-                    setprop ro.sf.lcd_density 240
+                    setprop ro.sf.lcd_density 360
                     setprop qemu.hw.mainkeys 0
                 else
-                    setprop ro.sf.lcd_density 480
+                    setprop ro.sf.lcd_density 360
                 fi
             elif [ $virtual_size -ge "720" ]
             then
-                setprop ro.sf.lcd_density 320
+                setprop ro.sf.lcd_density 360
             elif [ $virtual_size -ge "480" ]
             then
-                setprop ro.sf.lcd_density 240
+                setprop ro.sf.lcd_density 360
             else
-                setprop ro.sf.lcd_density 320
+                setprop ro.sf.lcd_density 360
             fi
         fi
 
