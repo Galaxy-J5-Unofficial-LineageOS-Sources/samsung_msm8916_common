@@ -1,4 +1,10 @@
 cc_prebuilt_binary {
+    name: "init.program_bdaddr.sh",
+    srcs: ["bin/init.program_bdaddr.sh"],
+    vendor: true,
+}
+
+cc_prebuilt_binary {
     name: "init.class_main.sh",
     srcs: ["bin/init.class_main.sh"],
     vendor: true,
