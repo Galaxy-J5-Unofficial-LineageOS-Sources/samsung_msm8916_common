@@ -127,6 +127,9 @@ ro.oem_unlock_supported=1
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+#Plqy Store
+ro.opengles.version=196608
+
 # Radio
 persist.radio.add_power_save=1 
 persist.radio.apm_sim_not_pwdn=1
