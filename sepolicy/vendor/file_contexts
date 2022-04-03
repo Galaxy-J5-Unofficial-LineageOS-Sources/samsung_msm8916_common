@@ -29,6 +29,7 @@
 
 # Bluetooth
 /(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.1-service u:object_r:hal_bluetooth_default_exec:s0
+/(vendor|system/vendor)/bin/init\.program_bdaddr\.sh          u:object_r:bluetooth_loader_exec:s0
 /efs/bluetooth(/.*)?    u:object_r:bluetooth_efs_file:s0
 
 # Camera
@@ -55,9 +56,6 @@
 
 # Logcat
 /cache/boot_lc_main.txt                                                                    u:object_r:cache_file:s0
-
-# btnvtool
-#/(vendor|system/vendor)/bin/btnvtool u:object_r:btnvtool_exec:s0
 
 # Power stats
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock          u:object_r:hal_power_stats_default_exec:s0
