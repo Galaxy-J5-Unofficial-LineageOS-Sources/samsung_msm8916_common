@@ -21,10 +21,5 @@ void vendor_load_properties()
     char const fp[] = "google/raven/raven:12/S3B1.220218.004/8242181:user/release-keys";
     char const fp_desc[] = "raven-user 12 S3B1.220218.004 8242181 release-keys";
     
-    set_device_props(
-            fp,
-            fp_desc,
-            "Google", "raven", "Pixel 6 Pro");
-
 	set_common_properties();
 }
