@@ -27,3 +27,9 @@ PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := phone
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Pixel 6 Pro Fingerprint
+BUILD_FINGERPRINT := "google/raven/raven:12/S3B1.220218.004/8242181:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+      PRIVATE_BUILD_DESC="raven-user 12 S3B1.220218.004 8242181 release-keys"
