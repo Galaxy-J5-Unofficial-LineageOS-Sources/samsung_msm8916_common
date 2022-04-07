@@ -28,8 +28,11 @@ LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
 DEVICE_PATH := device/samsung/msm8916-common
 
-# Include build.prop 
+# Include system.prop 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+# Include product.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
 # Chipset - Properties
 ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
