@@ -159,7 +159,9 @@ PRODUCT_PACKAGES += \
     copybit.msm8916 \
     memtrack.msm8916 \
     libtinyxml \
-    libtinyxml2 
+    libtinyxml2 \
+    vendor.lineage.livedisplay@2.0-service.samsung-qcom
+
     
 # Display Device Config
 PRODUCT_COPY_FILES += \
