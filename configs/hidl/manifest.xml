@@ -1,5 +1,8 @@
 <manifest version="1.0" type="device" target-level="legacy">
-	<hal format="hidl" optional="true">
+
+	<!-- USB HIDL  -->
+	
+   <hal format="hidl" optional="true">
         <name>android.hardware.usb.gadget</name>
         <transport arch="32">passthrough</transport>
         <version>1.0</version>
@@ -8,6 +11,9 @@
             <instance>default</instance>
         </interface>
     </hal>
+	
+	<!-- FM HIDL  -->
+	
     <hal format="hidl">
     <name>vendor.qti.hardware.fm</name>
         <transport>hwbinder</transport>
@@ -17,6 +23,9 @@
             <instance>default</instance>
         </interface>
     </hal>
+	
+	<!--  Light HIDL -->
+	
 <hal format="hidl">
         <name>android.hardware.light</name>
         <transport>hwbinder</transport>
@@ -26,6 +35,9 @@
             <instance>default</instance>
         </interface>
     </hal>
+	
+	<!-- Keymaster HIDL -->	
+	
 <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
@@ -35,6 +47,9 @@
             <instance>default</instance>
         </interface>
     </hal>
+	
+	<!-- NFC HIDL  -->
+
     <hal format="hidl">
         <name>vendor.nxp.nxpese</name>
         <transport>hwbinder</transport>
@@ -44,6 +59,40 @@
             <instance>default</instance>
         </interface>
     </hal>
+	
+    <hal format="hidl">
+        <name>vendor.nxp.nxpnfc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	
+    <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::INfc/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INqNfc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::INqNfc/default</fqname>
+    </hal>
+	
+	<!--  Audio HIDL -->
+
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -75,6 +124,9 @@
             <instance>default</instance>
         </interface>
     </hal>
+	
+	<!-- GPS HIDL  -->
+
     <hal format="hidl">
         <name>android.hardware.gnss</name>
         <transport>hwbinder</transport>
@@ -84,6 +136,9 @@
             <instance>default</instance>
         </interface>
     </hal>
+	
+	<!-- Graphics HIDL  -->
+
     <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
         <transport>hwbinder</transport>
@@ -114,6 +169,19 @@
         <fqname>@3.0::IMapper/default</fqname>
         <fqname>@4.0::IMapper/default</fqname>
     </hal>
+	
+	<!-- Sensor HIDL  -->
+	
+    <hal format="hidl">
+        <name>android.hardware.sensors</name>
+        <transport arch="32">passthrough</transport>
+	<version>1.0</version>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+
     <hal format="hidl">
         <name>android.hardware.ir</name>
         <transport arch="32">passthrough</transport>
@@ -154,6 +222,8 @@
             <instance>default</instance>
         </interface>
     </hal>
+
+	<!-- Wi-FI HIDL  -->
     <hal format="hidl">
         <name>android.hardware.wifi.offload</name>
         <transport>hwbinder</transport>
@@ -163,15 +233,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfc</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INxpNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
+	
+	<!-- Perf HIDL  -->
+	
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
         <transport>hwbinder</transport>
@@ -181,6 +245,9 @@
             <instance>default</instance>
         </interface>
     </hal>
+
+	<!--  Encryption HIDL -->
+
     <hal format="hidl">
         <name>vendor.qti.hardware.cryptfshw</name>
         <transport>hwbinder</transport>
@@ -190,26 +257,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::INfc/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INqNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::INqNfc/default</fqname>
-    </hal>
+	
+	<!-- DRM HIDL for ClearKey and Widevine  -->
+
 <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
@@ -231,15 +281,9 @@
         <fqname>@1.3::ICryptoFactory/widevine</fqname>
         <fqname>@1.3::IDrmFactory/widevine</fqname>
     </hal>
-<hal format="hidl">
-        <name>android.hardware.sensors</name>
-        <transport arch="32">passthrough</transport>
-	<version>1.0</version>
-        <interface>
-            <name>ISensors</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
+	
+	<!-- Dolby Atmos HIDL -->
+
     <hal format="hidl">
         <name>vendor.dolby.hardware.dms</name>
         <transport>hwbinder</transport>
@@ -250,6 +294,9 @@
         </interface>
         <fqname>@1.0::IDms/default</fqname>
     </hal>
+	
+	<!-- LiveDisplay HIDL  -->
+
   <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
@@ -274,5 +321,119 @@
             <name>ISunlightEnhancement</name>
             <instance>default</instance>
         </interface>
+    </hal>
+	
+	<!-- Radio HIDL  -->
+
+           <hal format="hidl">
+        <name>android.hardware.radio</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+       <fqname>@1.0::IRadio/slot1</fqname>
+       <fqname>@1.0::IRadio/slot2</fqname>
+       <fqname>@1.0::ISap/slot1</fqname>
+       <fqname>@1.0::ISap/slot2</fqname>
+       <fqname>@1.1::IRadio/slot1</fqname>
+       <fqname>@1.1::IRadio/slot2</fqname>
+       <fqname>@1.1::ISap/slot1</fqname>
+       <fqname>@1.1::ISap/slot2</fqname>
+       <fqname>@1.2::IRadio/slot1</fqname>
+       <fqname>@1.2::IRadio/slot2</fqname>
+       <fqname>@1.2::ISap/slot1</fqname>
+       <fqname>@1.2::ISap/slot2</fqname>
+       <fqname>@1.3::IRadio/slot1</fqname>
+       <fqname>@1.3::IRadio/slot2</fqname>
+       <fqname>@1.3::ISap/slot1</fqname>
+       <fqname>@1.3::ISap/slot2</fqname>
+       <fqname>@1.4::IRadio/slot1</fqname>
+       <fqname>@1.4::IRadio/slot2</fqname>
+       <fqname>@1.4::ISap/slot1</fqname>
+       <fqname>@1.4::ISap/slot2</fqname>
+       <fqname>@1.5::IRadio/slot1</fqname>
+       <fqname>@1.5::IRadio/slot2</fqname>
+       <fqname>@1.5::ISap/slot1</fqname>
+       <fqname>@1.5::ISap/slot2</fqname>
+       <fqname>@1.6::IRadio/slot1</fqname>
+       <fqname>@1.6::IRadio/slot2</fqname>
+       <fqname>@1.6::ISap/slot1</fqname>
+       <fqname>@1.6::ISap/slot2</fqname>
+    </hal>
+        <hal format="hidl">
+        <name>android.hardware.radio.deprecated</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOemHook</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+	
+	<!-- Camera HIDL  -->
+
+<hal format="hidl">
+        <name>android.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+	<version>2.5</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>legacy/0</instance>
+        </interface>
+        <fqname>@2.4::ICameraProvider/legacy/0</fqname>
+        <fqname>@2.5::ICameraProvider/legacy/0</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.frameworks.cameraservice.service</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+            <name>ICameraService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	
+	<!-- Bluetooth HIDL  -->
+
+   <hal format="hidl">
+        <name>android.hardware.bluetooth</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBluetoothHci</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	 <hal format="hidl">
+        <name>com.qualcomm.qti.bluetooth_audio</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBluetoothAudio</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	 <hal format="hidl">
+        <name>android.hardware.bluetooth.audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+   <hal format="hidl">
+        <name>android.hardware.bluetooth.a2dp</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IBluetoothAudioOffload/default</fqname>
     </hal>
 </manifest>
