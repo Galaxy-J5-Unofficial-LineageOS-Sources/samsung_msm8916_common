@@ -110,8 +110,6 @@ PRODUCT_PACKAGES += \
     libldacBT_bco \
     libldacBT_dec
 
-DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/bluetooth-manifest.xml
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-impl \
@@ -122,8 +120,6 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libcamera_shim \
     libmm-qcamera
-
-DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/camera-manifest.xml
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
@@ -389,8 +385,6 @@ PRODUCT_PACKAGES += \
     libxml2 \
     macloader \
     libcutils_shim
-
-DEVICE_MANIFEST_FILE += device/samsung/msm8916-common/Manifest/radio-manifest.xml
 
 # Repainter integration
 PRODUCT_PACKAGES += \
