@@ -107,11 +107,13 @@ on boot
     chown system system /sys/class/touch_screen/enabled
     chown system system /sys/class/touch_screen/status
 
-    # for BT MAC address
+# Permissions for bluetooth
     mkdir /efs/bluetooth 0775 radio system
-    # if already exist
-    chown radio system /efs/bluetooth
-    chmod 0775 /efs/bluetooth
+    setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
+    chown bluetooth net_bt_stack ro.bt.bdaddr_path
+    chown radio bluetooth /efs/bluetooth/bt_addr
+    chmod 0755 /efs/bluetooth/bt_addr
+    restorecon_recursive /efs/bluetooth
 
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
