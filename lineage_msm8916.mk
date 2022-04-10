@@ -196,7 +196,9 @@ PRODUCT_PACKAGES += \
     RemoveCamera2 \
     RemoveGallery2 \
     RemoveEleven \
-    RemoveJely
+    RemoveJely \
+    RemoveEtar \
+    RemoveAudioFX
 
 # DRM
 PRODUCT_PACKAGES += \
