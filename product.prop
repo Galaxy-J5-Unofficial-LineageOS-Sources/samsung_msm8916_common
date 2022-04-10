@@ -1,5 +1,5 @@
 # Pixel 6 Pro
-ro.build.fingerprint=google/raven/raven:12/S3B1.220218.004/8242181:user/release-keys
+ro.build.fingerprint=google/raven/raven:12/SP2A.220405.004/8233519:user/release-keys
 ro.product.brand=google
 ro.product.device=raven
 ro.product.manufacturer=Google
