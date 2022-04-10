@@ -383,6 +383,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.1 \
     android.hardware.radio@1.1.vendor \
+    android.hardware.radio.config@1.1 \
     libshim_secril \
     libshim_ril \
     libxml2 \
