@@ -99,16 +99,27 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor \
-    libbase_shim
 
 PRODUCT_PACKAGES += \
-    libldacBT_bco \
-    libldacBT_dec
+    android.hardware.bluetooth@1.0-impl-qti
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth.a2dp@1.0-impl.mock
+
+PRODUCT_PACKAGES += \
+    libbase_shim \
+    libbt-vendor
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bt.bdaddr_path="/efs/bluetooth/bt_addr"
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
 # Camera
 PRODUCT_PACKAGES += \
