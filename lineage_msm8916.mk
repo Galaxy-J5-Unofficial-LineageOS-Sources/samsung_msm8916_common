@@ -213,6 +213,10 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-v28 \
     libprotobuf-cpp-full-v28
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # FastCharge
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.usb
