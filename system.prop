@@ -68,6 +68,9 @@ dalvik.vm.heapmaxfree=8m
 # Data modules
 persist.data.netmgrd.qos.enable=false 
 
+# fastbootd
+ro.fastbootd.available=true
+
 # FM
 ro.fm.transmitter=false
 
