@@ -1,4 +1,4 @@
-<compatibility-matrix version="2.0" type="framework" level="3" >
+<compatibility-matrix version="2.0" type="framework" level="legacy" >
 <hal format="hidl" optional="true">
     <name>android.hardware.audio.effect</name>
     <version>7.0</version>
@@ -191,7 +191,7 @@
 </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.radio</name>
-        <version>1.0-6</version>
+        <version>1.1</version>
         <interface>
             <name>IRadio</name>
             <instance>slot1</instance>
@@ -207,7 +207,7 @@
     <hal format="hidl" optional="true">
         <name>android.hardware.radio.config</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.0-3</version>
         <interface>
             <name>IRadioConfig</name>
             <instance>default</instance>

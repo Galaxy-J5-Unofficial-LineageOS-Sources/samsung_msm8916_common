@@ -36,3 +36,6 @@ void qdi_flush_cmdq() {}
 void qmi_format_diag_log_msg() {}
 void qmi_qos_process_request_qos_req() {}
 void qmi_qos_process_qos_req_success_rsp() {}
+void ds_time_diff() {}
+void ds_get_soc_id() {}
+void ds_exec() {}

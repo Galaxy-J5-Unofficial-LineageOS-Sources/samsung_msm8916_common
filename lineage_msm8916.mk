@@ -20,9 +20,6 @@ $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
 # Include proprietary blobs
 $(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
 
-# Include Pixel Launcher
-$(call inherit-product, vendor/PixelMod/PixelMod.mk)
-
 # Define paths
 LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
@@ -135,12 +132,6 @@ PRODUCT_PACKAGES += \
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
-    
-# Data configuration files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
-    $(LOCAL_PATH)/configs/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
-    $(LOCAL_PATH)/configs/data/qmi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/qmi_config.xml
 
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -388,14 +379,33 @@ PRODUCT_COPY_FILES += \
     
 # Radio
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0 \
     android.hardware.radio@1.1 \
+    android.hardware.radio@1.1-impl \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.3 \
+    android.hardware.radio@1.4 \
+    android.hardware.radio@1.5 \
+    android.hardware.radio@1.6 \
+    android.hardware.radio@1.0.vendor \
     android.hardware.radio@1.1.vendor \
+    android.hardware.radio@1.2.vendor \
+    android.hardware.radio@1.3.vendor \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.0 \
     android.hardware.radio.config@1.1 \
+    android.hardware.radio.config@1.2 \
+    android.hardware.secure_element@1.0 \
     libshim_secril \
     libshim_ril \
     libxml2 \
     macloader \
     libcutils_shim
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.iwlan_operation_mode=legacy
 
 # Repainter integration
 PRODUCT_PACKAGES += \
@@ -436,9 +446,6 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-	libril \
-	librilutils \
-	rild \
 	librmnetctl 
 
 PRODUCT_PROPERTY_OVERRIDES += \
