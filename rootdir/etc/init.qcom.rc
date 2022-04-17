@@ -53,6 +53,8 @@ on early-boot
     setprop qcom.audio.init complete
 
 on boot
+# Prevents permission denied error for telephony
+    chmod 0644 /proc/cmdline
     start vendor.rmt_storage
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
@@ -604,6 +606,7 @@ on post-fs-data
     chmod 0660 /sys/class/sec/sec_key/hall_irq_ctrl
     chmod 0660 /sys/devices/virtual/misc/multipdp/waketime
 
+
     # link  the telephony database
     start vendor.link_ril_db
 
@@ -732,7 +735,7 @@ service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
-    group system wakelock
+    group radio system wakelock
     disabled
 
 on property:wc_transport.start_hci=true
@@ -766,16 +769,17 @@ on property:vendor.bluetooth.hciattach=true
 on property:vendor.bluetooth.hciattach=false
     setprop vendor.bluetooth.status off
 
-# QMUX must be in multiple groups to support external process connections
-service vendor.qmuxd /vendor/bin/qmuxd
-    class main
-    user root
-    group radio audio bluetooth gps nfc diag
 
-service vendor.netmgrd /vendor/bin/netmgrd
+# QMUX must be in multiple groups to support external process connections
+service qmuxd /system/vendor/bin/qmuxd
     class main
     user root
-    group root wifi wakelock radio inet
+    group radio audio bluetooth gps nfc oem_2901
+
+service netmgrd /system/vendor/bin/netmgrd
+    class main
+    user root
+    group root system wifi wakelock radio inet
 
 service sensors /system/bin/sensors.qcom
     class late_start
@@ -800,7 +804,7 @@ service vendor.link_ril_db /vendor/bin/init.link_ril_db.sh
 service vendor.wlandutservice /vendor/bin/wlandutservice
     class main
     user system
-    group wifi net_raw net_admin system inet
+    group radio wifi net_raw net_admin system inet
     disabled
     oneshot
 
@@ -834,6 +838,9 @@ service ipacm /system/bin/ipacm
     writepid /dev/cpuset/system-background/tasks
 
 on property:sys.boot_completed=1
+    # Start perf
+    setprop vendor.post_boot.parsed 1
+
     start vendor.qcom-post-boot
     setprop sys.io.scheduler "bfq"
 
@@ -845,18 +852,11 @@ on property:sys.boot_completed=1
     write /sys/class/touch_screen/enabled true
     write /sys/class/touch_screen/control auto
 
-service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
+# RIL for multi rild
+service vendor.ril-daemon2 /vendor/bin/hw/rild -l /vendor/lib/libsec-ril-dsds.so -c 2
     class main
-    user radio
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
-
-service vendor.ril-daemon3 /vendor/bin/hw/rild -c 3
-    class main
-    user radio
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
+    user root
+    group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service vendor.usb_uicc_enable /vendor/bin/init.qcom.uicc.sh
