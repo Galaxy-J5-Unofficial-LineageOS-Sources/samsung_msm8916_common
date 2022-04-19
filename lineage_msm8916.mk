@@ -300,8 +300,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.config.ulmk_memcg=true \
     ro.lmk.use_psi=false \
     ro.lmk.critical=0 \
-    ro.lmk.low=950 \
-    ro.lmk.swap_free_low_percentage=15    
+    ro.lmk.low=900 \
+    ro.lmk.swap_free_low_percentage=10    
     
 # Media configurations
 ifneq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
