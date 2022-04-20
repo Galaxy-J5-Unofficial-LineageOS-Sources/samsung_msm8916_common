@@ -100,14 +100,6 @@ mm.enable.qcom_parser=3183219
 mm.enable.smoothstreaming=true 
 mmp.enable.3g2=true
 
-# Memory Optimizations
-ro.lmk.critical_upgrade=true
-ro.lmk.upgrade_pressure=0
-ro.lmk.downgrade_pressure=70
-ro.lmk.kill_heaviest_task=true
-ro.statsd.enable=true
-ro.vendor.qti.sys.fw.bg_apps_limit=8
-
 # Misc
 debug.fdsan=0
 debug.mdpcomp.logs=0 
