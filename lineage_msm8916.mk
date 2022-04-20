@@ -20,13 +20,16 @@ $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
 # Include proprietary blobs
 $(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
 
+# Inherit Android go config
+$(call inherit-product, $(DEVICE_PATH)/android_go.mk)
+
 # Define paths
 LOCAL_PATH := device/samsung/msm8916-common
 COMMON_PATH := device/samsung/msm8916-common
 DEVICE_PATH := device/samsung/msm8916-common
 
 # Include system.prop 
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += 
 
 # Include product.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
