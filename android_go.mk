@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The Android Open Source Project
+# Copyright (C) 2022 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,15 +17,17 @@
 # Sets Android Go recommended default values for propreties.
 
 # Memory Optimizations
-ro.lmk.critical_upgrade=true
-ro.lmk.upgrade_pressure=0
-ro.lmk.downgrade_pressure=70
-ro.lmk.kill_heaviest_task=true
-ro.statsd.enable=true
-ro.vendor.qti.sys.fw.bg_apps_limit=8
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.critical_upgrade=true \
+    ro.lmk.upgrade_pressure=0 \
+    ro.lmk.downgrade_pressure=70 \
+    ro.lmk.kill_heaviest_task=true \
+    ro.statsd.enable=true \
+    ro.vendor.qti.sys.fw.bg_apps_limit=8
 
 # set threshold to filter unused apps
-pm.dexopt.downgrade_after_inactive_days=7
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.downgrade_after_inactive_days=7
 
 # set the compiler filter for shared apks to quicken.
 # Rationale: speed has a lot of dex code expansion, it uses more ram and space
@@ -35,12 +37,16 @@ pm.dexopt.downgrade_after_inactive_days=7
 # the processes that load of shared apk and the code cache is not shared.
 # Some notable apps that will be affected by this are gms and chrome.
 # b/65591595.
-pm.dexopt.shared=quicken
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.shared=quicken
 
 # 512MB specific properties.
 
 # lmkd can kill more now.
-ro.lmk.medium=700
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.medium=700
 
 # madvise random in ART to reduce page cache thrashing.
-dalvik.vm.madvise-random=true
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.madvise-random=true
