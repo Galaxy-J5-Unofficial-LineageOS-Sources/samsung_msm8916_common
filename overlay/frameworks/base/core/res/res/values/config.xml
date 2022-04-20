@@ -119,4 +119,8 @@
          SystemUI. Can be -1 if there is no maximum limit. -->
     <integer name="config_maxNumVisibleRecentTasks_lowRam">4</integer>
 
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+
+
 </resources>

@@ -20,6 +20,9 @@
 /sys/devices/soc.0/[a-f0-9]+\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk                           u:object_r:sysfs_kgsl_gpuclk:s0
 /(vendor|system/vendor)/bin/init\.link_ril_db\.sh                                          u:object_r:qti_init_shell_exec:s0
 
+# Tap To Wake node
+/sys/android_touch/doubletap2wake                       u:object_r:gesture_sysfs:s0
+
 # Authsecret
 /(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service                  u:object_r:hal_authsecret_default_exec:s0
 

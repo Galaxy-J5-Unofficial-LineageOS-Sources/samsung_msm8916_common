@@ -22,4 +22,8 @@
     <fraction name="def_window_transition_scale">50%</fraction>
     
     <bool name="def_bluetooth_on">false</bool>
+
+   <!-- Default state of tap to wake -->
+    <bool name="def_double_tap_to_wake">false</bool>
+
 </resources>

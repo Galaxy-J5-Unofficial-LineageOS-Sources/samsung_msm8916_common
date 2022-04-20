@@ -101,6 +101,10 @@ TARGET_DISABLE_POSTRENDER_CLEANUP := true
 # Dedupe VNDK libraries with identical core variants.
 TARGET_VNDK_USE_CORE_VARIANT := true
 
+
+# DoubleTap2Wake
+TARGET_TAP_TO_WAKE_NODE := /sys/android_touch/doubletap2wake
+
 # Encryption
 TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 TARGET_HW_DISK_ENCRYPTION := true
