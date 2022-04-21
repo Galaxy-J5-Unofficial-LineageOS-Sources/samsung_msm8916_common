@@ -232,6 +232,7 @@ on boot
 	chown system system  /sys/class/mdnie/mdnie/lcd_power
 	chown system media_rw /sys/class/mdnie/mdnie/scenario
 	chmod 0660 /sys/class/mdnie/mdnie/scenario
+        chown system system /sys/android_touch/doubletap2wake
 
 	chown system system /sys/class/mdnie/mdnie/tuning
 	chown system media_rw /sys/class/mdnie/mdnie/outdoor
