@@ -7,3 +7,4 @@ allow vold system_server:process {getattr};
 allow vold keystore:dir {search};
 allow vold keystore:file {read open};
 allow vold keystore:process {getattr};
+allow vold sysfs_mmc_host:file {write};
