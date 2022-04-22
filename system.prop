@@ -58,8 +58,8 @@ persist.cne.feature=0
 persist.dpm.feature=0
 
 # Dalvik
-dalvik.vm.heapstartsize=8m
-dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapstartsize=4m
+dalvik.vm.heapgrowthlimit=80m
 dalvik.vm.heapsize=256m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=512k
