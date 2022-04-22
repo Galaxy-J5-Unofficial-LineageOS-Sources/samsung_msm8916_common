@@ -560,22 +560,3 @@ PRODUCT_PACKAGES += \
     wificond \
     wpa_supplicant
     
-# Boot Profile
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DISABLE_SCUDO := true
-
-# Disable Scudo outside of eng builds to save RAM.
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
-  PRODUCT_DISABLE_SCUDO := true
-endif
-
-# Do not spin up a separate process for the network stack, use an in-process APK.
-PRODUCT_PACKAGES += InProcessNetworkStack
-PRODUCT_PACKAGES += CellBroadcastAppPlatform
-PRODUCT_PACKAGES += CellBroadcastServiceModulePlatform
-PRODUCT_PACKAGES += com.android.tethering.inprocess
