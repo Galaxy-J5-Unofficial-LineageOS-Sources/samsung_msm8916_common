@@ -131,7 +131,8 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.msm8916 \
     libcamera_shim \
-    libmm-qcamera
+    libmm-qcamera \
+    Snap
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
