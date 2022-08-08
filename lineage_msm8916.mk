@@ -462,6 +462,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge \
     sensors.msm8916
+
+# Touch features
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.samsung
     
 # Thermal HAL
 PRODUCT_PACKAGES += \
