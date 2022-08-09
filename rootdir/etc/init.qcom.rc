@@ -739,7 +739,7 @@ service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
-    group radio system wakelock
+    group radio system wakelock root
     disabled
 
 on property:wc_transport.start_hci=true
@@ -778,7 +778,7 @@ on property:vendor.bluetooth.hciattach=false
 service qmuxd /system/vendor/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc oem_2901
+    group radio audio bluetooth gps nfc oem_2901 root
 
 service vendor.netmgrd /system/vendor/bin/netmgrd
     class main
@@ -808,7 +808,7 @@ service vendor.link_ril_db /vendor/bin/init.link_ril_db.sh
 service vendor.wlandutservice /vendor/bin/wlandutservice
     class main
     user system
-    group radio wifi net_raw net_admin system inet
+    group radio wifi net_raw net_admin system inet root
     disabled
     oneshot
 
@@ -860,7 +860,7 @@ on property:sys.boot_completed=1
 service vendor.ril-daemon2 /vendor/bin/hw/rild -l /vendor/lib/libsec-ril-dsds.so -c 2
     class main
     user root
-    group radio cache inet misc audio log readproc wakelock
+    group radio cache inet misc audio log readproc wakelock root
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service vendor.usb_uicc_enable /vendor/bin/init.qcom.uicc.sh
