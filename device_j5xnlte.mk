@@ -13,14 +13,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Enable flatten APEX
-TARGET_FLATTEN_APEX := true
-
-# Enable Incremental on the device
-PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=yes
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Include Bluetooth config
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/configs/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth := $(LOCAL_PATH)/configs/bluetooth
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_BRAND := samsung
