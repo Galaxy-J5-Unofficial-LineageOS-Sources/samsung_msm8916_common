@@ -53,8 +53,6 @@ on early-boot
     setprop qcom.audio.init complete
 
 on boot
-# Prevents permission denied error for telephony
-    chmod 0644 /proc/cmdline
     start vendor.rmt_storage
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
@@ -85,9 +83,7 @@ on boot
 
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
-
-    chown system radio /sys/devices/virtual/sec/sec_touchkey/touchkey_enabled
-
+    
     # For SEC NFC
     chmod 0660 /dev/sec-nfc
     chown nfc nfc /dev/sec-nfc
@@ -739,7 +735,7 @@ service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
-    group radio system wakelock root
+    group system wakelock
     disabled
 
 on property:wc_transport.start_hci=true
@@ -773,17 +769,16 @@ on property:vendor.bluetooth.hciattach=true
 on property:vendor.bluetooth.hciattach=false
     setprop vendor.bluetooth.status off
 
-
 # QMUX must be in multiple groups to support external process connections
-service qmuxd /system/vendor/bin/qmuxd
+service vendor.qmuxd /vendor/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc oem_2901 root
+    group radio audio bluetooth gps nfc diag
 
-service vendor.netmgrd /system/vendor/bin/netmgrd
+service vendor.netmgrd /vendor/bin/netmgrd
     class main
     user root
-    group root system wifi wakelock radio inet
+    group root wifi wakelock radio inet
 
 service sensors /system/bin/sensors.qcom
     class late_start
@@ -808,7 +803,7 @@ service vendor.link_ril_db /vendor/bin/init.link_ril_db.sh
 service vendor.wlandutservice /vendor/bin/wlandutservice
     class main
     user system
-    group radio wifi net_raw net_admin system inet root
+    group wifi net_raw net_admin system inet
     disabled
     oneshot
 
@@ -859,8 +854,9 @@ on property:sys.boot_completed=1
 # RIL for multi rild
 service vendor.ril-daemon2 /vendor/bin/hw/rild -l /vendor/lib/libsec-ril-dsds.so -c 2
     class main
-    user root
-    group radio cache inet misc audio log readproc wakelock root
+    user radio
+    disabled
+    group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service vendor.usb_uicc_enable /vendor/bin/init.qcom.uicc.sh
