@@ -54,6 +54,7 @@ on early-boot
 
 on boot
     start vendor.rmt_storage
+    start vendor.qmuxd
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
@@ -772,13 +773,13 @@ on property:vendor.bluetooth.hciattach=false
 # QMUX must be in multiple groups to support external process connections
 service vendor.qmuxd /vendor/bin/qmuxd
     class main
-    user root
-    group radio audio bluetooth gps nfc diag
+    user radio
+    group radio audio bluetooth gps oem_2950 log
 
 service vendor.netmgrd /vendor/bin/netmgrd
     class main
     user root
-    group root wifi wakelock radio inet
+    group radio readproc system wakelock oem_2950
 
 service sensors /system/bin/sensors.qcom
     class late_start
@@ -918,6 +919,3 @@ service program_bdaddr /vendor/bin/init.program_bdaddr.sh
 #    seclabel u:r:bluetooth_loader:s0
     disabled
     oneshot
-
-on property:apexd.status=ready
-    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind

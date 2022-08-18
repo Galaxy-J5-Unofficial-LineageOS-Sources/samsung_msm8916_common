@@ -22,7 +22,7 @@ user: AID_SYSTEM
 group: AID_RADIO
 caps: 0
 
-[system/vendor/bin/btnvtool]
+[vendor/bin/btnvtool]
 mode: 0755
 user: AID_BLUETOOTH
 group: AID_BLUETOOTH

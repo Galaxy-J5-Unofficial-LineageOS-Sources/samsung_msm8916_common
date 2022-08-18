@@ -180,15 +180,23 @@ TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 BOARD_BOOTIMAGE_PARTITION_SIZE      := 13631488
 BOARD_CACHEIMAGE_PARTITION_SIZE     := 314572800
 BOARD_FLASH_BLOCK_SIZE              := 131072
+BOARD_VENDORIMAGE_PARTITION_SIZE    := 5232239424
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
+# Treble
+BOARD_VNDK_VERSION := current
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+TARGET_COPY_OUT_VENDOR := vendor
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
-    /system/bin/mediaserver=22 \
-    /system/vendor/bin/mm-qcamera-daemon=22 \
-    /system/vendor/bin/hw/rild=27
+    /vendor/bin/mediaserver=22 \
+    /vendor/bin/mm-qcamera-daemon=22 \
+    /vendor/bin/hw/rild=27
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
@@ -227,20 +235,20 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/lib/libmmjpeg_interface.so|libboringssl-compat.so \
+    /vendor/lib/libmmjpeg_interface.so|libboringssl-compat.so \
     /vendor/lib/libsec-ril.so|libshim_secril.so \
     /vendor/lib/libsec-ril-dsds.so|libshim_secril.so \
-    /system/lib/hw/camera.vendor.msm8916.so|libcamera_shim.so \
-    /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
-    /system/vendor/lib/vendor.qti.gnss@1.0_vendor.so|libshim_gps.so \
-    /system/vendor/lib/vendor.qti.gnss@1.0.so|libshim_gps.so \
-    /system/vendor/lib/libgeofence.so|liblocadapterbase_shim.so \
-    /system/vendor/lib/liblbs_core.so|liblocadapterbase_shim.so \
-    /system/vendor/lib/libizat_core.so|libshim_gps.so \
-    /system/vendor/lib/libloc_api_v02.so|liblocapibase_shim.so \
-    /system/vendor/bin/netmgrd|libshim_ril.so \
-    /system/vendor/lib/libdsi_netctrl.so|libshim_ril.so \
-    /system/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|libbase_shim.so \
+    /vendor/lib/hw/camera.vendor.msm8916.so|libcamera_shim.so \
+    /vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
+    /vendor/lib/vendor.qti.gnss@1.0_vendor.so|libshim_gps.so \
+    /vendor/lib/vendor.qti.gnss@1.0.so|libshim_gps.so \
+    /vendor/lib/libgeofence.so|liblocadapterbase_shim.so \
+    /vendor/lib/liblbs_core.so|liblocadapterbase_shim.so \
+    /vendor/lib/libizat_core.so|libshim_gps.so \
+    /vendor/lib/libloc_api_v02.so|liblocapibase_shim.so \
+    /vendor/bin/netmgrd|libshim_ril.so \
+    /vendor/lib/libdsi_netctrl.so|libshim_ril.so \
+    /vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|libbase_shim.so \
 
 
 # Time services

@@ -228,12 +228,32 @@ lib/libaudio-ril.so
 lib/libsecril-client.so
 vendor/lib/libril-qcril-hook-oem.so
 
+# QMI (vendor) - from Redmi/sweet_global/sweet:12/RKQ1.210614.002/V13.0.2.0.SKFMIXM:user/release-keys
+vendor/bin/irsc_util|121deb2d6fd21b122c6a8ca8b30ef167f6b90f61
+vendor/bin/pd-mapper|f42d79a48e3e0e4bba47e9ccca60d65a6c8f5716
+vendor/lib/libdiag.so|65e7607778bc164619a353f11f64957b60fdc22c
+vendor/lib/libdsutils.so|6a1bc9529fa8b53488e73fe3a191b40056261a35
+vendor/lib/libidl.so|f91eebf917150514da6c111de6c66805bed3f6c8
+vendor/lib/libmdmdetect.so|0105abde3eead7e5292d1c0823327f0969751e88
+vendor/lib/libminkdescriptor.so|c070295572b0c6d38d5b218fa7a8600abdaee218
+vendor/lib/libqcci_legacy.so|be14a3ba29cf4dc9fce1f7a51fb02cb775b16f1c
+vendor/lib/libqdi.so|fe29118fdbfed9b0d99bc00f0f126153186a4d36
+vendor/lib/libqdp.so|aa8399ab1d43e23db7463b2d8934dcac6223a6ec
+vendor/lib/libqmi.so|b77fbaa6c2f9385c680f21d286e973d3b5174f70
+vendor/lib/libqmi_cci.so|9b58cbf1061250e917534ff94105c8d8c8d467df
+vendor/lib/libqmi_client_helper.so|1fbb98bb3c1d8dbe6675ce21c1b4ff75e6b9c12a
+vendor/lib/libqmi_client_qmux.so|7aaabf55c5207922b7a94223d8221da77867f031
+vendor/lib/libqmi_common_so.so|ff25aa6185ebf0700fd5c7d913f383bcd09ea866
+vendor/lib/libqmi_csi.so|73749863f412035d1822f58f177ea27b0810387d
+vendor/lib/libqmi_encdec.so|d8642bf7e8193db310dafad8116222f3b3d9013a
+vendor/lib/libqmiservices.so|fe96f578fd765bed11978b5f62e1f75d1fc43cee
+
 # Samsung libs
 lib/libsecnativefeature.so
 lib/libseckeyprov.so
 
 # Security
-bin/irsc_util
+
 lib/libgdmcprov.so
 
 # STLport
