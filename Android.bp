@@ -1,20 +1,3 @@
 subdirs = [
      "light",
 ]
-
-cc_prebuilt_library_shared {
-        name: "libbase-v28",
-        owner: "samsung",
-        strip: {
-                none: true,
-        },
-        target: {
-                android_arm: {
-                        srcs: ["prebuilts/libbase-v28.so"],
-                },
-        },
-	compile_multilib: "32",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
