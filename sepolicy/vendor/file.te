@@ -1,6 +1,7 @@
 #======================= file ============================
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type imei_efs_file, file_type;
+type sysfs_block, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_camera, fs_type, sysfs_type;
 type sysfs_disk_stat, fs_type, sysfs_type;
 type sysfs_lights ,fs_type, sysfs_type;
