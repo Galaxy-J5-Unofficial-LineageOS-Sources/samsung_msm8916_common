@@ -16,6 +16,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Enable flatten APEX
 TARGET_FLATTEN_APEX := true
 
+# Include GMS for OEMS
+$(call inherit-product, vendor/partner_gms/products/gms_go_2gb.mk)
+
 # Enable Incremental on the device
 PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=yes
 
