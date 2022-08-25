@@ -1,6 +1,3 @@
-# Adoptable Storage
-ro.crypto.volume.options=aes-256-xts
-
 # Assistant
 ro.opa.eligible_device=true
 
