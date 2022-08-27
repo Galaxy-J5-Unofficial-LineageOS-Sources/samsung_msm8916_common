@@ -229,11 +229,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.usb
 
-# FM
-PRODUCT_PACKAGES += \
-    qcom.fmradio \
-    FM2
-
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -558,7 +553,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service.legacy \
+    android.hardware.wifi@1.0-service \
     android.hardware.wifi@1.5.vendor \
     hostapd \
     hostapd_cli \
