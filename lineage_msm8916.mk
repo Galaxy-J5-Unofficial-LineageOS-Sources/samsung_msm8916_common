@@ -229,8 +229,7 @@ PRODUCT_PACKAGES += \
     
 # FM
 PRODUCT_PACKAGES += \
-    qcom.fmradio \
-    FM2
+    qcom.fmradio
 
 # For config.fs
 PRODUCT_PACKAGES += \
