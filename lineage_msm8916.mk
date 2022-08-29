@@ -226,6 +226,11 @@ PRODUCT_PACKAGES += \
 # FastCharge
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.usb
+    
+# FM
+PRODUCT_PACKAGES += \
+    qcom.fmradio \
+    FM2
 
 # For config.fs
 PRODUCT_PACKAGES += \
