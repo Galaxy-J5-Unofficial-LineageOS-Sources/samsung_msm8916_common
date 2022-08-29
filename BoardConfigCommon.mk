@@ -105,10 +105,6 @@ TARGET_VNDK_USE_CORE_VARIANT := true
 # DoubleTap2Wake
 TARGET_TAP_TO_WAKE_NODE := /sys/class/touch/sys/ist30xx_dt2wake_enable
 
-# Encryption
-TARGET_LEGACY_HW_DISK_ENCRYPTION := true
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Filesystems
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE   := ext4
