@@ -246,18 +246,6 @@
         </interface>
     </hal>
 
-	<!--  Encryption HIDL -->
-
-    <hal format="hidl">
-        <name>vendor.qti.hardware.cryptfshw</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ICryptfsHw</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-	
 	<!-- DRM HIDL for ClearKey and Widevine  -->
 
 <hal format="hidl">
