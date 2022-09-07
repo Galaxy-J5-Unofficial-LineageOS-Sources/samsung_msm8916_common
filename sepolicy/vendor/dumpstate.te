@@ -1,0 +1,4 @@
+# ====================== dumpstate ===================
+
+allow dumpstate persist_data_file:dir {getattr};
+allow dumpstate efs_file:dir {getattr};

@@ -1,0 +1,7 @@
+# ============ adbroot ====================
+
+#allow adbroot adbroot:capability {sys_ptrace};
+#allow adbroot dumpstate:dir {search};
+#allow adbroot dumpstate:file {read open};
+#allow adbroot dumpstate:process {getattr};
+

@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Include GMS for OEMS
-$(call inherit-product, vendor/partner_gms/products/gms_go_2gb.mk)
+#$(call inherit-product, vendor/partner_gms/products/gms_go_2gb.mk)
 
 # Enable flatten APEX
 TARGET_FLATTEN_APEX := true

@@ -14,3 +14,4 @@ allow surfaceflinger platform_app:process {getattr};
 allow surfaceflinger priv_app:process {getattr};
 allow surfaceflinger system_server:process {getattr};
 allow surfaceflinger system_app:process {getattr};
+allow surfaceflinger dumpstate:process {getattr};

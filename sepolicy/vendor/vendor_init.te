@@ -20,3 +20,5 @@ allow vendor_init unlabeled:file { setattr };
 allow vendor_init radio_core_data_file:file { create write open setattr };
 allow vendor_init radio_core_data_file:dir { write add_name };
 allow vendor_init media_data_file:dir {create setattr};
+allow vendor_init proc_dirty:file {write};
+allow vendor_init system_prop:property_service {set};

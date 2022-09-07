@@ -44,6 +44,12 @@ allow system_server system_app:process {getattr};
 allow system_server secure_element:process {getattr};
 allow system_server untrusted_app_29:process {getattr};
 
+# Dumpstate
+allow system_server dumpstate:process {getattr};
+#allow system_server storaged:process {getattr};
+allow system_server incidentd:process {getattr};
+allow system_server cameraserver:process {getattr};
+
 #NFC
 allow system_server nfc:process {getattr};
 

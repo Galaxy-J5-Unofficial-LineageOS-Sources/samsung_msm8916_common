@@ -8,3 +8,5 @@ allow vold keystore:dir {search};
 allow vold keystore:file {read open};
 allow vold keystore:process {getattr};
 allow vold sysfs_mmc_host:file {write};
+allow vold vdc:process {getattr};
+allow vold vdc:process { getattr };
