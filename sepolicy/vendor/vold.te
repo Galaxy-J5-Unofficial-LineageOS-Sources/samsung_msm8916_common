@@ -10,3 +10,6 @@ allow vold keystore:process {getattr};
 allow vold sysfs_mmc_host:file {write};
 allow vold vdc:process {getattr};
 allow vold vdc:process { getattr };
+allow vold dumpstate:fd {use};
+allow vold dumpstate:fifo_file {write};
+allow vold dumpstate:process {getattr};

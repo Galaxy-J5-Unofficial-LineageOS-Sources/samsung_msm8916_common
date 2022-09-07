@@ -49,6 +49,10 @@ allow system_server dumpstate:process {getattr};
 #allow system_server storaged:process {getattr};
 allow system_server incidentd:process {getattr};
 allow system_server cameraserver:process {getattr};
+allow system_server gatekeeperd:process {getattr};
+allow system_server installd:process {getattr};
+allow system_server vold:process {getattr};
+allow system_server wificond:process {getattr};
 
 #NFC
 allow system_server nfc:process {getattr};

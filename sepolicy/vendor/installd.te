@@ -4,3 +4,6 @@ allow installd installd:capability {sys_ptrace};
 allow installd system_server:file {read open};
 allow installd system_server:dir {search};
 allow installd system_server:process {getattr};
+allow installd dumpstate:file {open read};
+allow installd dumpstate:dir {search};
+allow installd dumpstate:process {getattr};
