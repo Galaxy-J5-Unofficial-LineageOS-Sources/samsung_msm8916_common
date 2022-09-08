@@ -2,4 +2,11 @@
 allow toolbox cache_file:file { getattr ioctl write };
 allow toolbox kernel:system syslog_read;
 allow toolbox kmsg_device:chr_file { open read };
-
+allow toolbox proc:file{getattr};
+allow toolbox proc_uid_time_in_state:file{getattr};
+allow toolbox proc_sysrq:file {getattr};
+allow toolbox proc_diskstats:file {getattr};
+allow toolbox proc_keys:file {getattr};
+allow toolbox gmscore_app:dir {getattr search};
+allow toolbox gmscore_app:file {read open};
+allow toolbox gmscore_app:lnk_file {read};

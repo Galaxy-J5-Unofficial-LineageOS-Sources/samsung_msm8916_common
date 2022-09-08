@@ -1,0 +1,4 @@
+# ================ gmscore_app =========
+allow gmscore_app aac_drc_prop:file {open getattr};
+allow gmscore_app ab_update_gki_prop:file {open getattr};
+allow gmscore_app alarm_boot_prop:file {open getattr};

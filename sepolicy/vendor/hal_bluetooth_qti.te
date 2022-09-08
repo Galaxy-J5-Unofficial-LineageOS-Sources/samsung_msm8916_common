@@ -1,1 +1,2 @@
 allow hal_bluetooth_qti hal_fm_hwservice:hwservice_manager {add find};
+allow hal_bluetooth_qti vendor_default_prop:property_service {set};
