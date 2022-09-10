@@ -152,7 +152,7 @@ persist.timed.enable=true
 
 # Vendor security patch level - Properties
 # Defines latest vendor update from OEM
-ro.lineage.build.vendor_security_patch=2022-03-12
+ro.lineage.build.vendor_security_patch=2019-09-01
 
 # Video encoding
 vidc.enc.narrow.searchrange=1
