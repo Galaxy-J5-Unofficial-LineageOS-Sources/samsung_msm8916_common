@@ -185,7 +185,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2017-09-01
+    ro.lineage.build.vendor_security_patch=2019-09-01
 
 # Video encoding
 PRODUCT_PROPERTY_OVERRIDES += \
