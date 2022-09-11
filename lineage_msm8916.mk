@@ -31,9 +31,6 @@ $(call inherit-product, $(DEVICE_PATH)/android_go.mk)
 # Include system.prop 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
-# Include product.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-
 # Chipset - Properties
 ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8929)
 PRODUCT_PROPERTY_OVERRIDES += \
