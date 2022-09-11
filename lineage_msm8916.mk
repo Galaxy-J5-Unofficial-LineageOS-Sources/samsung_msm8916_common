@@ -121,16 +121,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-impl \
-    android.hardware.camera.provider@2.5-service-lazy \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    camera.device@1.0-impl \
-    camera.device@3.2-impl \
-    camera.msm8916 \
-    libcamera_shim \
-    libmm-qcamera \
-    Snap
+#PRODUCT_PACKAGES += \
+#    android.hardware.camera.provider@2.5-impl \
+#    android.hardware.camera.provider@2.5-service-lazy \
+#    vendor.qti.hardware.camera.device@1.0.vendor \
+#    camera.device@1.0-impl \
+#    camera.device@3.2-impl \
+#    camera.msm8916 \
+#    libcamera_shim \
+#    libmm-qcamera \
+#    Snap
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
@@ -542,7 +542,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-cellbroadcastappplatform.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-cellbroadcastappplatform.xml
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-cellbroadcastappplatform.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-cellbroadcastappplatform.xml \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-cellbroadcastservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-cellbroadcastservice.xml
 
 # WiDi
 PRODUCT_PACKAGES += \
