@@ -26,17 +26,18 @@ vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
 lib/com.qualcomm.qti.ant@1.0.so|eef326d23bc65dbdd75134b7302c1989e770e3c6
 vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so|62f59ebce4dd877035de2886b0bc769fbe3f5f44
 
-# Bluetooth
+# Bluetooth from j8y18lte
+vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/Bluetooth_cal.acdb
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
-vendor/lib/libbtnv.so
-vendor/lib/vendor.qti.hardware.fm@1.0.so
-vendor/lib/libldacBT_enc.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so
+vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so
+vendor/lib/libqti_vndfwk_detect.so
 
-# Camera
+# Camera from J510FNXXS3BTI6
 bin/mm-qcamera-daemon
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
@@ -54,6 +55,28 @@ vendor/lib/libjpegehw.so
 
 # Camera - wf-crackling-7.1-TOS093F-a29b96e3d6
 vendor/lib/libmmcamera_faceproc.so|8e6a95d0dd0d282f96cc905c11c1a738
+
+# Dolby Atmos from ZTE A2019 Pro
+vendor/priv-app/DaxUI/DaxUI.apk
+vendor/priv-app/daxService/daxService.apk
+vendor/framework/dolby_dax.jar
+vendor/lib/libdapparamstorage.so
+vendor/lib/libdlbdsservice.so
+vendor/lib/libstagefright_soft_ddpdec.so
+vendor/lib/libstagefrightdolby.so
+vendor/lib/soundfx/libatmos.so
+vendor/lib/vendor.dolby.hardware.dms@1.0-impl.so
+vendor/lib/vendor.dolby.hardware.dms@1.0.so
+vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
+vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
+vendor/etc/dolby/dap-default.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/permissions/dolby_dax.xml
+vendor/etc/permissions/privapp-com.dolby.atmos.xml
+vendor/etc/permissions/privapp-com.dolby.daxservice.xml
+vendor/etc/sysconfig/config-com.dolby.atmos.xml
+vendor/etc/sysconfig/config-com.dolby.daxappui.xml
+vendor/etc/sysconfig/config-com.dolby.daxservice.xml
 
 # DRM
 bin/qcom-system-daemon
@@ -89,45 +112,51 @@ vendor/lib/libflp.so|8ecc18a88b768e65ade0c2f900aa3699
 vendor/lib/libgeofence.so|862cfcd014939ba68c2418488c00a724
 vendor/lib/liblbs_core.so|be81bdae864452bc38544db8184303c6
 
-# Graphics - wf-crackling-7.1-TOS111B
-vendor/lib/egl/eglsubAndroid.so|21442267a5e128873442ad9d38475e07
-vendor/lib/egl/eglSubDriverAndroid.so|1e34bc15a3bbcc3eb69a9f1fd525cb0b
-vendor/lib/egl/libEGL_adreno.so|cce3189ca361b239d53db58060893eab
-vendor/lib/egl/libESXEGL_adreno.so|ece400a0d1f05d3e5f0fe3f704e6898d
-vendor/lib/egl/libESXGLESv1_CM_adreno.so|6cd4b8adf65f35ae86e33b531da6068d
-vendor/lib/egl/libESXGLESv2_adreno.so|9a89a84193b17680c1c4a66591d76a43
-vendor/lib/egl/libGLESv1_CM_adreno.so|0b3093145eafb04523844940a4a36af9
-vendor/lib/egl/libGLESv2_adreno.so|bd12ff8d2017689040b80206bfac0b9a
-vendor/lib/egl/libq3dtools_adreno.so|493cb66c4ff6723af6577e83803957b3
-vendor/lib/egl/libQTapGLES.so|374f04a7a7c65d7676e781f0552cd1ca
-vendor/lib/egl/libRBEGL_adreno.so|f2fc963450474859aa7c7ccf6fac92b6
-vendor/lib/egl/libRBGLESv1_CM_adreno.so|5719e42981a1acc1df1a8878312bdca5
-vendor/lib/egl/libRBGLESv2_adreno.so|4d831f9d61222398f09eb15d4f4e7395
-vendor/lib/libadreno_utils.so|b74a626858dd1b3411e8199694bd5da8
+# Graphics from LA.BR.1.2.9.1-02310-8x16.0
+vendor/lib/egl/eglsubAndroid.so
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libESXEGL_adreno.so
+vendor/lib/egl/libESXGLESv1_CM_adreno.so
+vendor/lib/egl/libESXGLESv2_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so:
+vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/egl/libQTapGLES.so
+vendor/lib/egl/libRBEGL_adreno.so
+vendor/lib/egl/libRBGLESv1_CM_adreno.so
+vendor/lib/egl/libRBGLESv2_adreno.so
+vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
-vendor/lib/libC2D2.so|9ce02ff41421ec64d26b571c479fe6ca
-vendor/lib/libc2d30-a3xx.so|91c8e82b10afda25a727ffc94dad5bc5
-vendor/lib/libc2d30-a4xx.so|5fb624bd78b3ac8bacd2a9f1226db103
-vendor/lib/libCB.so|40daed628f19ef2f625ca7fca559d0b7
-vendor/lib/libgsl.so|06a985c79c24b850ec4a03e89bd4e208
-vendor/lib/libllvm-glnext.so|df95f2de1e3468b8caf8ecb6839a6477
-vendor/lib/libllvm-qcom.so|8c40927b9b56047447c42d0a23081ef1
-vendor/lib/libOpenCL.so|c68ff0a56dc1c98be520b08e7eb6fee1
-vendor/lib/librs_adreno.so|40dbf893c0fd2ad8583d9937e9c92d3f
-vendor/lib/librs_adreno_sha1.so|4f695154805ab290651af850fad24d81
-vendor/lib/libRSDriver_adreno.so|bd572f3fc34e9dd747753f14a73fb133
+vendor/lib/libC2D2.so
+vendor/lib/libc2d30-a3xx.so
+vendor/lib/libc2d30-a4xx.so
+vendor/lib/libCB.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-glnext.so
+vendor/lib/libllvm-qcom.so
+vendor/lib/libOpenCL.so
+vendor/lib/librs_adreno.so
+vendor/lib/librs_adreno_sha1.so
+vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a2xx.so
-vendor/lib/libsc-a3xx.so|42193ceddf52b1c6e5914d8c20c9f4ab
-vendor/lib/libscale.so|811e35d84497eeafd66952fba530c8b8
+vendor/lib/libsc-a3xx.so
+vendor/lib/libscale.so
 
-# Graphics Firmware
-etc/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw
-etc/firmware/a420_pfp.fw:vendor/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw:vendor/firmware/a420_pm4.fw
-etc/firmware/ice40.bin:vendor/firmware/ice40.bin
-etc/firmware/leia_pfp_470.fw:vendor/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw:vendor/firmware/leia_pm4_470.fw
+# Graphics Firmware from J510FNXXS3BTI6
+vendor/firmware/a225p5_pm4.fw
+vendor/firmware/a225_pfp.fw
+vendor/firmware/a225_pm4.fw
+vendor/firmware/a300_pfp.fw
+vendor/firmware/a300_pm4.fw
+vendor/firmware/a330_pfp.fw
+vendor/firmware/a330_pm4.fw
+vendor/firmware/a420_pfp.fw
+vendor/firmware/a420_pm4.fw
+vendor/firmware/ice40.bin
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw
 
 # Media
 etc/somxreg.conf
@@ -250,16 +279,14 @@ bin/time_daemon
 vendor/lib/libTimeService.so
 vendor/lib/libtime_genoff.so
 
-# Widevine - bullhead
+# Widevine from Nokia 1 Plus
+vendor/etc/init/android.hardware.drm@1.3-service-lazy.widevine.rc
 vendor/lib/libwvhidl.so
-/vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/bin/hw/android.hardware.drm@1.3-service-lazy.widevine
 
 #Hex-Edited for old libstagefright_foundation.so
 vendor/lib/libwvm.so|a1717e49380c936bb409962a3b20942156bab4c1
 vendor/lib/libWVStreamControlAPI_L1.so|74e4a4ba035ed5da9b81cc2cc3929151
 vendor/lib/libwvhidl.so |0881cb4ca98d38f4d033a0b4dd971e74e067942c
 vendor/lib/mediadrm/libwvdrmengine.so |102f6287cb9949be9999f94f803b4113e4030a34
-
-# DRM services - from Channel QPY30.52-2
-vendor/bin/hw/android.hardware.drm@1.3-service-lazy.widevine
-vendor/etc/init/android.hardware.drm@1.3-service-lazy.widevine.rc
