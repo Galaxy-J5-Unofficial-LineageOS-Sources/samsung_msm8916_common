@@ -18,3 +18,5 @@ allow rild radio_core_data_file:file { create getattr open read setattr unlink w
 allow rild system_data_file:dir search;
 allow rild system_prop:file { getattr open read };
 allow rild device:chr_file { read open ioctl };
+allow rild imei_efs_file:dir {search};
+allow rild imei_efs_file:file {read open getattr};

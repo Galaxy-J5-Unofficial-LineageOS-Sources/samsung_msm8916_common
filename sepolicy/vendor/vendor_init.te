@@ -23,3 +23,4 @@ allow vendor_init media_data_file:dir {create setattr};
 allow vendor_init proc_dirty:file {write};
 allow vendor_init system_prop:property_service {set};
 allow vendor_init proc_dirty_ratio:file {write};
+allow vendor_init vendor_mpctl_prop:property_service {set};

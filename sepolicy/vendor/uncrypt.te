@@ -1,0 +1,3 @@
+# ============ uncrypt ========
+allow uncrypt proc:file {read open getattr};
+allow uncrypt block_device:blk_file {write open};
