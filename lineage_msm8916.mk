@@ -132,6 +132,10 @@ PRODUCT_COPY_FILES += \
 #    libmm-qcamera \
 #    Snap
 
+# Colors picker
+PRODUCT_PACKAGES += \
+    ColorPickerStub
+
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
