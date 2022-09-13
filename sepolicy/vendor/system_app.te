@@ -20,3 +20,6 @@ binder_call(system_app, vold)
 binder_call(system_app, wificond)
 
 allow system_app gesture_sysfs:file rw_file_perms;
+
+allow system_app system_data_file:dir {add_name create setattr};
+allow system_app system_data_file:file {create write setattr};

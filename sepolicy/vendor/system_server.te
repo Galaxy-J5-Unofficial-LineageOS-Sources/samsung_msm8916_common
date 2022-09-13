@@ -60,3 +60,5 @@ allow system_server nfc:process {getattr};
 # Props
 allow system_server build_bootimage_prop:file { getattr open read };
 allow system_server vendor_default_prop:file { getattr open read };
+
+allow system_server shell:unix_stream_socket {getopt};

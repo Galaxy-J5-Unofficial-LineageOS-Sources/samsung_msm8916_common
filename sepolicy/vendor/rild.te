@@ -20,3 +20,5 @@ allow rild system_prop:file { getattr open read };
 allow rild device:chr_file { read open ioctl };
 allow rild imei_efs_file:dir {search};
 allow rild imei_efs_file:file {read open getattr};
+allow rild vold_prop:file {read open getattr};
+allow rild config_prop:file {read open getattr};
