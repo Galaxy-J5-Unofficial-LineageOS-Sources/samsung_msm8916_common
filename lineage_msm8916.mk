@@ -209,7 +209,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service-lazy \
-    android.hardware.drm@1.4-service-lazy.clearkey
+    android.hardware.drm-service-lazy.clearkey
 
 # VNDK prebuilts
 PRODUCT_COPY_FILES += \
@@ -556,8 +556,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service.legacy \
-    android.hardware.wifi@1.5.vendor \
+    android.hardware.wifi@1.0-service-lazy \
     hostapd \
     hostapd_cli \
     libwpa_client \
