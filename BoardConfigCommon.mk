@@ -155,6 +155,9 @@ TARGET_KERNEL_SELINUX_LOG_CONFIG := selinux_log_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8916
 TARGET_KERNEL_CLANG_COMPILE := false
 TARGET_HAS_MEMFD_BACKPORT := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_LLVM_BINUTILS := false
 
 # Kernel - Toolchain
 ifneq ($(wildcard $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-7.2/bin),)
