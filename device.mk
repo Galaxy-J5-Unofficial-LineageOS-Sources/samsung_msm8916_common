@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Include GMS for OEMS
-$(call inherit-product, vendor/partner_gms/products/gms_go_2gb.mk)
+#$(call inherit-product, vendor/partner_gms/products/gms_go_2gb.mk)
 
 # Enable flatten APEX
 TARGET_FLATTEN_APEX := true
@@ -30,4 +30,14 @@ PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := phone
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Pixel 6 Pro Fingerprint
+BUILD_FINGERPRINT := google/raven/raven:12/SP2A.220405.004/8233519:user/release-keys
+BUILD_DESCRIPTION := raven-user 12 SP2A.220405.004 8233519 release-keys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+      PRIVATE_BUILD_DESC="$(BUILD_DESCRIPTION)"
 
