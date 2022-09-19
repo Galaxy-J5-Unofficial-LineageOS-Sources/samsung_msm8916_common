@@ -230,7 +230,7 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/libmmjpeg_interface.so|libboringssl-compat.so \
     /vendor/lib/libsec-ril.so|libshim_secril.so \
     /vendor/lib/libsec-ril-dsds.so|libshim_secril.so \
-    /system/lib/hw/camera.vendor.msm8916.so|libcamera_shim.so \
+    /system/vendor/lib/hw/camera.vendor.msm8916.so|libcamera_shim.so \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/vendor/lib/vendor.qti.gnss@1.0_vendor.so|libshim_gps.so \
     /system/vendor/lib/vendor.qti.gnss@1.0.so|libshim_gps.so \
