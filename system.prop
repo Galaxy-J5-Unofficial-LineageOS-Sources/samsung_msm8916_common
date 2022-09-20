@@ -153,6 +153,10 @@ ro.soc.model=MSM8916
 # Time services
 persist.timed.enable=true
 
+# TWRP - Properties
+# This patch applies to Android S+
+persist.sys.binary_xml=false 
+
 # Vendor security patch level - Properties
 # Defines latest vendor update from OEM
 ro.lineage.build.vendor_security_patch=2019-09-01
