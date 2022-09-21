@@ -279,11 +279,12 @@ bin/time_daemon
 vendor/lib/libTimeService.so
 vendor/lib/libtime_genoff.so
 
-# Widevine from Nokia 1 Plus
-vendor/etc/init/android.hardware.drm@1.3-service-lazy.widevine.rc
+# Widevine from r7naxx-user 12 SP1A.210812.016 N770FXXU8FVB4 release-keys
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/lib/libwvhidl.so
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
-vendor/bin/hw/android.hardware.drm@1.3-service-lazy.widevine
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 
 #Hex-Edited for old libstagefright_foundation.so
 vendor/lib/libwvm.so|a1717e49380c936bb409962a3b20942156bab4c1
