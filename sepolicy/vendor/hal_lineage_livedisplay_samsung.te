@@ -7,3 +7,5 @@ init_daemon_domain(hal_lineage_livedisplay_samsung)
 # Allow LiveDisplay HAL's default implementation to use vendor-binder service
 vndbinder_use(hal_lineage_livedisplay_samsung)
 
+allow hal_lineage_livedisplay_samsung sysfs:file {read open write};
+allow hal_lineage_livedisplay_samsung sysfs_livedisplay_tuneable:file {read write open getattr};
