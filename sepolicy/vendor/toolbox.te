@@ -2,4 +2,10 @@
 allow toolbox cache_file:file { getattr ioctl write };
 allow toolbox kernel:system syslog_read;
 allow toolbox kmsg_device:chr_file { open read };
-
+allow toolbox untrusted_app_30:dir {getattr search};
+allow toolbox untrusted_app_30:file {read open};
+allow toolbox untrusted_app_30:lnk_file read;
+allow toolbox priv_app:unix_dgram_socket {getattr};
+allow toolbox priv_app:unix_stream_socket {getattr};
+allow toolbox priv_app:dir {read open};
+allow toolbox priv_app:fifo_file {read open};
