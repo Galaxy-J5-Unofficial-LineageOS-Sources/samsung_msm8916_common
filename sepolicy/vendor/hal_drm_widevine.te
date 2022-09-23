@@ -1,3 +1,4 @@
 # ========= hal_drm_widevine ======
 
-allow hal_drm_widevine media_data_file:dir {search};
+allow hal_drm_widevine media_data_file:dir {search getattr};
+allow hal_drm_widevine media_data_file:file {read write getattr};
