@@ -1,0 +1,3 @@
+# ========= hal_drm_widevine ======
+
+allow hal_drm_widevine media_data_file:dir {search};
