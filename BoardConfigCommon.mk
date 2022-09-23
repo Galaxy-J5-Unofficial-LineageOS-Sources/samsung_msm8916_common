@@ -137,8 +137,7 @@ BOARD_KERNEL_CMDLINE += \
 	msm_rtb.filter=0x3F \
 	ehci-hcd.park=3 \
 	androidboot.bootdevice=7824900.sdhci \
-	androidboot.selinux=permissive \
-        androidboot.init_fatal_reboot_target=recovery
+    androidboot.init_fatal_reboot_target=recovery
 	
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
