@@ -1,2 +1,10 @@
 allow untrusted_app_30 storage_file:file rw_file_perms;
 allow untrusted_app_30 proc:file {read open getattr};
+allow untrusted_app_30 sysfs:dir {read open getattr};
+allow untrusted_app_30 sysfs:file {read open getattr};
+allow untrusted_app_30 proc_interrupts:file{read open getattr};
+allow untrusted_app_30 vendor_default_prop:file{read open getattr};
+allow untrusted_app_30 rootfs:dir {read open};
+allow untrusted_app_30 wifi_hal_prop:file {read open getattr};
+
+

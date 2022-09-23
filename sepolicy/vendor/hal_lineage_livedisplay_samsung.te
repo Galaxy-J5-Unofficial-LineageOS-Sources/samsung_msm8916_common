@@ -9,3 +9,5 @@ vndbinder_use(hal_lineage_livedisplay_samsung)
 
 allow hal_lineage_livedisplay_samsung sysfs:file {read open write};
 allow hal_lineage_livedisplay_samsung sysfs_livedisplay_tuneable:file {read write open getattr};
+
+allow hal_lineage_livedisplay_samsung display_vendor_data_file:dir {search};

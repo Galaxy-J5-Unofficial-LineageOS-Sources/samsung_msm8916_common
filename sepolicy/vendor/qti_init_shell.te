@@ -12,13 +12,14 @@ allow qti_init_shell radio_data_file:lnk_file { create getattr read setattr };
 allow qti_init_shell self:capability dac_override;
 allow qti_init_shell sysfs:file { setattr write };
 allow qti_init_shell sysfs_net:file write;
-allow qti_init_shell system_data_file:dir { add_name create open read remove_name rmdir setattr write };
+allow qti_init_shell system_data_file:dir { search add_name create open read remove_name rmdir setattr write };
 allow qti_init_shell system_data_file:file { create open write };
 allow qti_init_shell toolbox_exec:file { execute execute_no_trans getattr open read };
 allow qti_init_shell vfat:dir search;
-allow qti_init_shell radio_core_data_file:dir { getattr read open write remove_name rmdir add_name create setattr };
+allow qti_init_shell radio_core_data_file:dir { search getattr read open write remove_name rmdir add_name create setattr };
 allow qti_init_shell radio_control_prop:file { read open getattr};
 allow qti_init_shell default_prop:file { read open getattr};
 allow qti_init_shell media_data_file:dir { getattr};
 allow qti_init_shell sysfs_android_usb:file { write};
 allow qti_init_shell radio_core_data_file:file { write open };
+

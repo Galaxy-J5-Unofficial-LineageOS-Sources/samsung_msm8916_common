@@ -2,3 +2,5 @@
 allow wcnss_service unlabeled:dir search;
 allow wcnss_service unlabeled:file {open read getattr};
 allow wcnss_service persist_data_file:file {read write open setattr};
+allow wcnss_service persist_data_file:dir {search};
+allow wcnss_service efs_file:dir {search};

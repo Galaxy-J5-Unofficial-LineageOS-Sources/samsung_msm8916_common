@@ -18,8 +18,11 @@ binder_call(system_app, installd)
 binder_call(system_app, netd)
 binder_call(system_app, vold)
 binder_call(system_app, wificond)
+binder_call(system_app, hal_health_default)
 
 allow system_app gesture_sysfs:file rw_file_perms;
 
 allow system_app system_data_file:dir {add_name create setattr};
 allow system_app system_data_file:file {create write setattr};
+allow system_app proc_vmallocinfo:file {read open getattr};
+

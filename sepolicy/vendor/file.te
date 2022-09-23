@@ -15,3 +15,4 @@ type sysfs_sec_touchkey, fs_type, sysfs_type;
 type sysfs_battery, fs_type, sysfs_type;
 type sysfs_battery_writable, fs_type, sysfs_type;
 
+
