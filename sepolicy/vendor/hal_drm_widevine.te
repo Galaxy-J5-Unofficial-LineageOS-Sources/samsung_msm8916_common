@@ -1,6 +1,6 @@
 # ========= hal_drm_widevine ======
 
-allow hal_drm_widevine media_data_file:dir {search getattr write add_name};
+allow hal_drm_widevine media_data_file:dir {search getattr write add_name create};
 allow hal_drm_widevine media_data_file:file {open read write getattr};
 allow hal_drm_widevine firmware_file:lnk_file {read};
 allow hal_drm_widevine vfat:dir {search};
