@@ -128,12 +128,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-impl \
     android.hardware.camera.provider@2.5-service-lazy \
     vendor.qti.hardware.camera.device@1.0.vendor \
-    camera.device@1.0-impl \
-    camera.device@3.2-impl \
     camera.msm8916 \
     libcamera_shim \
-    libmm-qcamera \
-    Snap
+    libmm-qcamera
 
 # Colors picker
 PRODUCT_PACKAGES += \
