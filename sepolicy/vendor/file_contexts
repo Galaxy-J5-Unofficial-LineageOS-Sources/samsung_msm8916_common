@@ -10,6 +10,7 @@
 
 # Radio
 /dev/alarm u:object_r:alarm_device:s0
+/(vendor|system/vendor)/bin/init\.qcom\.fm\.sh u:object_r:qti_init_shell_exec:s0
 
 # Rootfs
 /firmware                                                                                  u:object_r:firmware_file:s0
