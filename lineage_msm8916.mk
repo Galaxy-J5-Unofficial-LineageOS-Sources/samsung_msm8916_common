@@ -132,10 +132,6 @@ PRODUCT_PACKAGES += \
     libcamera_shim \
     libmm-qcamera
 
-# Colors picker
-PRODUCT_PACKAGES += \
-    ColorPickerStub
-
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
