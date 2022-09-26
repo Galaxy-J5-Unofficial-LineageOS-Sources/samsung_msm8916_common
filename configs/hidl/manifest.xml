@@ -246,22 +246,11 @@
         </interface>
     </hal>
 
-	<!-- DRM HIDL for ClearKey and Widevine  -->
+	<!-- DRM HIDL for Widevine  -->
 
 <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ICryptoFactory</name>
-            <instance>default</instance>
-            <instance>widevine</instance>
-        </interface>
-        <interface>
-            <name>IDrmFactory</name>
-            <instance>default</instance>
-            <instance>widevine</instance>
-        </interface>
         <fqname>@1.4::ICryptoFactory/widevine</fqname>
         <fqname>@1.4::IDrmFactory/widevine</fqname>
     </hal>
