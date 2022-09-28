@@ -2,4 +2,5 @@
 allow hal_sensors_default sysfs:dir { open read };
 allow hal_sensors_default system_server:binder {call};
 allow hal_sensors_default sysfs:file {open read write getattr create setattr};
+allow hal_sensors_default efs_file:dir search;
 
