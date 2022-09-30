@@ -16,8 +16,6 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-
-#define BTM_DEF_LOCAL_NAME   "Samsung Galaxy J5"
 #define BLUETOOTH_QTI_SW TRUE
 #define BTC_INCLUDED TRUE
 // Disables read remote device feature
