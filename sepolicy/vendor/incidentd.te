@@ -172,7 +172,7 @@ allow incidentd qti_prop:file {open getattr};
 #allow incidentd radio_cdma_ecm_prop:file {open getattr};
 allow incidentd rebootescrow_hal_prop:file {open getattr};
 allow incidentd recovery_config_prop:file {open getattr};
-allow incidentd recovery_update_prop:file {open getattr};
+#allow incidentd recovery_update_prop:file {open getattr};
 #allow incidentd remote_prov_prop:file {open getattr};
 allow incidentd reschedule_service_prop:file {open getattr};
 allow incidentd retaildemo_prop:file {open getattr};
