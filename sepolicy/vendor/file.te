@@ -12,7 +12,4 @@ type proc_kernel_sched, fs_type, proc_type;
 type sysfs_fastcharge_switch, fs_type, sysfs_type;
 type gesture_sysfs, sysfs_type, file_type;
 type sysfs_sec_touchkey, fs_type, sysfs_type;
-type sysfs_battery, fs_type, sysfs_type;
-type sysfs_battery_writable, fs_type, sysfs_type;
-
 
