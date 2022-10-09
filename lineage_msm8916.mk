@@ -208,10 +208,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm-service.clearkey
 
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images_vendor
-
 # VNDK prebuilts
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v28.so \
@@ -265,10 +261,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/izat.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/izat.conf \
     $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/sap.conf   
     
-# Health
+# Health HAL
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.samsung \
-    android.hardware.health-service.samsung-recovery
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 # HIDL 
 PRODUCT_PACKAGES += \
