@@ -130,7 +130,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     camera.msm8916 \
     libcamera_shim \
-    libmm-qcamera
+    libmm-qcamera \
+    Aperture
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
