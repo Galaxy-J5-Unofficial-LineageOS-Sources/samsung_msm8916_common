@@ -369,4 +369,5 @@
             <name>IBluetoothAudio</name>
             <instance>default</instance>
         </interface>
+     </hal>
 </manifest>
