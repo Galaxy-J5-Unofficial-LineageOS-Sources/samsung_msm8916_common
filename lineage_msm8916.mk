@@ -187,6 +187,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.hwui.use_buffer_age=false 
     
+# Enable support of one-handed mode
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.support_one_handed_mode=true
+    
 # API
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=21 \
