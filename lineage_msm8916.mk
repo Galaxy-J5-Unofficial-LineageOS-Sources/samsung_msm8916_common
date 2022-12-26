@@ -182,6 +182,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     debug.renderengine.backend=threaded \
     debug.sf.enable_gl_backpressure=1 \
+    debug.sf.auto_latch_unsignaled=true \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
